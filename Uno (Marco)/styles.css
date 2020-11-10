@@ -12,18 +12,25 @@ body{
 }
 
 .screen{
-    display: block;
+    position: relative;
     width: 1280px;
     height: 720px;
-
+    
     background-image: url(dock.jpg);
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
+.screen.finish {
+    animation-name: continue-background;
+    animation-duration: 1s;
+    animation-delay: 7s;
+    animation-fill-mode: forwards;
+}
+
 .inventory{
-    position: relative;
+    position: absolute;
     width: 500px;
     height: 90px;
     top: 620px;
@@ -51,12 +58,12 @@ body{
 
 .instructions {
     position: absolute;
-    top: 60px;
-    right: 400px;
+    top: 20px;
+    right: 200px;
 }
 
 .instructions h1 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: Arial, sans-serif;
     color: white;
     text-shadow: 1px 3px 5px rgb(33, 33, 33);
 }
@@ -78,31 +85,132 @@ body{
 }
 
 .part1 {
-    top: -20px;
-    left: 650px;
+    top: -60px;
+    left: 450px;
     width: 460px;
 }
 
 .part2 {
     width: 400px;
-    top: 0px;
-    left: 300px;
+    top: -20px;
+    left: 100px;
 }
 
 .part3 {
     width: 300px;
 
-    top: 350px;
-    left: 1050px;
+    top: 330px;
+    left: 840px; 
 }
 
 .part4 {
-    top: 570px;
-    left: 600px;
+    top: 530px;
+    left: 400px;
 }
 
 .part5 {
     width: 75px;
-    top: 530px;
-    left: 1000px;
+    top: 480px;
+    left: 800px;
+}
+
+
+.water {
+    position: absolute;
+
+    width: 1280px;
+    bottom: 0px;
+
+    animation-name: water;
+    animation-duration: 3s;
+}
+
+.assembledPart {
+    opacity: 100%;
+
+    width: 250px;
+    top: 430px;
+    left: 900px;
+}
+
+.boatFinished {
+    position: absolute;
+    opacity: 100%;
+
+    width: 250px;
+    top: 430px;
+    left: 900px;
+
+    animation-name: boat, gone;
+    animation-duration: 2s, 2s;
+    animation-delay: 3s, 5s;
+    animation-fill-mode: forwards;
+}
+
+.movePart {
+    animation-name: move-part;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.continue {
+    opacity: 0%;
+    position: absolute;
+    top: 200px;
+    left: 500px;
+
+    animation-name: continue-arrow;
+    animation-duration: 1s;
+    animation-delay: 8s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes water {
+    from {
+        opacity: 0%;
+        width: 0px;
+    };
+
+    to {
+        opacity: 100%;
+        width: 1280px;
+    };
+}
+
+@keyframes boat {
+    to {
+        transform: rotate(-20deg);
+    }
+}
+
+@keyframes gone {
+    to {
+        left: 1100px;
+        top: 350;
+        opacity: 0%;
+    };
+}
+
+@keyframes continue-background {
+    to {
+        z-index: -10;
+        opacity: 0%;
+    }
+}
+
+@keyframes continue-arrow {
+    to {
+        opacity: 100%;
+        z-index: 10;
+    }
+}
+
+@keyframes move-part {
+    to {
+        opacity: 100%;
+
+        width: 250px;
+        top: 430px;
+        left: 900px;
+    }
 }
