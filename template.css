@@ -12,14 +12,15 @@ body{
 }
 
 .screen{
+    position: relative;
     display: block;
     width: 1280px;
     height: 720px;
-    background: rgb(0, 150, 255);
+    background: blue;
 }
 
 .inventory{
-    position: relative;
+    position: absolute;
     width: 500px;
     height: 90px;
     top: 620px;
