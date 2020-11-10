@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+}
+
+.screen{
+    display: block;
+    width: 1280px;
+    height: 720px;
+
+    background-image: url(dock.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.inventory{
+    position: relative;
+    width: 500px;
+    height: 90px;
+    top: 620px;
+    left: 365px;
+    opacity: 10%;
+    transition: opacity linear .5s;
+}
+
+.inventoryItem{
+    float: left;
+    width: 90px;
+    height: 90px;
+    background: white;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.inventory:hover{
+    opacity: 100%;
+}
+
+.inventoryItem:last-child{
+    margin:0;
+}
+
+.instructions {
+    position: absolute;
+    top: 60px;
+    right: 400px;
+}
+
+.instructions h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-shadow: 1px 3px 5px rgb(33, 33, 33);
+}
+
+.boatPart {
+    position: absolute;
+
+    width: 250px;
+
+    opacity: 50%;
+}
+
+.correctPart {
+    opacity: 75%;
+}
+
+.boatPart:hover {
+    opacity: 100%;
+}
+
+.part1 {
+    top: -20px;
+    left: 650px;
+    width: 460px;
+}
+
+.part2 {
+    width: 400px;
+    top: 0px;
+    left: 300px;
+}
+
+.part3 {
+    width: 300px;
+
+    top: 350px;
+    left: 1050px;
+}
+
+.part4 {
+    top: 570px;
+    left: 600px;
+}
+
+.part5 {
+    width: 75px;
+    top: 530px;
+    left: 1000px;
+}
