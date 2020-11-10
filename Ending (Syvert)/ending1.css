@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+}
+
+.screen{
+    position: relative;
+    display: block;
+    width: 1280px;
+    height: 720px;
+    background: rgb(2,0,36);
+    background: linear-gradient(360deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 9%, rgba(0,150,255,1) 100%);
+}
+
+.sky{
+    position: absolute;
+    background: #9be8ff;
+    width: 100%;
+    height: 300px;
+    top:0px;
+}
+
+/* INVENTORY */
+
+.inventory{
+    position: absolute;
+    width: 500px;
+    height: 90px;
+    top: 620px;
+    left: 365px;
+    opacity: 10%;
+    transition: opacity linear .5s;
+}
+
+.inventoryItem{
+    float: left;
+    position: relative;
+    width: 90px;
+    height: 90px;
+    background: white;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.inventoryItemPicture{
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.inventory:hover{
+    opacity: 100%;
+}
+
+.inventoryItem:last-child{
+    margin:0;
+}
+
+/* END INVENTORY SECTION */
+
+.boat{
+    width: 300px;
+    position: absolute;
+    left: 20px;
+    top: 180px;
+}
+
+.speech-bubble {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+	background: #00aabb;
+	border-radius: .4em;
+}
+
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 44px solid transparent;
+	border-top-color: #00aabb;
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -22px;
+	margin-bottom: -44px;
+}
