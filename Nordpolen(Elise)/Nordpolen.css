@@ -1,0 +1,275 @@
+*{
+    margin: 0;
+}
+
+.snow {
+    background: url(snøø.png);
+    background-repeat: repeat;
+    width: 100%;
+    height: 320px;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    animation: animateOne 10s infinite linear; 
+    
+}
+
+@keyframes animateOne {
+    0%
+    {
+        background-position: 0px 0px 
+    }
+    100%
+    {
+        background-position: 10px 500px
+    }
+}
+
+.sea{
+    position: relative;
+    left: 0;
+    top: 300px;
+    bottom: 50px;
+    height: 30px;
+    background-size: 40px 100px;
+    background-image: radial-gradient(
+        circle at 20px -5px,
+        transparent 22px,
+         #05317a 18px);
+        background-repeat: repeat;
+}
+
+.sea:before{
+    position: relative;
+    content: "";
+    background-color: #2d90af;
+    height: 30px;
+    width: 1000vw;
+    bottom: -30px;
+    
+}
+#cloud {
+    position: absolute;
+    width: 200px;
+    top: 4%;
+    left: 0%;
+    animation: cloud 20s infinite linear;
+    animation-fill-mode: forwards;
+    
+}
+
+@keyframes cloud {
+    0% {left: -50px;}
+    100% {left: 100%}
+}
+
+#boat {
+    position: absolute;
+    width: 250px;
+    top: 25%;
+    left: 15%;
+    animation-name: boat;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    
+}
+
+@keyframes boat {
+    0% {left: -300px;}
+    100% {left: 15%;}
+}
+
+
+
+
+#santa {
+    position: absolute;
+    width: 100px;
+    top: 25%;
+    left: 75%;
+}
+
+#snowpile {
+    position: absolute;
+    width: 300px;
+    top: 33%;
+    left: 65%;
+}
+
+#sign {
+    position: absolute;
+    width: 70px;
+    top: 25%;
+    left: 67%;
+}
+
+#wind {
+    position: absolute;
+    width: 1200px;
+    height: 600px;
+    top: 40%;
+    animation: wind 10s infinite ease-in-out;
+    
+}
+
+@keyframes wind {
+    0% {right: -50px;}
+    50% {right: 10%}
+    100% {right: -50px}
+}
+
+#gift1 {
+    position: absolute;
+    width: 100px;
+    top: 48%;
+    right: 3%;
+    z-index: 1;
+    transition-property: opacity;
+    transition-duration: 700ms;
+}
+
+#socks {
+    position: absolute;
+    width: 45px;
+    top: 50%;
+    right: 5%;
+    z-index: 0.5;
+}
+
+#gift1:hover {
+    opacity: 0%;
+}
+
+#gift2 {
+    position: absolute;
+    width: 130px;
+    top: 65%;
+    right: 15%;
+    z-index: 1;
+    transition-property: opacity;
+    transition-duration: 700ms;
+}
+
+#teddy {
+    position: absolute;
+    width: 80px;
+    top: 66%;
+    right: 16%;
+    z-index: 0.5;
+}
+
+#gift2:hover {
+    opacity: 0%;
+}
+
+#gift3 {
+    position: absolute;
+    width: 100px;
+    top: 55%;
+    right: 60%;
+    z-index: 1;
+    transition-property: opacity;
+    transition-duration: 700ms;
+   
+} 
+
+#a {
+    position: absolute;
+    width: 100px;
+    top: 55%;
+    right: 60%;
+    z-index: 0.5;
+    
+}
+
+#gift3:hover{
+    opacity: 0%;
+}
+
+
+#giftbag {
+    position: absolute;
+    width: 90px;
+    top: 32%;
+    left: 85%
+} 
+
+.top {
+    position: absolute;
+    width: 100%;
+    height: 45%;
+    background-color: #3a63a6;
+    
+}
+
+.dialog {
+    border: 5px solid black;
+    display: inline;
+    padding: 50px;
+    border-radius: 100px;
+    background-color: white;
+    
+}
+
+#dialog1 {
+    position: absolute;
+    width: 200px;
+    left: 60%;
+    height: 40px;
+    top: 2%;
+    opacity: 0%;
+    animation-name: dialog;
+    animation-delay: 4s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes dialog {
+    0% {top: -0%;}
+    100% {top: 2%; opacity: 1;}
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+}
+
+
+.screen{
+    position: relative;
+    width: 1280px;
+    height: 720px;
+    background: #05317a;
+}
+
+.inventory{
+    position: absolute;
+    width: 500px;
+    height: 90px;
+    top: 620px;
+    left: 365px;
+    opacity: 10%;
+    transition: opacity linear .5s;
+}
+
+.inventoryItem{
+    float: left;
+    width: 90px;
+    height: 90px;
+    background: white;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.inventory:hover{
+    opacity: 100%;
+}
+
+.inventoryItem:last-child{
+    margin:0;
+}
