@@ -15,26 +15,26 @@
 
 #dialogLink{
     position: absolute;
-    
-    width: 200px;
-    top: 100px;
+    opacity: 0;
+    top: 300px;
     left: 50%;
+    
+    padding: 20px;
+    
     transform: translateX(-50%);
     
     animation: link;
-    animation-duration: 100s;
+    animation-delay: 54s;
+    animation-duration: 2s;
     animation-timing-function: linear;
+    animation-fill-mode: forwards;
     animation-iteration-count: 1;
 }
 @keyframes link {
     0%{
         opacity: 0;
-    }20%{
-        opacity: 0;
-    }21%{
-        opacity: 1;
     }100%{
-        opacity: 1
+        opacity: 1;
     }
 }
 
@@ -44,10 +44,10 @@
     left: 600px;
     opacity: 1;
     transform: rotateY(180deg);
-    animation: Neptune;
-    animation-duration: 10s;
-    animation-timing-function: linear;
-    animation-iteration-count: 1;
+    animation: Neptune, nepSwaying;
+    animation-duration: 10s, 11s;
+    animation-timing-function: linear, linear;
+    animation-iteration-count: 1, infinite;
 }
 @keyframes Neptune{
     0%{
@@ -67,6 +67,20 @@
     100%{
         opacity: 1;
         left: 600px;
+    }
+}
+@keyframes nepSwaying{
+    0%{
+        top: 100px;
+    }
+    33%{
+        top: 70px;
+    }
+    66%{
+        top: 150px;
+    }
+    100%{
+        top: 100px;
     }
 }
 
@@ -109,6 +123,7 @@
 }
 
 .dialog{
+    position: absolute;
     border: 5px solid black;
     display: inline;
     padding: 50px;
@@ -117,7 +132,6 @@
 }
 
 #dialog2{
-    position: absolute;
     top: 100px;
     left: 20%;
     opacity: 0;
@@ -140,70 +154,125 @@
     60%{
         
     }
-    80%{
+    90%{
         opacity: 1;
     }
     100%{
         opacity: 0;
     }
 }
+
 #dialog1{
-    position: absolute;
     top: 5%;
     left: 50%;
     opacity: 0;
-    animation: dialog1;
-    animation-duration: 100s;
+    animation: dialog3;
+    animation-delay: 5s;
+    animation-duration: 5s;
     animation-timing-function: linear;
     animation-iteration-count: 1;
 }
-@keyframes dialog1 {
+
+#dialog3{
+    top: 15%;
+    left: 20%;
+    opacity: 0;
+    animation: dialog3;
+    animation-delay: 10s;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}
+@keyframes dialog3 {
     0%{
-        
-    }
-    9%{
         opacity: 0;
     }
-    10%{
+    1%{
         opacity: 1;
     }
-    19%{
-        opacity: 1;
+    99%{
+        opacity: 1; 
     }
-    20%{
+    100%{
         opacity: 0;
-    }
-    30%{
-        
-    }
-    40%{
-        
-    }
-    50%{
-        
-    }
-    60%{
-        
-    }
-    70%{
-        
-    }
-    80%{
-        
-    }
-    90%{
-        
-    }
-    100{
-        
     }
 }
 
+#dialog4{
+    top: 5%;
+    left: 50%;
+    opacity: 0;
+    animation: dialog3;
+    animation-delay: 20s;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}
 
+#dialog5{
+    top: 15%;
+    left: 20%;
+    opacity: 0;
+    animation: dialog3;
+    animation-delay: 30s;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}
+
+#dialog6{
+    top: 5%;
+    left: 50%;
+    opacity: 0;
+    animation: dialog3;
+    animation-delay: 40s;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}
+
+
+.curtain{
+    position: absolute;
+}
+#curtainLeft{
+    left: -100%;
+    animation: curtainLeftMove;
+    animation-delay: 49s;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+@keyframes curtainLeftMove{
+    0%{
+        left: -100%;
+    }
+    100%{
+        left: 0%;
+    }
+}
+#curtainRight{
+    left: -50%;
+    animation: curtainRightMove;
+    animation-delay: 49s;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+@keyframes curtainRightMove{
+    0%{
+        left: -50%;
+    }
+    100%{
+        left: 50%;
+    }
+}
 #blackLeftLayer{ 
     position: relative;
     border: 360px solid black;
-    left: -1282px;
+    left: -1280px;
 }
 
 
