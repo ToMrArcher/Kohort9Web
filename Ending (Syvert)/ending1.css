@@ -1,5 +1,10 @@
 *{
     margin: 0;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
 
 body{
@@ -26,6 +31,7 @@ body{
     width: 100%;
     height: 300px;
     top:0px;
+    z-index: 0;
 }
 
 /* INVENTORY */
@@ -71,29 +77,64 @@ body{
 .boat{
     width: 300px;
     position: absolute;
-    left: 20px;
+    left: 50px;
     top: 180px;
+    animation: boat 8s linear;
+    opacity: 100%;
 }
 
-.speech-bubble {
+.evilBoat{
     position: absolute;
-    top: 100px;
-    left: 100px;
-	background: #00aabb;
-	border-radius: .4em;
+    width: 350px;
+    right: 10px;
+    top: 30px;
 }
 
-.speech-bubble:after {
-	content: '';
-	position: absolute;
-	bottom: 0;
-	left: 50%;
-	width: 0;
-	height: 0;
-	border: 44px solid transparent;
-	border-top-color: #00aabb;
-	border-bottom: 0;
-	border-left: 0;
-	margin-left: -22px;
-	margin-bottom: -44px;
+.speechBubble {
+    position: absolute;
+    border: 5px solid black;
+    display: inline;
+    padding: 50px;
+    border-radius: 100px;
+    background-color: white;
+    top: 100px;
+    left: 250px;
+    animation: speechBubble 2s linear;
+    opacity: 0%;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+.button{
+    position: absolute;
+    background: yellow;
+    padding: 15px;
+    border: 3px solid black;
+    border-radius: 20px;
+    top: 500px;
+    left: 580px;
+}
+
+@keyframes boat {
+    0%{
+        opacity: 0%;
+        left: 20px;
+    }
+    10%{
+        opacity: 100%;
+        left: 25px;
+    }
+    100%{
+        left: 50px;
+        opacity: 100%;
+    }
+}
+
+@keyframes speechBubble{
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
 }
