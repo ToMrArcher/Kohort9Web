@@ -1,18 +1,89 @@
-#uboat{
-    position: relative;
-    width: 200px;;
-    top: 400px;
-    left: 200px;
-    animation: uboat;
+#background{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#Atlantis{
+    position: absolute;
+    width: 25%;
+    height: 40%;
+    top: 45%;
+    left: 45%;
+    opacity: 0.9;
+}
+
+#dialogLink{
+    position: absolute;
+    
+    width: 200px;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    animation: link;
+    animation-duration: 100s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}
+@keyframes link {
+    0%{
+        opacity: 0;
+    }20%{
+        opacity: 0;
+    }21%{
+        opacity: 1;
+    }100%{
+        opacity: 1
+    }
+}
+
+#Neptune{
+    position: absolute;
+    top: 100px;
+    left: 600px;
+    opacity: 1;
+    transform: rotateY(180deg);
+    animation: Neptune;
     animation-duration: 10s;
     animation-timing-function: linear;
     animation-iteration-count: 1;
 }
+@keyframes Neptune{
+    0%{
+        opacity: 0;
+        left: 680px;
+    }
+    40%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+        left: 500px;
+    }
+    70%{
+        left: 600px;
+    }
+    100%{
+        opacity: 1;
+        left: 600px;
+    }
+}
+
+#uboat{
+    position: absolute;
+    width: 200px;
+    top: 300px;
+    left: 200px;
+    animation: uboat, swaying;
+    animation-duration: 10s, 10s;
+    animation-timing-function: linear, linear;
+    animation-iteration-count: 1, infinite;
+}
 @keyframes uboat {
     0%{left: -100px;
-    opacity: 0;}
+    }
     50%{left: 600px;
-    opacity: 1;
     transform: rotate(0deg)}
     60%{
         transform: rotate(20deg)
@@ -22,14 +93,64 @@
     }
     100%{left: 200px;}
 }
+@keyframes swaying{
+    0%{
+        top: 300px;
+    }
+    33%{
+        top: 330px;
+    }
+    66%{
+        top: 270px;
+    }
+    100%{
+        top: 300px;
+    }
+}
+
 .dialog{
-    position: relative;
-    top: 20px;
-    left: 50%;
     border: 5px solid black;
     display: inline;
     padding: 50px;
     border-radius: 100px;
+    background-color: white;
+}
+
+#dialog2{
+    position: absolute;
+    top: 100px;
+    left: 20%;
+    opacity: 0;
+    animation: dialog2;
+    animation-delay: 1s;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}
+@keyframes dialog2 {
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 1;
+    }
+    40%{
+        
+    }
+    60%{
+        
+    }
+    80%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+#dialog1{
+    position: absolute;
+    top: 5%;
+    left: 50%;
     opacity: 0;
     animation: dialog1;
     animation-duration: 100s;
@@ -78,6 +199,14 @@
     }
 }
 
+
+#blackLeftLayer{ 
+    position: relative;
+    border: 360px solid black;
+    left: -1282px;
+}
+
+
 *{
     margin: 0;
 }
@@ -92,6 +221,7 @@ body{
 }
 
 .screen{
+    position: absolute;
     display: block;
     width: 1280px;
     height: 720px;
@@ -99,7 +229,7 @@ body{
 }
 
 .inventory{
-    position: relative;
+    position: absolute;
     width: 500px;
     height: 90px;
     top: 620px;
