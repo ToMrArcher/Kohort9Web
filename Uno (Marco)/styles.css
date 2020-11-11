@@ -153,6 +153,12 @@ body{
     animation-fill-mode: forwards;
 }
 
+.lastPart {
+    animation-name: last-part;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
 .continue {
     opacity: 0%;
     position: absolute;
@@ -208,6 +214,16 @@ body{
 @keyframes move-part {
     to {
         opacity: 100%;
+
+        width: 250px;
+        top: 430px;
+        left: 900px;
+    }
+}
+
+@keyframes last-part {
+    to {
+        opacity: 0%;
 
         width: 250px;
         top: 430px;
