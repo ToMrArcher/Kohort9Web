@@ -146,11 +146,41 @@ body{
     left: 300px;
     opacity: 0;
     animation: boom 2s linear .5s;
+    z-index: 3;
 }
 
 .ball{
     position: absolute;
-    width: 100px;
+    width: 60px;
+    left: 370px;
+    top: 180px;
+    opacity: 0;
+    animation: ball 3s linear .5s;
+}
+
+
+@keyframes ball{
+    0%{
+        opacity: 1;
+    }
+    33%{
+        top: 100px;
+        left: 570px;
+    }
+    66%{
+        top: 130px;
+        left: 770px;
+    }
+    99%{
+        top: 170px;
+        left: 970px;
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        top:170px;
+        left: 970px;
+    }
 }
 
 
