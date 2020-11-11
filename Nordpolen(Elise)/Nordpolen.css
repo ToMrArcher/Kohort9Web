@@ -97,6 +97,24 @@
     left: 65%;
 }
 
+#snowpile2 {
+    position: absolute;
+    width: 300px;
+    top: 70%;
+    left: 5%;
+    
+    
+}
+
+#bear {
+    position: absolute;
+    width: 125px;
+    top: 55%;
+    left: 15%;
+    
+}
+
+
 #sign {
     position: absolute;
     width: 70px;
