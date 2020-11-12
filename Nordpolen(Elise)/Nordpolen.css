@@ -37,6 +37,7 @@
         transparent 22px,
          #05317a 18px);
         background-repeat: repeat;
+   
 }
 
 .sea:before{
@@ -48,6 +49,9 @@
     bottom: -30px;
     
 }
+
+
+
 #cloud {
     position: absolute;
     width: 200px;
@@ -102,8 +106,15 @@
     width: 300px;
     top: 70%;
     left: 5%;
+    animation: snowMove 7s infinite linear;
+    animation-fill-mode: forwards;
     
-    
+}
+
+@keyframes snowMove {
+    0% {left: 5%}
+    50% {left: 7%}
+    100% {left: 5%;}
 }
 
 #bear {
@@ -111,7 +122,15 @@
     width: 125px;
     top: 55%;
     left: 15%;
+    animation: bearMove 7s infinite linear;
+    animation-fill-mode: forwards;
     
+}
+
+@keyframes bearMove {
+    0% {left: 15%}
+    50% {left: 17%}
+    100% {left: 15%;}
 }
 
 
