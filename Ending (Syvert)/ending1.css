@@ -132,10 +132,11 @@ body{
 .alex{
     z-index: 1;
     position: absolute;
-    width: 400px;
-    right: 10px;
-    top: -10px;
+    width: 180px;
+    top: 70px;
+    right: 120px;
     animation: alex 2s ease-in-out infinite;
+    transform: rotateY(180deg);
 }
 
 @keyframes boat {
@@ -185,12 +186,12 @@ body{
 
 @keyframes alex{
     0%{
-        top: -10px;
+        top: 70px;
     }
     50%{
-        top: 0px;
+        top: 80px;
     }
     100%{
-        top: -10px;
+        top: 70px;
     }
 }

@@ -128,14 +128,29 @@ body{
 .alex{
     z-index: 1;
     position: absolute;
-    width: 400px;
-    right: 10px;
-    top: -10px;
-    animation-name: alex, alex2;
-    animation-duration: 2s, 3s;
-    animation-delay: 0s, 3.5s;
-    animation-timing-function: linear, linear;
+    width: 180px;
+    top: 70px;
+    right: 120px;
+    animation-name: alex, dissapear, reappear;
+    animation-duration:  2s, 0.01s, 0.01s;
+    animation-delay: 0s, 3.5s, 7.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 2, 1, 1;
     animation-fill-mode: forwards;
+    transform: rotateY(180deg);
+}
+
+.alex2{
+    z-index: 100;
+    position: absolute;
+    width: 180px;
+    opacity: 0;
+    transform: rotateY(180deg);
+    animation: alex2 4s linear 3.5s;
+    animation-fill-mode: forwards;
+    right: 120px;
+    top: 0px;
+
 }
 
 .cannon{
@@ -165,6 +180,11 @@ body{
     opacity: 0;
     animation: boom 2s linear 3.5s;
     z-index: 300;
+}
+
+.splash{
+    position: absolute;
+    width: 400px;
 }
 
 .ball{
@@ -280,27 +300,54 @@ body{
 
 @keyframes alex{
     0%{
-        top: -10px;
+        opacity: 1;
+        top: 70px;
     }
     50%{
-        top: 0px;
+        top: 80px;
     }
     100%{
-        top: -10px;
+        top: 70px;
+    }
+}
+
+@keyframes dissapear{
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes reappear{
+    100%{
+        opacity: 1;
+        right: 300px;
+        top: 150px;
+        z-index: 100;
     }
 }
 
 @keyframes alex2{
+    0%{
+        opacity: 1;
+        transform: rotateY(180deg);
+        right: 120px;
+        top: 0px;
+    }
     50%{
-        top: 80px;
-        right: 100px;
-        transform: rotate(180deg);
+        top: -40px;
+        right: 200px;
+        transform: rotate;
+        transform: rotateY(180deg) rotate(180deg);
     }
 
+    99%{
+        opacity: 1;
+    }
     100% {
-       right: 200px;
+       right: 300px;
        top: 150px;
-       transform: rotate(360deg);
+       transform: rotateY(180deg) rotate(360deg);
+       opacity: 0;
     }
 }
 
