@@ -1,0 +1,174 @@
+#boat{
+    position: absolute;
+    top: 100px;
+    width: 200px;
+    height: 150px;
+    left: 100px; 
+    
+    animation-name: moveBoat;
+    animation-duration: 5s;
+    animation-timing-function: ease-in;
+}
+
+@keyframes moveBoat{
+    0%{
+        opacity: 0;
+        left: 0px;
+        
+    }
+    50%{
+        opacity: 0.2;
+    }
+    100%{
+        opacity: 1;
+        left: 100px;
+    }
+    
+}
+#bullet{
+    position: relative;
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    background-color: black;
+    left: 1300px;
+    top: 200px;
+    
+    animation-name: bullet;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-delay: 6s;
+    animation-timing-function: linear;
+}
+
+@keyframes bullet{
+    0%{
+        left: 1300px;
+        top: 200px;
+    }
+    45%{
+        top: 20px;
+    }
+    46%{
+        top: 18px;
+    }
+    47%{
+        top: 16px;
+    }
+    48%{
+        top: 14px;
+    }
+    49%{
+        top: 12px;
+    }
+    50%{
+        top: 10px;
+        left: 640px;
+    }
+    51%{
+        top: 12px;
+    }
+    52%{
+        top: 14px;
+    }
+    53%{
+        top: 16px;
+    }
+    54%{
+        top: 18px;
+    }
+    55%{
+        top: 20px;
+    }
+    75%{
+        top: 70px;
+    }
+    100%{
+        top: 120px;
+        left: -10px;
+    }
+}
+#sky{
+    position: absolute;
+    background-color: #bd4f6c;
+    background-image: linear-gradient(326deg, #bd4f6c 0%, #d7816a 74%);
+
+    width: 1280px;
+    height: 200px;
+}
+
+#text1{
+    position: absolute;
+    top: 100px;
+    left: 270px;
+    
+    animation-name: text;
+    animation-delay: 0s;
+    animation-duration: 8s;
+    opacity: 1;
+
+    
+}
+@keyframes text{
+    0%{
+        opacity: 0;
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+{
+    margin: 0;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+}
+
+.screen{
+    position: relative;
+    display: block;
+    width: 1280px;
+    height: 720px;
+    background: rgb(6,4,47);
+    background: linear-gradient(0deg, rgba(6,4,47,1) 6%, rgba(30,50,191,1) 59%);
+}
+
+.inventory{
+    position: absolute;
+    width: 500px;
+    height: 90px;
+    top: 620px;
+    left: 365px;
+    opacity: 10%;
+    transition: opacity linear .5s;
+}
+
+.inventoryItem{
+    float: left;
+    width: 90px;
+    height: 90px;
+    background: white;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.inventory:hover{
+    opacity: 100%;
+}
+
+.inventoryItem:last-child{
+    margin:0;
+}
+
+
+
