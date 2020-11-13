@@ -59,8 +59,9 @@
 }
 
 @keyframes cloud {
-    0% {left: -50px;}
-    100% {left: 1100px;}
+    0% {left: -50px; opacity: 0.3;}
+    20% {opacity: 1;}
+    100% {left: 1100px; opacity: 1;}
 }
 
 #boat {
