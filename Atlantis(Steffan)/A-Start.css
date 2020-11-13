@@ -13,18 +13,64 @@
     opacity: 0.9;
 }
 
-#dialogLink{
+
+@keyframes link {
+    0%{
+        opacity: 0;
+    }100%{
+        opacity: 1;
+        z-index: 2;
+    }
+}
+
+/* Sqaures er styling til start */
+.square{
     position: absolute;
-    opacity: 0;
-    top: 300px;
+    top: 50%;
     left: 50%;
-    
-    padding: 20px;
-    
-    transform: translateX(-50%);
-    
+    transform: translate(-50%, -50%);
+    padding: 3%;
+}
+
+
+#outerSqaure{
+    color: red;
+    border: 17px dotted yellow;
+    border-radius: 16px;
+    padding: 3.1%;
+    animation-name: colorSplash;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes colorSplash {
+    0%{
+        border-color: yellow;
+    }
+    25%{
+        border-color: green;
+    }
+    50%{
+        border-color: blue;
+    }
+    75%{
+        border-color: purple;
+    }
+    100%{
+        border-color: orange;
+    }
+}
+
+#mainSqaure{
+    background-color: rgb(255, 250, 230);
+    border-radius: 4px;
+    box-shadow: 0px 0px 1px 25px #d60b15   
+}
+
+#opacitySquare{
+    opacity: 0;
     animation: link;
-    animation-delay: 54s;
+    animation-delay: 46s;
     animation-duration: 2s;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
@@ -168,7 +214,7 @@
     opacity: 0;
     animation: dialog3;
     animation-delay: 5s;
-    animation-duration: 5s;
+    animation-duration: 7s;
     animation-timing-function: linear;
     animation-iteration-count: 1;
 }
@@ -178,8 +224,8 @@
     left: 20%;
     opacity: 0;
     animation: dialog3;
-    animation-delay: 10s;
-    animation-duration: 10s;
+    animation-delay: 12s;
+    animation-duration: 7s;
     animation-timing-function: linear;
     animation-iteration-count: 1;
 }
@@ -203,8 +249,8 @@
     left: 50%;
     opacity: 0;
     animation: dialog3;
-    animation-delay: 20s;
-    animation-duration: 10s;
+    animation-delay: 19s;
+    animation-duration: 7s;
     animation-timing-function: linear;
     animation-iteration-count: 1;
 }
@@ -214,8 +260,8 @@
     left: 20%;
     opacity: 0;
     animation: dialog3;
-    animation-delay: 30s;
-    animation-duration: 10s;
+    animation-delay: 26s;
+    animation-duration: 7s;
     animation-timing-function: linear;
     animation-iteration-count: 1;
 }
@@ -225,8 +271,8 @@
     left: 50%;
     opacity: 0;
     animation: dialog3;
-    animation-delay: 40s;
-    animation-duration: 10s;
+    animation-delay: 33s;
+    animation-duration: 8s;
     animation-timing-function: linear;
     animation-iteration-count: 1;
 }
@@ -238,7 +284,7 @@
 #curtainLeft{
     left: -100%;
     animation: curtainLeftMove;
-    animation-delay: 49s;
+    animation-delay: 41s;
     animation-duration: 5s;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
@@ -255,7 +301,7 @@
 #curtainRight{
     left: -50%;
     animation: curtainRightMove;
-    animation-delay: 49s;
+    animation-delay: 41s;
     animation-duration: 5s;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
