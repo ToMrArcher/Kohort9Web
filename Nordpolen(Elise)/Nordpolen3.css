@@ -53,29 +53,30 @@
     width: 200px;
     top: 4%;
     left: 0%;
-    animation: cloud 20s infinite linear;
+    animation: cloud 10s infinite linear;
     animation-fill-mode: forwards;
     
 }
 
 @keyframes cloud {
     0% {left: -50px;}
-    100% {left: 100%;}
+    100% {left: 1100px;}
 }
 
 #boat {
     position: absolute;
     width: 250px;
-    top: 190px;
+    top: 30%;
     left: 15%;
-    animation: boat1 5s linear 3s;
+    animation: boat1 3s linear 3s;
     animation-fill-mode: forwards;
     
 }
 
 @keyframes boat1 {
-    0% {left: 15%;top: 190px;}
-    100% {left: 100%; top: 500px; opacity: 0.3;}
+    0% {left: 15%;top: 30%;}
+    80% {opacity: 0;}
+    100% {left: 100%; top: 500px; opacity: 0;}
 }
 
 
@@ -229,7 +230,6 @@
 #lighter {
     position: absolute;
     width: 90px;
-    left: 50%;
     top: 45%;
     animation-name: lighters;
     animation-duration: 2s;
@@ -238,8 +238,8 @@
 }
 
 @keyframes lighters {
-    0% {top: 45%;}
-    100% {top: 87%; width: 55px; left: 73%; }
+    0% {top: -300px;}
+    100% {top: 0%; width: 55px; left: 5px }
     
 }
 
@@ -273,11 +273,19 @@ body{
 
 .inventoryItem{
     float: left;
+    position: relative;
     width: 90px;
     height: 90px;
     background: white;
     border-radius: 10px;
     margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inventoryItemPicture{
+    width: 90%;
 }
 
 .inventory:hover{
