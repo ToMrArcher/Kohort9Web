@@ -37,6 +37,9 @@
         transparent 22px,
          #05317a 18px);
         background-repeat: repeat;
+    /*animation: seaMove 2s infinite linear;
+    animation-fill-mode: forwards;*/
+   
 }
 
 .sea:before{
@@ -48,25 +51,32 @@
     bottom: -30px;
     
 }
+
+/*@keyframes seaMove {
+    0% {left: 0px;}
+    100% {left: 100px;}
+}*/
+
 #cloud {
     position: absolute;
     width: 200px;
     top: 4%;
     left: 0%;
-    animation: cloud 20s infinite linear;
+    animation: cloud 10s infinite linear;
     animation-fill-mode: forwards;
     
 }
 
 @keyframes cloud {
-    0% {left: -50px;}
-    100% {left: 100%}
+    0% {left: -50px; opacity: 0.3;}
+    20% {opacity: 1;}
+    100% {left: 1100px; opacity: 1;}
 }
 
 #boat {
     position: absolute;
     width: 250px;
-    top: 25%;
+    top: 30%;
     left: 15%;
     animation-name: boat;
     animation-duration: 4s;
@@ -76,7 +86,7 @@
 }
 
 @keyframes boat {
-    0% {left: -300px;}
+    0% {left: -30px;}
     100% {left: 15%;}
 }
 
@@ -102,8 +112,15 @@
     width: 300px;
     top: 70%;
     left: 5%;
+    animation: snowMove 7s infinite linear;
+    animation-fill-mode: forwards;
     
-    
+}
+
+@keyframes snowMove {
+    0% {left: 5%}
+    50% {left: 7%}
+    100% {left: 5%;}
 }
 
 #bear {
@@ -111,7 +128,15 @@
     width: 125px;
     top: 55%;
     left: 15%;
+    animation: bearMove 7s infinite linear;
+    animation-fill-mode: forwards;
     
+}
+
+@keyframes bearMove {
+    0% {left: 15%}
+    50% {left: 17%}
+    100% {left: 15%;}
 }
 
 
@@ -277,11 +302,19 @@ body{
 
 .inventoryItem{
     float: left;
+    position: relative;
     width: 90px;
     height: 90px;
     background: white;
     border-radius: 10px;
     margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inventoryItemPicture{
+    width: 90%;
 }
 
 .inventory:hover{

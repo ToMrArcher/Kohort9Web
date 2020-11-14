@@ -69,7 +69,15 @@
     width: 250px;
     top: 30%;
     left: 15%;
+    animation: boat1 3s linear 3s;
+    animation-fill-mode: forwards;
     
+}
+
+@keyframes boat1 {
+    0% {left: 15%;top: 30%;}
+    80% {opacity: 0;}
+    100% {left: 100%; top: 500px; opacity: 0;}
 }
 
 
@@ -198,23 +206,6 @@
    
 } 
 
-#a {
-    position: absolute;
-    width: 100px;
-    top: 55%;
-    right: 60%;
-    z-index: 0.5;
-    animation: a 1500ms linear;
-    animation-fill-mode: forwards;
-    
-}
-
-@keyframes a {
-    0% {top: 55%; width: 100px}
-    100% {top: 0%; right:50%;width: 200px;}
-
-}
-
 #gift3:hover{
     opacity: 0%;
 }
@@ -235,81 +226,24 @@
     
 }
 
-.speak1 {
-    border: 5px solid black;
-    display: inline;
-    padding: 50px;
-    border-radius: 100px;
-    background-color: white;
-}
 
-#speak {
-    position: absolute;
-    width:200px;
-    left: 60%;
-    height: 40px;
-    top: 2%;
-    opacity: 0;
-    animation-name: speak;
-    animation-duration: 7s;
-    animation-fill-mode: forwards;
-    animation-delay: 1700ms;
-    
-    
-}
-
-@keyframes speak{
-    0% {top: -0%;}
-    10% {top: 2%; opacity: 1;}
-    90% {top: 2%; opacity: 1;}
-    100% {top: 2%; opacity: 0;}
-}
-
-.talk1 {
-    border: 5px solid black;
-    display: inline;
-    padding: 50px;
-    border-radius: 100px;
-    background-color: white;
-}
-
-#talk {
-    position: absolute;
-    width: 200px;
-    left: 60%;
-    height: 40px;
-    top: 2%;
-    opacity: 0;
-    animation-name: talk;
-    animation-duration: 7s;
-    animation-fill-mode: forwards;
-    animation-delay: 9s;
-}
-
-@keyframes talk {
-    0% {top: -0%}
-    10% {top: 2%; opacity: 1;}
-    90% {top: 2%; opacity: 1;}
-    100% {top: 2%; opacity: 0;}
-}
 
 #lighter {
     position: absolute;
-    width: 40px;
-    left: 73%;
-    top: 30%;
+    width: 90px;
+    top: 45%;
     animation-name: lighters;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-fill-mode: forwards;
-    animation-delay: 12s;
-    
-    
+   
 }
 
 @keyframes lighters {
-    0% {left:73%;}
-    100% {left: 50%; width: 90px; top: 45%;}
+    0% {top: -300px;}
+    100% {top: 0%; width: 55px; left: 5px }
+    
 }
+
 
 body{
     width: 100vw;
