@@ -99,10 +99,9 @@ body{
     border-radius: 100px;
     background-color: white;
     top: 100px;
-    right: 300px;
-    animation: speechBubble 2s linear;
+    left: 400px;
+    animation: speechBubble 2s linear 9s;
     opacity: 0%;
-    animation-delay: 1s;
     animation-fill-mode: forwards;
 }
 
@@ -131,11 +130,11 @@ body{
     width: 180px;
     top: 70px;
     right: 120px;
-    animation-name: alex, dissapear, reappear;
-    animation-duration:  2s, 0.01s, 0.01s;
-    animation-delay: 0s, 3.5s, 7.5s;
+    animation-name: alex, dissapear, reappear, alexFloating;
+    animation-duration:  2s, 0.01s, 0.01s, 3s;
+    animation-delay: 0s, 3.5s, 7.5s, 7.51s;
     animation-timing-function: ease-in-out;
-    animation-iteration-count: 2, 1, 1;
+    animation-iteration-count: 2, 1, 1, infinite;
     animation-fill-mode: forwards;
     transform: rotateY(180deg);
 }
@@ -183,8 +182,14 @@ body{
 }
 
 .splash{
+    /* HEIGHT 300px WIDTH 500px */
     position: absolute;
-    width: 400px;
+    width: 700px;
+    left: 550px;
+    bottom: 0px;
+    z-index: 10000;
+    animation: splash .5s ease-in-out 7.2s;
+    transform: scale(0);
 }
 
 .ball{
@@ -196,6 +201,31 @@ body{
     animation: ball 3s linear .5s;
 }
 
+@keyframes alexFloating{
+    0%{
+        right: 300px;
+    }
+    50%{
+        right: 280px;
+    }
+    100%{
+        right: 300px;
+    }
+}
+
+@keyframes splash{
+    75%{
+        transform: scale(3);
+        opacity: 1;
+    }
+    99%{
+        transform: scale(4);
+        opacity: 0;
+    }
+    100%{
+        display: none;
+    }
+}
 
 @keyframes ball{
     0%{
@@ -322,7 +352,8 @@ body{
         opacity: 1;
         right: 300px;
         top: 150px;
-        z-index: 100;
+        z-index: 400;
+        border-radius: 25%;
     }
 }
 
@@ -357,11 +388,14 @@ body{
     }
     20%{
         opacity: 1;
+        transform: scale(3);
     }
     80%{
         opacity: 1;
+        transform: scale(3);
     }
     100%{
         opacity: 0;
+        transform: scale(0);
     }
 }

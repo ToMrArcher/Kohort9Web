@@ -54,14 +54,6 @@ body{
     background: white;
     border-radius: 10px;
     margin-right: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.inventoryItemPicture{
-    width: 90%;
-    max-height: 90%;
 }
 
 .inventory:hover{
@@ -79,7 +71,6 @@ body{
     position: absolute;
     left: 50px;
     top: 180px;
-    animation: boat 8s linear;
     opacity: 100%;
 }
 
@@ -87,8 +78,9 @@ body{
     position: absolute;
     width: 350px;
     right: 10px;
-    top: 30px;
-    animation: evilBoat 2s ease-in-out infinite;
+    transform: rotate(180deg);
+    top: 200px;
+    z-index: 0;
 }
 
 .highZ{
@@ -103,67 +95,47 @@ body{
     border-radius: 100px;
     background-color: white;
     top: 100px;
-    left: 250px;
-    animation: speechBubble 2s linear;
+    left: 400px;
+    animation: speechBubble 2s linear 1s;
     opacity: 0%;
-    animation-delay: 3s;
     animation-fill-mode: forwards;
-}
-
-.button{
-    position: absolute;
-    background: yellow;
-    padding: 15px;
-    border: 3px solid black;
-    border-radius: 20px;
-    top: 500px;
-    left: 550px;
-    animation: button 1s linear 6s;
-    animation-fill-mode: forwards;
-    opacity: 0%;
-    transition: transform 1s;
-    color: black;
-}
-
-.button:hover{
-    transform: scale(1.2,1.2);
 }
 
 .alex{
-    z-index: 1;
+    z-index: 5;
     position: absolute;
-    width: 180px;
-    top: 70px;
-    right: 120px;
-    animation: alex 2s ease-in-out infinite;
-    transform: rotateY(180deg);
+    width: 400px;
+    top: 80px;
+    right: 100px;
+    animation-name: alexFloating;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    transform: rotateY(180deg) rotate(-4deg);
 }
 
-@keyframes boat {
+.cannon{
+    position: absolute;
+    width: 130px;
+    left: 260px;
+    top: 190px;
+}
+
+
+@keyframes alexFloating{
     0%{
-        opacity: 0%;
-        left: 20px;
+        right: 200px;
     }
-    10%{
-        opacity: 100%;
-        left: 25px;
+    50%{
+        right: 180px;
     }
     100%{
-        left: 50px;
-        opacity: 100%;
+        right: 200px;
     }
 }
+
 
 @keyframes speechBubble{
-    0%{
-        opacity: 0%;
-    }
-    100%{
-        opacity: 100%;
-    }
-}
-
-@keyframes button {
     0%{
         opacity: 0%;
     }
@@ -184,14 +156,3 @@ body{
     }
 }
 
-@keyframes alex{
-    0%{
-        top: 70px;
-    }
-    50%{
-        top: 80px;
-    }
-    100%{
-        top: 70px;
-    }
-}
