@@ -37,6 +37,9 @@
         transparent 22px,
          #05317a 18px);
         background-repeat: repeat;
+    width: 3000px;
+     animation: seaMove 5s infinite linear;
+    animation-fill-mode: forwards;
 }
 
 .sea:before{
@@ -44,10 +47,14 @@
     content: "";
     background-color: #2d90af;
     height: 30px;
-    width: 1000vw;
     bottom: -30px;
-    
 }
+
+@keyframes seaMove {
+    0% {left: -200px;}
+    100% {left: 0px;}
+}
+
 #cloud {
     position: absolute;
     width: 200px;
@@ -326,6 +333,7 @@ body{
     width: 1280px;
     height: 720px;
     background: #05317a;
+    overflow: hidden;
 }
 
 .inventory{

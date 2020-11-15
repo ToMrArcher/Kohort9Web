@@ -11,7 +11,6 @@
     top: 0%;
     left: 0%;
     animation: animateOne 10s infinite linear; 
-    
 }
 
 @keyframes animateOne {
@@ -37,9 +36,9 @@
         transparent 22px,
          #05317a 18px);
         background-repeat: repeat;
-    /*animation: seaMove 2s infinite linear;
-    animation-fill-mode: forwards;*/
-   
+    animation: seaMove 5s infinite linear;
+    animation-fill-mode: forwards;
+   width: 3000px;
 }
 
 .sea:before{
@@ -47,15 +46,14 @@
     content: "";
     background-color: #2d90af;
     height: 30px;
-    width: 1000vw;
     bottom: -30px;
     
 }
 
-/*@keyframes seaMove {
-    0% {left: 0px;}
-    100% {left: 100px;}
-}*/
+@keyframes seaMove {
+    0% {left: -200px;}
+    100% {left: 0px;}
+}
 
 #cloud {
     position: absolute;
@@ -130,7 +128,6 @@
     left: 15%;
     animation: bearMove 7s infinite linear;
     animation-fill-mode: forwards;
-    
 }
 
 @keyframes bearMove {
@@ -138,7 +135,6 @@
     50% {left: 17%}
     100% {left: 15%;}
 }
-
 
 #sign {
     position: absolute;
@@ -153,7 +149,6 @@
     height: 600px;
     top: 40%;
     animation: wind 10s infinite ease-in-out;
-    
 }
 
 @keyframes wind {
@@ -180,9 +175,6 @@
     z-index: 0.5;
 }
 
-#gift1:hover {
-    opacity: 0%;
-}
 
 #gift2 {
     position: absolute;
@@ -202,8 +194,22 @@
     z-index: 0.5;
 }
 
-#gift2:hover {
+#gift2Container:hover #gift2 {
     opacity: 0%;
+}
+
+#gift2Container:hover .incorrectGift2 {
+    color: black;
+    opacity: 1;
+}
+
+#gift1Container:hover #gift1 {
+    opacity: 0%;
+}
+
+#gift1Container:hover .incorrectGift1 {
+    color: black;
+    opacity: 1;
 }
 
 #gift3 {
@@ -273,6 +279,29 @@
     100% {top: 2%; opacity: 1;}
 }
 
+.incorrectGift2 {
+    position: absolute;
+    width: 130px;
+    top: 80%;
+    right: 15%;
+    color: transparent;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 700ms;
+}
+
+.incorrectGift1 {
+    position: absolute;
+    width: 100px;
+    top: 45%;
+    right: 10%;
+    z-index: 2;
+    color: transparent;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 700ms;
+    
+}
 body{
     width: 100vw;
     height: 100vh;
@@ -288,6 +317,7 @@ body{
     width: 1280px;
     height: 720px;
     background: #05317a;
+    overflow: hidden;
 }
 
 .inventory{
