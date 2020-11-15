@@ -60,15 +60,15 @@
     width: 200px;
     top: 4%;
     left: 0%;
-    animation: cloud 10s infinite linear;
+    animation: cloud 9400ms infinite linear;
     animation-fill-mode: forwards;
     
 }
 
 @keyframes cloud {
     0% {left: -50px; opacity: 0.3;}
-    20% {opacity: 1;}
-    100% {left: 1100px; opacity: 1;}
+    10% {opacity: 1;}
+    100% {left: 1500px; opacity: 1;}
 }
 
 #boat {

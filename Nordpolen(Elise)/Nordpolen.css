@@ -14,14 +14,8 @@
 }
 
 @keyframes animateOne {
-    0%
-    {
-        background-position: 0px 0px 
-    }
-    100%
-    {
-        background-position: 10px 500px
-    }
+    0% {background-position: 0px 0px}
+    100% {background-position: 10px 500px}
 }
 
 .sea{
@@ -32,13 +26,13 @@
     height: 30px;
     background-size: 40px 100px;
     background-image: radial-gradient(
-        circle at 20px -5px,
-        transparent 22px,
-         #05317a 18px);
-        background-repeat: repeat;
+    circle at 20px -5px,
+    transparent 22px,
+    #05317a 18px);
+    background-repeat: repeat;
     animation: seaMove 5s infinite linear;
     animation-fill-mode: forwards;
-   width: 3000px;
+    width: 3000px;
 }
 
 .sea:before{
@@ -60,15 +54,15 @@
     width: 200px;
     top: 4%;
     left: 0%;
-    animation: cloud 10s infinite linear;
+    animation: cloud 9400ms infinite linear;
     animation-fill-mode: forwards;
     
 }
 
 @keyframes cloud {
     0% {left: -50px; opacity: 0.3;}
-    20% {opacity: 1;}
-    100% {left: 1100px; opacity: 1;}
+    10% {opacity: 1;}
+    100% {left: 1500px; opacity: 1;}
 }
 
 #boat {
@@ -77,18 +71,17 @@
     top: 30%;
     left: 15%;
     animation-name: boat;
-    animation-duration: 4s;
+    animation-duration: 15s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-out;
     
 }
 
 @keyframes boat {
-    0% {left: -30px;}
+    0% {left: -500px;}
+    80% {left: -30px;}
     100% {left: 15%;}
 }
-
-
 
 
 #santa {
@@ -96,6 +89,14 @@
     width: 100px;
     top: 25%;
     left: 75%;
+    animation: santaMove 6s linear;
+    z-index: 2;
+}
+
+@keyframes santaMove {
+  0% {left: 0px; top: 3%; transform: rotate(0deg);}
+    90% {left: 900px; top: 3%; transform: rotate(0);}
+    100% {left: 75%; top: 25%; transform: rotate(360deg);}
 }
 
 #snowpile {
@@ -128,6 +129,7 @@
     left: 15%;
     animation: bearMove 7s infinite linear;
     animation-fill-mode: forwards;
+    z-index: 2;
 }
 
 @keyframes bearMove {
@@ -135,6 +137,7 @@
     50% {left: 17%}
     100% {left: 15%;}
 }
+
 
 #sign {
     position: absolute;
@@ -269,7 +272,7 @@
     top: 2%;
     opacity: 0%;
     animation-name: dialog;
-    animation-delay: 4s;
+    animation-delay: 14s;
     animation-duration: 2s;
     animation-fill-mode: forwards;
 }
