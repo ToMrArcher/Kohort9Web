@@ -173,6 +173,7 @@ body{
     display: block;
     width: 1280px;
     height: 720px;
+    overflow: hidden;
     background-image: url(Images/background.jpg);
     background-repeat: no-repeat;
     background-size: 1280px 720px;
