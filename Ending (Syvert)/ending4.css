@@ -1,10 +1,11 @@
+/* 
+    Kohort 9 - Programmering
+    Syvert Andreas Eidjord
+    Kobling: ending4.html
+*/
+
 *{
     margin: 0;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -o-user-select: none;
-    user-select: none;
 }
 
 body{
