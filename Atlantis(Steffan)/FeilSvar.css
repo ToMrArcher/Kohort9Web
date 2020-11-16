@@ -1,21 +1,102 @@
+#blackBox{
+    position: absolute;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    
+    animation: transition;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    
+    
+    
+}
+@keyframes transition {
+    0% {
+        opacity: 1;
+    }
+    99% {
+        z-index: 1;
+    }
+    100% {
+        opacity: 0;
+        z-index: -1;
+        
+    }
+}
 
 
 
 
 
 
+#Neptune{
+    position: absolute;
+    top: 100px;
+    left: -390px;
+    opacity: 1;
+    transform: rotate(20deg);
+    transform-origin: bottom;
+    animation: Neptune, nepSwaying;
+    animation-duration: 10s, 11s;
+    animation-timing-function: linear, linear;
+    animation-iteration-count: 1, infinite;
+}
+@keyframes nepSwaying{
+    0%{
+        top: 100px;
+    }
+    33%{
+        top: 70px;
+    }
+    66%{
+        top: 150px;
+    }
+    100%{
+        top: 100px;
+    }
+}
 
 
 
 
 
+#dialogFeil{
+    position: absolute;
+    left: 600px;
+    top: 200px;
+    color: red;
+    font-size: 100px;
+}
 
+#dialogTryAgain{
+    position: absolute;
+    color: black;
+    left: 650px;
+    top: 300px;
+    font-size: 50px;
+    text-decoration: none;
+}
 
+#dialogTryAgain:hover{
+    border: 10px;
+    
+}
 
+#dialog1{
+    left: 150px;
+    top: 100px;
+}
 
-
-
-
+.dialog{
+    position: absolute;
+    border: 5px solid black;
+    display: inline;
+    padding: 50px;
+    border-radius: 100px;
+    background-color: white;
+}
 
 #blackLeftLayer{ 
     position: relative;

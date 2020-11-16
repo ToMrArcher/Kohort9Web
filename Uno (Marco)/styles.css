@@ -29,6 +29,8 @@ body{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    overflow: hidden;
 }
 
 .screen.finish {
@@ -310,9 +312,8 @@ body{
 
 @keyframes gone {
     to {
-        left: 1100px;
+        left: 1300px;
         top: 350;
-        opacity: 0%;
     };
 }
 
