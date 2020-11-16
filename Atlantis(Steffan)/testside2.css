@@ -320,7 +320,6 @@ background: radial-gradient(circle, rgba(195,34,34,1) 50%, rgba(255,255,255,0.26
 
 #blackLayerTop{
     position: relative;
-    padding: 1px;
     border: 500px solid black;
     top: -1000px;
 }
