@@ -37,6 +37,9 @@
         transparent 22px,
          #05317a 18px);
         background-repeat: repeat;
+    width: 3000px;
+     animation: seaMove 5s infinite linear;
+    animation-fill-mode: forwards;
 }
 
 .sea:before{
@@ -44,24 +47,28 @@
     content: "";
     background-color: #2d90af;
     height: 30px;
-    width: 1000vw;
     bottom: -30px;
-    
 }
+
+@keyframes seaMove {
+    0% {left: -200px;}
+    100% {left: 0px;}
+}
+
 #cloud {
     position: absolute;
     width: 200px;
     top: 4%;
     left: 0%;
-    animation: cloud 10s infinite linear;
+    animation: cloud 9400ms infinite linear;
     animation-fill-mode: forwards;
     
 }
 
 @keyframes cloud {
     0% {left: -50px; opacity: 0.3;}
-    20% {opacity: 1;}
-    100% {left: 1100px; opacity: 1;}
+    10% {opacity: 1;}
+    100% {left: 1500px; opacity: 1;}
 }
 
 #boat {
@@ -326,6 +333,7 @@ body{
     width: 1280px;
     height: 720px;
     background: #05317a;
+    overflow: hidden;
 }
 
 .inventory{

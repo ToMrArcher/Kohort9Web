@@ -64,12 +64,30 @@ body{
     position: absolute;
     top: 20px;
     right: 200px;
+
+    border: 5px solid black;
+    display: inline;
+    padding: 30px;
+    border-radius: 100px;
+    background-color: white;
+
+    animation-name: showNext;
+    animation-duration: 1s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+}
+
+.instructions.fade {
+    opacity: 0%;
+
+    animation-name: showNext;
+    animation-duration: 1s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
 }
 
 .instructions h1 {
-    font-family: Arial, sans-serif;
-    color: white;
-    text-shadow: 1px 3px 5px rgb(33, 33, 33);
+    font-size: 30px;
 }
 
 .villain {
@@ -78,8 +96,10 @@ body{
     top: 450px;
     left: 650px;
 
-    animation-name: villainToBoat, villainBoat;
-    animation-duration: 1s, 1s;
+    transform: rotateY(180deg);
+
+    animation-name: villainToBoat, villainInBoat;
+    animation-duration: 1s, 3s;
     animation-delay: 1s, 3s;
     animation-fill-mode: forwards;
 }
@@ -87,13 +107,13 @@ body{
 .villainBoat {
     position: absolute;
     width: 350px;
-    top: 200px;
+    top: 240px;
     left: 100px;
 
     transform: rotateY(180deg);
 
     animation-name: villainBoat;
-    animation-duration: 1s;
+    animation-duration: 3s;
     animation-delay: 3s;
     animation-fill-mode: forwards;
 }
@@ -159,11 +179,21 @@ body{
     position: absolute;
 
     width: 1280px;
+    height: 0px;
     bottom: 0px;
+
+    opacity: 0%;
+    
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+
+    border-radius: 100% 0% 100% 0% / 21% 100% 0% 79%;
 
     animation-name: water;
     animation-duration: 5s;
-    animation-timing-function: linear;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
 }
 
 .assembledPart {
@@ -200,25 +230,6 @@ body{
     animation-fill-mode: forwards;
 }
 
-
-#firstText {
-    opacity: 100%;
-
-    animation-name: hideIntro;
-    animation-duration: 1s;
-    animation-delay: 4s;
-    animation-fill-mode: forwards;
-}
-
-#secondText {
-    opacity: 0%;
-
-    animation-name: showNext;
-    animation-duration: 1s;
-    animation-delay: 4s;
-    animation-fill-mode: forwards;
-}
-
 @keyframes showNext {
     to {
         opacity: 100%;
@@ -227,41 +238,67 @@ body{
 }
 
 @keyframes hideIntro {
-    to {
+    75% {
         opacity: 0%;
+    }
+    100% {
         z-index: -10;
     }
 }
 
 @keyframes villainToBoat {
     to {
-        top: 300px;
+        top: 350px;
         left: 220px;
     }
 }
 
+@keyframes villainInBoat {
+    10% {
+        transform: rotateY(0deg) scale(1);
+    }
+    55% {
+        opacity: 100%;
+    }
+    60% {
+        opacity: 0%;
+    }
+    100% {
+        top: 370px;
+        left: 740px;
+        transform: rotateY(0deg) scale(0);
+        opacity: 0%;
+    }
+}
+
 @keyframes villainBoat {
-    to {
-        left: 1000px;
+    55% {
+        opacity: 100%;
+    }
+    60% {
+        opacity: 0%;
+    }
+    100% {
+        top: 300px;
+        left: 600px;
+        transform: rotateY(180deg) scale(0);
         opacity: 0%;
     }
 }
 
 @keyframes water {
-    from {
-        opacity: 0%;
-        width: 0px;
-    };
-
     to {
-        opacity: 100%;
-        width: 1280px;
+        opacity: 95%;
+        height: 550px;
+
+        border-radius: 100% 0% 100% 0% / 0% 100% 0% 100%;
     };
 }
 
 @keyframes boat {
     to {
         transform: rotate(-20deg);
+        top: 300px;
     }
 }
 
