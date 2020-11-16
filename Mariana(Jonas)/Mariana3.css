@@ -25,11 +25,22 @@
     }
 }
 
+@font-face{
+    font-family: 'semiBold';
+    src:url(Fonts/Montserrat-SemiBold.ttf);
+    font-style: normal;
+} /*Importerer fonten*/
 #text{
     position: absolute;
-    color: white;
-    left: 300px;
+    left: 280px;
     top: 350px;
+    font-family: semiBold;
+    
+    border: 5px solid black;
+    display: inline;
+    padding: 7px;
+    border-radius: 100px;
+    background-color: white;
     
     animation-name: text;
     animation-duration: 15s;

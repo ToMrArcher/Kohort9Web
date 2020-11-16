@@ -97,19 +97,19 @@
 }
 
 @font-face{
-    font-family: 'SemiBold';
+    font-family: 'semiBold';
     src:url(Fonts/Montserrat-SemiBold.ttf);
     font-style: normal;
 } /*Importerer fonten*/
 #text1{
     position: absolute;
     top: 100px;
-    left: 270px;
-    font-family: SemiBold;
+    left: 280px;
+    font-family: semiBold;
     
     border: 5px solid black;
     display: inline;
-    padding 50px;
+    padding: 9px;
     border-radius: 100px;
     background-color: white;
     
