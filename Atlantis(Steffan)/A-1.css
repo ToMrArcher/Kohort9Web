@@ -351,6 +351,7 @@ body{
     left: 365px;
     opacity: 10%;
     transition: opacity linear .5s;
+    animation: startInventory .1s;
 }
 
 .inventoryItem{
@@ -368,4 +369,12 @@ body{
 
 .inventoryItem:last-child{
     margin:0;
+}
+@keyframes startInventory{
+    0%{
+        opacity: 10%;
+    }
+    100%{
+        opacity: 10%;
+    }
 }
