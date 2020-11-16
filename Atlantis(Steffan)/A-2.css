@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(../Montserrat/Montserrat-SemiBold.ttf);
+}
+
 #background{
     position: absolute;
     width: 100%;
@@ -35,6 +40,7 @@
     padding: 50px;
     border-radius: 100px;
     background-color: white;
+    font-family: montserrat;
 }
 
 #dialog1{
@@ -150,6 +156,7 @@
     animation-delay: 15s;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
+    font-family: montserrat;
 }
 @keyframes fancyBoxMvmnt{
     from {
