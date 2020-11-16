@@ -50,6 +50,7 @@ body{
     left: 365px;
     opacity: 10%;
     transition: opacity linear .5s;
+    animation: startInventory .1s;
 }
 
 .inventoryItem{
@@ -143,6 +144,15 @@ body{
     right: 120px;
     animation: alex 2s ease-in-out infinite;
     transform: rotateY(180deg);
+}
+
+@keyframes startInventory{
+    0%{
+        opacity: 10%;
+    }
+    100%{
+        opacity: 10%;
+    }
 }
 
 @keyframes boat {
