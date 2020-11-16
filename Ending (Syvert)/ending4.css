@@ -96,7 +96,21 @@ body{
     background-color: white;
     top: 100px;
     left: 400px;
-    animation: speechBubble 2s linear 1s;
+    animation: speechBubble 4s linear 1s;
+    opacity: 0%;
+    animation-fill-mode: forwards;
+}
+
+.speechBubble2 {
+    position: absolute;
+    border: 5px solid black;
+    display: inline;
+    padding: 50px;
+    border-radius: 100px;
+    background-color: white;
+    top: 100px;
+    left: 400px;
+    animation: speechBubble 4s linear 5s;
     opacity: 0%;
     animation-fill-mode: forwards;
 }
@@ -139,8 +153,14 @@ body{
     0%{
         opacity: 0%;
     }
-    100%{
+    20%{
         opacity: 100%;
+    }
+    80%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 0;
     }
 }
 
