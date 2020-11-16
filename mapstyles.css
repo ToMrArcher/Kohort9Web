@@ -3,7 +3,7 @@
     position: absolute;
 
     top: 50px;
-    right: 200px;
+    right: 100px;
 
     width: 250px;
 
@@ -13,6 +13,28 @@
     animation-fill-mode: forwards;
 }
 
+.map {
+    position: absolute;
+
+    width: 1280px;
+    height: 720px;
+
+    opacity: 0%;
+    z-index: -10%;
+
+    top: 0px;
+    
+    background-image: url(images/world.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    animation-name: continue-arrow;
+    animation-duration: 1s;
+    animation-delay: 8s;
+    animation-fill-mode: forwards;
+}
+
+/*
 .map-image {
     position: absolute;
 
@@ -29,18 +51,27 @@
     animation-delay: 8s;
     animation-fill-mode: forwards;
 }
+*/
 
-.map-text {
+.map-texts {
     position: absolute;
+    display: flex;
+
+    bottom: 25px;
+    width: 1280px;
 
     opacity: 0%;
 
-    bottom: 100px;
-    width: 1280px;
-    text-align: center;
-    font-size: 50px;
-    color: white;
-    text-shadow: -1px 2px 0px rgb(33, 33, 33);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 180px;
+
+    background-image: url(images/scroll.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 
     animation-name: map-text;
     animation-duration: 3s;
@@ -48,8 +79,20 @@
     animation-fill-mode: forwards;
 }
 
-.map-text.year {
-    bottom: 50px;
+.map-text {
+    position: relative;
+
+    margin-top: -20px;
+
+    text-align: center;
+    font-size: 38px;
+    color: black;
+    padding: 10px;
+    padding-bottom: 0px;
+}
+
+.map-texts:nth-child(2) {
+    margin-bottom: -15px;
 }
 
 .map-boat {
@@ -61,11 +104,11 @@
     width: 75px;
 
     top: 392px;
-    left: 1234px;
+    left: 1100px; /*1234 = -134*/
 
-    animation-name: continue-arrow, boat-move-reef;
-    animation-duration: 1s, 3s;
-    animation-delay: 8s, 10s;
+    animation-name: continue-arrow, boat-move-reef, boat-move-marianna, boat-move-atlantis, boat-move-northpole, boat-move-norway;
+    animation-duration: 1s, 3s, 4s, 6s, 4s, 4s;
+    animation-delay: 8s, 10s, 13s, 17s, 23s, 27s;
     animation-fill-mode: forwards;
 }
 
@@ -82,7 +125,7 @@
     background-color: red;
 
     top: 415px;
-    left: 1271.5px;
+    left: 1137.5px;
 
     animation-name: continue-arrow;
     animation-duration: 1s;
@@ -115,7 +158,7 @@
 @keyframes boat-move-reef {
     to {
         top: 432px;
-        left: 1290px;
+        left: 1166px;
         transform: rotate(40deg);
     }
 }
@@ -123,7 +166,7 @@
 @keyframes boat-move-marianna {
     0% {
         top: 432px;
-        left: 1290px;
+        left: 1166px;
         transform: rotate(40deg);
     }
 
@@ -137,14 +180,14 @@
 
     100% {
         top: 250px;
-        left: 1290px;
+        left: 1166px;
     }
 }
 
 @keyframes boat-move-atlantis {
     0% {
         top: 250px;
-        left: 1290px;
+        left: 1166px;
     }
 
     20% {
@@ -153,19 +196,19 @@
 
     33% {
         top: 580px;
-        left: 1290px;
+        left: 1166px;
         transform: rotateY(180deg);
     }
 
     66% {
         top: 500px;
-        left: 680px;
+        left: 546px;
         transform: rotateY(180deg) rotateZ(-20deg);
     }
     
     100% {
         top: 300px;
-        left: 600px;
+        left: 466px;
         transform: rotateY(180deg);
     }
 }
@@ -173,7 +216,7 @@
 @keyframes boat-move-northpole {
     0% {
         top: 300px;
-        left: 600px;
+        left: 466px;
         transform: rotateY(180deg);
     }
 
@@ -187,7 +230,7 @@
 
     100% {
         top: 50px;
-        left: 700px;
+        left: 580px;
         transform: rotateY(0deg) rotateZ(0deg);
     }
 }
@@ -195,7 +238,7 @@
 @keyframes boat-move-norway {
     0% {
         top: 50px;
-        left: 700px;
+        left: 580px;
         transform: rotateY(0deg) rotateZ(0deg);
     }
 
@@ -205,7 +248,7 @@
 
     100% {
         top: 120px;
-        left: 760px;
+        left: 626px;
         transform: rotateY(0deg) rotateZ(0deg);
     }
 }
