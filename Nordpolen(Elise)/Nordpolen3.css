@@ -11,21 +11,14 @@
     top: 0%;
     left: 0%;
     animation: animateOne 10s infinite linear; 
-    
 }
 
 @keyframes animateOne {
-    0%
-    {
-        background-position: 0px 0px 
-    }
-    100%
-    {
-        background-position: 10px 500px
-    }
+    0% { background-position: 0px 0px; }
+    100% { background-position: 10px 500px; }
 }
 
-.sea{
+.sea {
     position: relative;
     left: 0;
     top: 300px;
@@ -33,16 +26,16 @@
     height: 30px;
     background-size: 40px 100px;
     background-image: radial-gradient(
-        circle at 20px -5px,
-        transparent 22px,
-         #05317a 18px);
-        background-repeat: repeat;
+    circle at 20px -5px,
+    transparent 22px,
+    #05317a 18px);
+    background-repeat: repeat;
     width: 3000px;
-     animation: seaMove 5s infinite linear;
+    animation: seaMove 5s infinite linear;
     animation-fill-mode: forwards;
 }
 
-.sea:before{
+.sea:before { 
     position: relative;
     content: "";
     background-color: #2d90af;
@@ -51,8 +44,8 @@
 }
 
 @keyframes seaMove {
-    0% {left: -200px;}
-    100% {left: 0px;}
+    0% { left: -200px; }
+    100% { left: 0px; }
 }
 
 #cloud {
@@ -62,13 +55,12 @@
     left: 0%;
     animation: cloud 9400ms infinite linear;
     animation-fill-mode: forwards;
-    
 }
 
 @keyframes cloud {
-    0% {left: -50px; opacity: 0.3;}
-    10% {opacity: 1;}
-    100% {left: 1500px; opacity: 1;}
+    0% { left: -50px; opacity: 0.3; }
+    10% { opacity: 1; }
+    100% { left: 1500px; opacity: 1; }
 }
 
 #boat {
@@ -77,23 +69,36 @@
     top: 30%;
     left: 15%;
     animation: boat1 3s linear 3s;
-    animation-fill-mode: forwards;
-    
+    animation-fill-mode: forwards;  
 }
 
 @keyframes boat1 {
-    0% {left: 15%;top: 30%;}
-    80% {opacity: 0;}
-    100% {left: 100%; top: 500px; opacity: 0;}
+    0% { left: 15%;top: 30%; }
+    80% { opacity: 0; }
+    100% { left: 100%; top: 500px; opacity: 0; }
 }
-
-
 
 #santa {
     position: absolute;
     width: 100px;
     top: 25%;
     left: 75%;
+    display: inline-block;
+}
+
+#santa:hover {
+    animation-name: bounce;
+    animation-duration: 4s;
+    animation-timing-function: ease;
+    transform-origin: bottom;
+}
+
+@keyframes bounce {
+    0%   { transform: scale(1,1)    translateY(0); }
+    10%  { transform: scale(1.1,.9) translateY(0); }
+    30%  { transform: scale(.9,1.1) translateY(-30px); }
+    50%  { transform: scale(1,1)    translateY(0); }
+    100% { transform: scale(1,1)    translateY(0); }
 }
 
 #snowpile {
@@ -109,14 +114,13 @@
     top: 70%;
     left: 5%;
     animation: snowMove 7s infinite linear;
-    animation-fill-mode: forwards;
-    
+    animation-fill-mode: forwards; 
 }
 
 @keyframes snowMove {
-    0% {left: 5%}
-    50% {left: 7%}
-    100% {left: 5%;}
+    0% { left: 5%; }
+    50% { left: 7%; }
+    100% { left: 5%; }
 }
 
 #bear {
@@ -126,13 +130,13 @@
     left: 15%;
     animation: bearMove 7s infinite linear;
     animation-fill-mode: forwards;
-    
+    transition: transform 2s ease-in-out;
 }
 
 @keyframes bearMove {
-    0% {left: 15%}
-    50% {left: 17%}
-    100% {left: 15%;}
+    0% { left: 15%; }
+    50% { left: 17%; }
+    100% { left: 15%; }
 }
 
 #sign {
@@ -148,14 +152,12 @@
     height: 600px;
     top: 40%;
     animation: wind 10s infinite linear;
-    
 }
 
 @keyframes wind {
-    0% {right: -50px;}
-    50% {right: 10%}
-    100% {right: -50px}
-
+    0% { right: -50px; }
+    50% { right: 10%; }
+    100% { right: -50px; }
 }
 
 #gift1 {
@@ -209,31 +211,31 @@
     right: 60%;
     z-index: 1;
     transition-property: opacity;
-    transition-duration: 700ms;
-   
+    transition-duration: 700ms; 
 } 
 
 #gift3:hover{
     opacity: 0%;
 }
 
-
 #giftbag {
     position: absolute;
     width: 90px;
     top: 32%;
-    left: 85%
+    left: 85%;
+    transition: transform 1500ms ease-in-out;
 } 
+
+#giftbag:hover {
+    transform: rotate(360deg);
+}
 
 .top {
     position: absolute;
     width: 100%;
     height: 45%;
     background-color: #3a63a6;
-    
 }
-
-
 
 #lighter {
     position: absolute;
@@ -242,15 +244,13 @@
     animation-name: lighters;
     animation-duration: 2s;
     animation-fill-mode: forwards;
-   
+    display: inline-block;
 }
 
 @keyframes lighters {
-    0% {top: -300px;}
-    100% {top: 0%; width: 55px; left: 5px }
-    
+    0% { top: -300px; }
+    100% { top: 0%; width: 55px; left: 5px; }
 }
-
 
 body{
     width: 100vw;
@@ -260,7 +260,6 @@ body{
     justify-content: center;
     background: black;
 }
-
 
 .screen{
     position: relative;
