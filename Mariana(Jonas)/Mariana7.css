@@ -10,23 +10,7 @@
     left: 750px;
     width: 200px;
     height: 150px;
-    
-    animation-name: boat;
-    animation-duration: 4s;
-    animation-timing-function: linear;
 }
-
-@keyframes boat{
-    0%{
-        top: 350px;
-        left: 100px;
-    }
-    100%{
-        top: 400px;
-        left: 750px;
-    }
-}
-
 
 #fish{
     position: absolute;
@@ -46,30 +30,6 @@
     transform: rotateY(180deg);
 }
 
-#closedChest{
-    position: absolute;
-    left: 1000px;
-    top: 500px;
-    width: 100px;
-    height: 100px;
-    
-    animation-name: closedChest;
-    animation-duration: 4s;
-    animation-timing-function: linear;
-    opacity: 0;
-}
-@keyframes closedChest{
-    0%{
-        opacity: 1;
-    }
-    99%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 0;
-    }
-}
-
 #openChest{
     position: absolute;
     left: 1000px;
@@ -83,24 +43,13 @@
     opacity: 1;
 }
 
-@keyframes openChest{
-    0%{
-        opacity: 0;
-    }
-    99%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-}
-
 #wheel{
     position: absolute;
-    width: 50px;
-    height: 50px;
-    left: 1010px;
-    top: 520px;
+    width: 80px;
+    height: 80px;
+    left: 470px;
+    top: 625px;
+    z-index: 1;
     
     animation-name: wheel;
     animation-duration: 4s;
@@ -109,54 +58,51 @@
 
 @keyframes wheel{
     0%{
-        opacity: 0;
-    }
-    99%{
-        opacity: 0;
+    left: 1010px;
+    top: 520px;
+    width: 50px;
+    height: 50px;
+        
     }
     100%{
-        opacity: 1;
+        left: 470px;
+        top: 625px;
     }
 }
 
+.screen.finish {
+    animation-name: continue-background;
+    animation-duration: 1s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+}
 
-@font-face{
-    font-family: 'semiBold';
-    src:url(Fonts/Montserrat-SemiBold.ttf);
-    font-style: normal;
-} /*Importerer fonten*/
-#text{
+.continue {
+    opacity: 0%;
     position: absolute;
-    left: 900px;
-    top: 400px;
-    font-family: semiBold;
-    
-    border: 5px solid black;
-    display: inline;
-    padding: 7px;
-    border-radius: 100px;
-    background-color: white;
-    
-    animation-name: text;
-    animation-duration: 5s;
-    animation-timing-function: linear;
+    top: 200px;
+    left: 500px;
+
+    animation-name: continue-arrow;
+    animation-duration: 1s;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
 }
 
-@keyframes text{
-    0%{
-        opacity: 0;
-    }
-    99%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
+@keyframes continue-background {
+    to {
+        z-index: -10;
+        opacity: 0%;
     }
 }
 
-{
-    margin: 0;
+@keyframes continue-arrow {
+    to {
+        opacity: 100%;
+        z-index: 10;
+    }
 }
+
 
 body{
     width: 100vw;

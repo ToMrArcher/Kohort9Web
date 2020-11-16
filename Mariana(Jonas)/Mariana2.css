@@ -1,3 +1,9 @@
+#cannonBarrel{
+    width: 90%;
+    max-height: 90%;
+    
+}
+
 #boat{
     position: absolute;
     top: 450px;
@@ -120,7 +126,20 @@ body{
     left: 365px;
     opacity: 10%;
     transition: opacity linear .5s;
+    
+    animation-name: inventory;
+    animation-duration: 1s;
 }
+
+@keyframes inventory{
+    0%{
+        opacity: 10%;
+    }
+    100%{
+        opacity: 10%;
+    }
+}
+
 
 .inventoryItem{
     float: left;
@@ -129,6 +148,9 @@ body{
     background: white;
     border-radius: 10px;
     margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .inventory:hover{

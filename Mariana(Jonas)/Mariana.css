@@ -1,3 +1,9 @@
+#cannonBarrel{
+    width: 90%;
+    max-height: 90%;
+    
+}
+
 #boat{
     position: absolute;
     top: 100px;
@@ -9,7 +15,6 @@
     animation-duration: 5s;
     animation-timing-function: ease-in;
 }
-
 @keyframes moveBoat{
     0%{
         opacity: 0;
@@ -25,6 +30,7 @@
     }
     
 }
+
 #bullet{
     position: relative;
     height: 30px;
@@ -40,14 +46,13 @@
     animation-delay: 6s;
     animation-timing-function: linear;
 }
-
 @keyframes bullet{
     0%{
         top: 190px;
         left: 1300px;
     }
     10%{
-        top: 160px;
+        top: 150px;
         left: 1170px;
     }
     20%{
@@ -87,6 +92,7 @@
         left: -10px;
     }
 }
+
 #sky{
     position: absolute;
     background-color: #bd4f6c;
@@ -162,6 +168,18 @@ body{
     left: 365px;
     opacity: 10%;
     transition: opacity linear .5s;
+    
+    animation-name: inventory;
+    animation-duration: 1s;
+}
+
+@keyframes inventory{
+    0%{
+        opacity: 10%;
+    }
+    100%{
+        opacity: 10%;
+    }
 }
 
 .inventoryItem{
@@ -171,6 +189,9 @@ body{
     background: white;
     border-radius: 10px;
     margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .inventory:hover{

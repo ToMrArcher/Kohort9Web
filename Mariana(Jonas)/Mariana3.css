@@ -1,57 +1,80 @@
+#cannonBarrel{
+    width: 90%;
+    max-height: 90%;
+    
+}
+
 #boat{
     position: absolute;
-    top: 350px;
+    top: 720px;
     width: 200px;
     height: 150px;
     left: 100px;
-    opacity: 0.08;
+    opacity: 0;
     
     animation-name: dive;
-    animation-duration: 4s;
-    animation-timing-function: linear;
+    animation-duration: 6s;
 }
 
 @keyframes dive{
     0%{
-        top: -100px;
-        opacity: 0;
+        top: 450px;
+        left: 100px;
+        opacity: 1;
     }
-    30%{
-        opacity: 0;
+    40%{
+        opacity: 0.0000001;
     }
     100%{
-        top: 350px;
-        opacity: 0.08;
+        top: 720px;
+        left: 100px;
+        opacity: 0;
     }
 }
-
-@font-face{
-    font-family: 'semiBold';
-    src:url(Fonts/Montserrat-SemiBold.ttf);
-    font-style: normal;
-} /*Importerer fonten*/
-#text{
-    position: absolute;
-    left: 280px;
-    top: 350px;
-    font-family: semiBold;
+#bullet{
+    position: relative;
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    background-color: black;
+    left: 1300px;
+    top: 200px;
     
-    border: 5px solid black;
-    display: inline;
-    padding: 7px;
-    border-radius: 100px;
-    background-color: white;
-    
-    animation-name: text;
-    animation-duration: 15s;
-    opacity: 1;
+    animation-name: bullet;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-timing-function: linear;
 }
 
-@keyframes text{
+@keyframes bullet{
     0%{
-        opacity: 0
+        left: 1300px;
+        top: 200px;
     }
-    80%{
+    100%{
+        top: 450px;
+        left: -10px;
+    }
+}
+
+#arrow{
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    left: 1000px;
+    top: 600px;
+    opacity: 1;
+    
+    animation-name: arrow;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+}
+@keyframes arrow{
+    0%{
+        opacity: 0;
+    }
+    90%{
         opacity: 0;
     }
     100%{
@@ -59,131 +82,15 @@
     }
 }
 
-#fish2{
-    position: absolute;
-    height: 600px;
-    width: 600px;
-    left: 600px;
-    top: 100px;
-    
-    animation-name: fish2;
-    animation-duration: 15s;
-    animation-timing-function: linear;
-    opacity: 0.2;
-}
 
-@keyframes fish2{
-    0%{
-        left: 650px;
-        top: 10px;
-        opacity: 0;
-    }
-    10%{
-        left: 650px;
-        top: 10px;
-        opacity: 0.08;
-        width: 200px;
-        height: 200px;
-    }
-    30%{
-        top: 40px;
-        width: 300px;
-        height: 300px;
-    }
-    50%{
-        transform: rotateY(0deg);
-        
-    }
-    60%{
-        left: 300px;
-        top: 300px;
-        width: 450px;
-        height: 450px;
-        transform: rotateY(180deg);
-    }
-    75%{
-        left: 450px;
-        top: 80px;
-    }
-    90%{
-        left: 600px;
-        top: 100px;
-        transform: rotateY(180deg);
-        width: 600px;
-        height: 600px;
-    }
-}
-
-#fish{
+#sky{
     position: absolute;
-    height: 600px;
-    width: 600px;
-    left: 600px;
-    top: 100px;
-    
-    animation-name: fish;
-    animation-duration: 15s;
-    animation-timing-function: linear;
-    opacity: 0.2;
-}
+    background-color: #bd4f6c;
+    background-image: linear-gradient(326deg, #bd4f6c 0%, #d7816a 74%);
 
-@keyframes fish{
-    0%{
-        left: 650px;
-        top: 10px;
-        opacity: 0;
-    }
-    10%{
-        left: 650px;
-        top: 10px;
-        opacity: 0.08;
-        width: 200px;
-        height: 200px;
-    }
-    30%{
-        top: 40px;
-        width: 300px;
-        height: 300px;
-    }
-    50%{
-        transform: rotateY(0deg);
-        
-    }
-    60%{
-        left: 300px;
-        top: 300px;
-        width: 450px;
-        height: 450px;
-        transform: rotateY(180deg);
-    }
-    75%{
-        left: 450px;
-        top: 80px;
-    }
-    90%{
-        left: 600px;
-        top: 100px;
-        transform: rotateY(180deg);
-        width: 600px;
-        height: 600px;
-    }
-}
-
-#box{
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    left: 613px;
-    top: 380px;
-    
-}
-#box2{
-    position: absolute;
     width: 1280px;
-    height: 720px;
-    background-color: black;
-    opacity: 0.9777
-    }
+    height: 200px;
+}
 
 {
     margin: 0;
@@ -196,7 +103,6 @@ body{
     align-items: center;
     justify-content: center;
     background: black;
-    z-index: 0;
 }
 
 .screen{
@@ -204,9 +110,8 @@ body{
     display: block;
     width: 1280px;
     height: 720px;
-    background-image: url(Images/background.jpg);
-    background-repeat: no-repeat;
-    background-size: 1280px 720px;
+    background: rgb(6,4,47);
+    background: linear-gradient(0deg, rgba(6,4,47,1) 6%, rgba(30,50,191,1) 59%);
 }
 
 .inventory{
@@ -217,6 +122,18 @@ body{
     left: 365px;
     opacity: 10%;
     transition: opacity linear .5s;
+    
+    animation-name: inventory;
+    animation-duration: 1s;
+}
+
+@keyframes inventory{
+    0%{
+        opacity: 10%;
+    }
+    100%{
+        opacity: 10%;
+    }
 }
 
 .inventoryItem{
@@ -226,6 +143,9 @@ body{
     background: white;
     border-radius: 10px;
     margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .inventory:hover{
