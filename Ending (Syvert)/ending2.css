@@ -89,6 +89,7 @@ body{
     top: 625px;
     left: 670px;
     z-index: 5;
+    height: 30px;
 }
 
 .lighter{
@@ -181,6 +182,49 @@ body{
     animation-fill-mode: forwards;
 }
 
+.buildingCloud{
+    position: absolute;
+    width: 300px;
+    left: 200px;
+    top: 100px;
+    z-index: 100;
+    opacity: 0;
+    animation: buildingCloud 2s linear 2.5s;
+}
+
+@keyframes buildingCloud{
+    0%{
+        transform: scale(0) rotate(0deg);
+    }
+    20%{
+        opacity: 1;
+        transform: scale(1) rotate(80deg);
+    }
+    80%{
+        opacity: 1;
+        transform: scale(1) rotate(280deg);
+    }
+    100%{
+        opacity: 0;
+        transform: scale(0) rotate(360deg);
+    }
+}
+
+.cloud {
+    position: absolute;
+    width: 200px;
+    top: 4%;
+    left: 0%;
+    animation: cloud 9400ms infinite linear;
+    animation-fill-mode: forwards;
+    z-index: 0;
+}
+
+@keyframes cloud {
+    0% {left: -50px; opacity: 0.3;}
+    10% {opacity: 1;}
+    100% {left: 1500px; opacity: 1;}
+}
 
 @keyframes speechBubble{
     0%{
