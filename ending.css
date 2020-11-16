@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+}
+
+.screen{
+    position: relative;
+    display: block;
+    width: 1280px;
+    height: 720px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    background-image: url(images/menu-world.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@font-face {
+    font-family: MontserratBold;
+    src: url(Montserrat/Montserrat-ExtraBold.ttf);
+}
+
+.menu {
+    width: 40%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu h1 {
+    font-family: MontserratBold;
+    color: white;
+}
+
+.menu h3 {
+    font-family: MontserratBold;
+    color: white;
+}
+
+.menu a {
+    font-family: MontserratBold;
+    font-size: 20px;
+
+    margin-top: 40px;
+
+    background-color: white;
+    color: rgb(32, 32, 32);
+    padding: 20px 50px;
+
+    transition: background-color 0.3s, color 0.3s, padding 0.3s;
+
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: rgba(32, 32, 32, 0.8);
+    padding: 15px 45px;
+    cursor: pointer;
+}
+
+.menu a:active {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: rgba(32, 32, 32, 0.7);
+    padding: 10px 40px;
+    cursor: pointer;
+}
