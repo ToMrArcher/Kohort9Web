@@ -23,6 +23,7 @@
     top: 5px;
     transform: rotateY(180deg);
 }
+
 #openChest{
     position: absolute;
     left: 1000px;

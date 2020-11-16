@@ -52,6 +52,18 @@
     animation-timing-function: linear;
     opacity: 0;
 }
+@keyframes closedChest{
+    0%{
+        opacity: 1;
+    }
+    99%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
 #openChest{
     position: absolute;
     left: 1000px;
@@ -65,17 +77,6 @@
     opacity: 1;
 }
 
-@keyframes closedChest{
-    0%{
-        opacity: 1;
-    }
-    99%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 0;
-    }
-}
 @keyframes openChest{
     0%{
         opacity: 0;

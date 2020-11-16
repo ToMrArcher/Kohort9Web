@@ -37,6 +37,9 @@
         transparent 22px,
          #05317a 18px);
         background-repeat: repeat;
+    width: 3000px;
+     animation: seaMove 5s infinite linear;
+    animation-fill-mode: forwards;
 }
 
 .sea:before{
@@ -44,39 +47,36 @@
     content: "";
     background-color: #2d90af;
     height: 30px;
-    width: 1000vw;
     bottom: -30px;
-    
 }
+
+@keyframes seaMove {
+    0% {left: -200px;}
+    100% {left: 0px;}
+}
+
 #cloud {
     position: absolute;
     width: 200px;
     top: 4%;
     left: 0%;
-    animation: cloud 20s infinite linear;
+    animation: cloud 9400ms infinite linear;
     animation-fill-mode: forwards;
     
 }
 
 @keyframes cloud {
-    0% {left: -50px;}
-    100% {left: 100%;}
+    0% {left: -50px; opacity: 0.3;}
+    10% {opacity: 1;}
+    100% {left: 1500px; opacity: 1;}
 }
 
 #boat {
     position: absolute;
     width: 250px;
-    top: 190px;
+    top: 30%;
     left: 15%;
-    animation: boat1 5s linear 20s;
-    animation-fill-mode: forwards;
     
-    
-}
-
-@keyframes boat1 {
-    0% {left: 15%;top: 190px;}
-    100% {left: 100%; top: 500px; opacity: 0.3;}
 }
 
 
@@ -93,6 +93,38 @@
     width: 300px;
     top: 33%;
     left: 65%;
+}
+
+#snowpile2 {
+    position: absolute;
+    width: 300px;
+    top: 70%;
+    left: 5%;
+    animation: snowMove 7s infinite linear;
+    animation-fill-mode: forwards;
+    
+}
+
+@keyframes snowMove {
+    0% {left: 5%}
+    50% {left: 7%}
+    100% {left: 5%;}
+}
+
+#bear {
+    position: absolute;
+    width: 125px;
+    top: 55%;
+    left: 15%;
+    animation: bearMove 7s infinite linear;
+    animation-fill-mode: forwards;
+    
+}
+
+@keyframes bearMove {
+    0% {left: 15%}
+    50% {left: 17%}
+    100% {left: 15%;}
 }
 
 #sign {
@@ -187,11 +219,9 @@
 @keyframes a {
     0% {top: 55%; width: 100px}
     100% {top: 0%; right:50%;width: 200px;}
-    
 
-        
-    
 }
+
 #gift3:hover{
     opacity: 0%;
 }
@@ -228,7 +258,7 @@
     top: 2%;
     opacity: 0;
     animation-name: speak;
-    animation-duration: 10s;
+    animation-duration: 7s;
     animation-fill-mode: forwards;
     animation-delay: 1700ms;
     
@@ -238,6 +268,7 @@
 @keyframes speak{
     0% {top: -0%;}
     10% {top: 2%; opacity: 1;}
+    90% {top: 2%; opacity: 1;}
     100% {top: 2%; opacity: 0;}
 }
 
@@ -259,12 +290,14 @@
     animation-name: talk;
     animation-duration: 7s;
     animation-fill-mode: forwards;
-    animation-delay: 12s;
+    animation-delay: 9s;
 }
 
 @keyframes talk {
     0% {top: -0%}
-    100% {top: 2%; opacity: 1;}
+    10% {top: 2%; opacity: 1;}
+    90% {top: 2%; opacity: 1;}
+    100% {top: 2%; opacity: 0;}
 }
 
 #lighter {
@@ -275,7 +308,7 @@
     animation-name: lighters;
     animation-duration: 3s;
     animation-fill-mode: forwards;
-    animation-delay: 15s;
+    animation-delay: 12s;
     
     
 }
@@ -300,6 +333,7 @@ body{
     width: 1280px;
     height: 720px;
     background: #05317a;
+    overflow: hidden;
 }
 
 .inventory{
@@ -314,11 +348,19 @@ body{
 
 .inventoryItem{
     float: left;
+    position: relative;
     width: 90px;
     height: 90px;
     background: white;
     border-radius: 10px;
     margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inventoryItemPicture{
+    width: 90%;
 }
 
 .inventory:hover{

@@ -1,0 +1,74 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#blackLeftLayer{ 
+    position: relative;
+    border: 360px solid black;
+    left: -1280px;
+}
+
+
+*{
+    margin: 0;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+}
+
+.screen{
+    position: relative;
+    display: block;
+    width: 1280px;
+    height: 720px;
+    background: blue;
+}
+
+.inventory{
+    position: absolute;
+    width: 500px;
+    height: 90px;
+    top: 620px;
+    left: 365px;
+    opacity: 10%;
+    transition: opacity linear .5s;
+}
+
+.inventoryItem{
+    float: left;
+    width: 90px;
+    height: 90px;
+    background: white;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.inventory:hover{
+    opacity: 100%;
+}
+
+.inventoryItem:last-child{
+    margin:0;
+}
+

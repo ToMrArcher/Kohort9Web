@@ -55,13 +55,13 @@
     left: 600px;
     top: 100px;
     
-    animation-name: fish1;
+    animation-name: fish2;
     animation-duration: 15s;
     animation-timing-function: linear;
     opacity: 0.2;
 }
 
-@keyframes fish1{
+@keyframes fish2{
     0%{
         left: 650px;
         top: 10px;

@@ -13,7 +13,7 @@ body{
 
 .screen{
     display: block;
-    position: relative;
+    position: absolute;
     width: 1280px;
     height: 720px;
     background: rgb(0, 150, 255);
@@ -55,14 +55,19 @@ body{
 }
 
 .boat{
-    position: relative;
+    position: absolute;
     top: 400px;
-    left: 1400px;
+    left: 500px;
     width: 200px;
     animation-name: boat;
     animation-duration: 15s;
     animation-timing-function: linear;
     
+}
+.rigg {
+    position: absolute;
+    width: 400px;
+    top: -30px;
 }
 
 .sea{
@@ -79,15 +84,28 @@ body{
         background-repeat: repeat;
 }
 
-.sea:before{
-    position: relative;
-    content: "";
-    background-color: #2d90af;
-    height: 30px;
-    width: 1000vw;
-    bottom: -30px;
+.cleenup:hover {
+    position: absolute;
+    width: 100px;
+
 }
 
+
+.speechBubble {
+    position: absolute;
+    border: 5px solid black;
+    display: inline;
+    padding: 50px;
+    border-radius: 100px;
+    background-color: white;
+    top: 100px;
+    left: 250px;
+    animation: speechBubble 10s linear;
+    opacity: 0;
+    animation-delay: 10s;
+    animation-fill-mode: forwards; 
+    z-index: 1000;
+}
 /*// bobler i vannet, endrer duration og delay slik at det gir en autentisk effekt på havet //*/
 
 .bubbles{
@@ -107,8 +125,8 @@ body{
     height: 10px;
     background: #81d4fa;
     border-radius: 50%;
-    opacity: 0.5;
-    animation: flying 10s infinite ease-in;
+    opacity: 0;
+    animation: bobble 3s infinite ease-in;
 }
 .bubble:nth-child(1){
     width: 20px;
@@ -153,15 +171,15 @@ body{
     animation-delay: 5s;
 }
 
-
+/*// cloud er skyene som flyter rundt, setter lightning i samma class som cloud for at det skal få samma animasjon /*/
 
 .cloudSection {
-    position: relative;
+    position: absolute;
 
     width: 100px;
     top: 50px;
 
-    animation: wind 60s linear infinite reverse;
+    animation: wind 60s linear infinite;
 }
 
 .cloudSection .cloud {
@@ -177,20 +195,20 @@ body{
 }
 
 #cloudSection1 {
-    position: relative;
-    animation: cloudSection1 40s linear infinite reverse;
+    position: absolute;
+    animation: cloudSection1 40s linear infinite;
     top: 10px;
 }
 
 #cloudSection2 {
-    position: relative;
-    animation: cloudSection2 60s linear infinite reverse;
+    position: absolute;
+    animation: cloudSection2 60s linear infinite;
     top: 40px;
 }
 
 #cloudSection3 {
     position: absolute;
-    animation: cloudSection3 30s linear infinite reverse;
+    animation: cloudSection3 30s linear infinite;
     top: 40px;
 }
 
@@ -205,31 +223,51 @@ body{
     animation-iteration-count: infinite;
 }
 
+
+
 /*// KEYFRAMES //*/
 
 @keyframes boat {
-    0%{ left: -100px;
-    opacity: 0;
-    }
-    30% {left: 400px;}
-    50%{ left: 400px;}
-    70%{ left: 400px;}
-    100%{left: 1400px;}
+    0%{ left: -50px;
+        top: 600px;
+        opacity: 0;}
+    10%{left: 50px;
+        top: 290px;}
+    50%{left: 900px;
+        top: 250px;
+        transform: rotateY(0deg);}
+    51%{left: 910px;
+        top: 290px;
+        transform: rotateY(180deg);}
+    68% { left: 50px;
+        top: 290px;
+        transform: rotateY(180deg);}
+    69%{ left: 51px;
+        top: 300px;
+        transform: rotateY(0deg);}
+    75% {left: 290px;
+        top: 350px; }
+    90%{ left: 340;
+        top: 400px;}
+
 }
 
 @keyframes cloudSection1 {
-    from{ left: -200px}
-    to{ left: 100%}
+    0%{ left: 50px}
+    90%{ opacity: 1; }
+    100%{ left: 95%; opacity: 0;}
   }
 
   @keyframes cloudSection2 {
-    from{ left: -300px}
-    to{ left: 100%}
+    0%{ left: 200px}
+    90%{ opacity: 1; }
+    100%{ left: 95%; opacity: 0;}
   }
 
   @keyframes cloudSection3 {
-    from{ left: -100px}
-    to{ left: 100%}
+    0%{ left: 300px}
+    90%{ opacity: 1; }
+    100%{ left: 95%; opacity: 0;}
   }
 
   @keyframes lighningEffekt{
@@ -240,17 +278,27 @@ body{
       100% { opacity: 0;}
   }
 
-@keyframes flying{
+@keyframes bobble{
     0%{
-        bottom: -100px;
+        bottom: 0px;
         transform: translateX(0);
+        opacity: 0;
     }
+    10% { opacity: 1;}
     50%{
         transform: translateX(100px);
     }
+    90%{ opacity: 1;}
 
     100%{
-        bottom: 1080px;
-        transform: translateX(-200px);
+        bottom: 400px;
+        transform: translateX(-20px);
+        opacity: 0;
         }
+}
+@keyframes speechBubble{
+    0%{ opacity: 0;}
+    30%{ opacity: 1;}
+    80% {opacity: 1;}
+    100%{ opacity: 0;}
 }
