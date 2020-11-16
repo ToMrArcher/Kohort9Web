@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+}
+
+.screen{
+    position: relative;
+    display: block;
+    width: 1280px;
+    height: 720px;
+    background-image: url("../images/cell.jpg");
+}
+
+.cell{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+.alex{
+    width: 500px;
+    position: absolute;
+    right: 10px;
+    bottom: -10px;
+}
+
+.eivind{
+    width: 250px;
+    left: 100px;
+    bottom: 0px;;
+    position: absolute;
+    z-index: 2;
+}
+
+.scarlett{
+    width: 220px;
+    left: 600px;
+    bottom: 0;
+    position: absolute;
+    z-index: 2;
+    animation: scarlett 1s linear 11s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.speechBubble {
+    z-index: 3;
+    position: absolute;
+    border: 5px solid black;
+    display: inline;
+    padding: 50px;
+    border-radius: 100px;
+    background-color: white;
+    opacity: 0%;
+    animation-fill-mode: forwards;
+}
+
+.speechBubble1{
+    top: 20px;
+    left: 300px;
+    animation: speechBubble 4s linear 1s;
+}
+
+.speechBubble2{
+    top: 20px;
+    right: 300px;
+    animation: speechBubble 4s linear 5s;
+}
+
+.speechBubble3{
+    top: 20px;
+    left: 300px;
+    animation: speechBubble 4s linear 9s;
+}
+
+@keyframes speechBubble{
+    0%{
+        opacity: 0%;
+    }
+    20%{
+        opacity: 100%;
+    }
+    80%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes scarlett{
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
