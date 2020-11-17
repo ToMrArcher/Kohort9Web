@@ -2,6 +2,8 @@
     margin: 0;
 }
 
+/* Snøen som snør i bakgrunnen */
+
 .snow {
     background: url(snøø.png);
     background-repeat: repeat;
@@ -17,6 +19,8 @@
     0% {background-position: 0px 0px}
     100% {background-position: 10px 500px}
 }
+
+/* Stripen øverst på vannet som lager bølgene */
 
 .sea{
     position: relative;
@@ -48,6 +52,21 @@
     100% {left: 0px;}
 }
 
+/* Solen som er oppe i hjørnet */
+
+.sun {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    left: 30px;
+    background-color: #eaed95;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0px 0px 30px 20px #fdffd4;
+}
+
+/* Skyen som beveger seg på himmelen */
+
 #cloud {
     position: absolute;
     width: 200px;
@@ -63,13 +82,15 @@
     100% {left: 1500px; opacity: 1;}
 }
 
+/* Båten som kommer kjørende inn i bildet */
+
 #boat {
     position: absolute;
     width: 250px;
     top: 30%;
     left: 15%;
     animation-name: boat;
-    animation-duration: 15s;
+    animation-duration: 10s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-out; 
 }
@@ -79,6 +100,8 @@
     80% {left: -30px;}
     100% {left: 15%;}
 }
+
+/* Nissen som kommer inn i bildet og står på snøhaugen */
 
 #santa {
     position: absolute;
@@ -95,6 +118,8 @@
     100% {left: 75%; top: 25%; transform: rotate(360deg);}
 }
 
+/* Snøhaugene som er i vannet */
+
 #snowpile {
     position: absolute;
     width: 300px;
@@ -109,6 +134,7 @@
     left: 5%;
     animation: snowMove 7s infinite linear;
     animation-fill-mode: forwards; 
+    z-index: 1;
 }
 
 @keyframes snowMove {
@@ -116,6 +142,8 @@
     50% {left: 7%}
     100% {left: 5%;}
 }
+
+/* Isbjørnen som sitter på den ene snøhaugen */
 
 #bear {
     position: absolute;
@@ -133,12 +161,22 @@
     100% {left: 15%;}
 }
 
+/* Skiltet som står på snøhaugen med nissen */
+
 #sign {
     position: absolute;
     width: 70px;
     top: 25%;
     left: 67%;
+    transition-property: transform;
+    transition-duration: 1s;
 }
+
+#sign:hover {
+    transform: rotateY(180deg);
+}
+
+/* Bildet som er lagt på sjøen for at det skal se ut som bevegelse/bølger */
 
 #wind {
     position: absolute;
@@ -153,6 +191,8 @@
     50% {right: 10%}
     100% {right: -50px}
 }
+
+/* Gavene som ligger i sjøen */
 
 #gift1 {
     position: absolute;
@@ -230,6 +270,8 @@
     opacity: 0%;
 }
 
+/* Gavesekken som står ved siden av nissen på snøhaugen */
+
 #giftbag {
     position: absolute;
     width: 90px;
@@ -242,12 +284,16 @@
     transform: rotate(360deg);
 }
 
+/* Himmelen */
+
 .top {
     position: absolute;
     width: 100%;
     height: 45%;
     background-color: #3a63a6;
 }
+
+/* Utseendet på snakkeboblen */
 
 .dialog {
     border: 5px solid black;
@@ -258,13 +304,15 @@
     font-size: 25px;
 }
 
+/* Snakkeboblen */
+
 #dialog1 {
     position: absolute;
     left: 60%;
     top: 2%;
     opacity: 0%;
     animation-name: dialog;
-    animation-delay: 14s;
+    animation-delay: 11s;
     animation-duration: 2s;
     animation-fill-mode: forwards;
 }
@@ -273,6 +321,8 @@
     0% {top: -0%;}
     100% {top: 2%; opacity: 1;}
 }
+
+/* Beskjedene som kommer opp når man tar feil gave */
 
 .incorrectGift2 {
     position: absolute;
@@ -297,6 +347,8 @@
     transition-duration: 700ms; 
 }
 
+/* Standaren for skjermen */
+
 body{
     width: 100vw;
     height: 100vh;
@@ -313,6 +365,8 @@ body{
     background: #05317a;
     overflow: hidden;
 }
+
+/* Tingene som man samler opp underveis som ligger nederst på skjermen */
 
 .inventory{
     position: absolute;
