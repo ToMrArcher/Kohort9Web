@@ -1,10 +1,11 @@
+/* 
+    Kohort 9 - Programmering
+    Syvert Andreas Eidjord
+    Kobling: ending4.html
+*/
+
 *{
     margin: 0;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -o-user-select: none;
-    user-select: none;
 }
 
 body{
@@ -134,6 +135,22 @@ body{
     width: 130px;
     left: 260px;
     top: 190px;
+}
+
+.cloud {
+    position: absolute;
+    width: 200px;
+    top: 4%;
+    left: 0%;
+    animation: cloud 9400ms infinite linear;
+    animation-fill-mode: forwards;
+    z-index: 0;
+}
+
+@keyframes cloud {
+    0% {left: -50px; opacity: 0.3;}
+    10% {opacity: 1;}
+    100% {left: 1500px; opacity: 1;}
 }
 
 

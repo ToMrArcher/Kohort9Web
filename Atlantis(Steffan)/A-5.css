@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(../Montserrat/Montserrat-SemiBold.ttf);
+}
+
 #background{
     position: absolute;
     width: 100%;
@@ -13,15 +18,10 @@
     opacity: 0.6;
 }
 
-#Arena{
-    position: absolute;
-    width: 100%;
-    top: 256px;
-}
 
 #blackBox{
     position: absolute;
-    opacity: 0.6;
+    opacity: 0.0;
     width: 100%;
     height: 100%;
     background-color: black;
@@ -35,6 +35,7 @@
     padding: 50px;
     border-radius: 100px;
     background-color: white;
+    font-family: montserrat;
 }
 
 #dialog1{
@@ -60,182 +61,34 @@
         opacity: 0;
     }
 }
-
-#answars{
-    top: 350px;
-    left: 480px;
-    width: 150px;
+#dialog2{
+    top: 20px;
+    left: 600px;
     opacity: 0;
-    text-decoration: none;
-    animation: answars;
-    animation-duration: 10s;
-    animation-delay: 22s;
-    animation-fill-mode: forwards;
+    animation: dialog1;
+    animation-duration: 11s;
+    animation-delay: 15s;
+    animation-timing-function: linear;
 }
-
-@keyframes answars{
+@keyframes dialog1 {
     0%{
         opacity: 0;
     }
-    20%{
+    1%{
+        opacity: 1;
+    }
+    99%{
         opacity: 1; 
     }
     100%{
-        opacity: 1;
+        opacity: 0;
     }
 }
 
-#rAnswar:hover{
-    color: red
-}
-#wAnswar:hover{
-    color: red
-}
 
 
 
 
-
-
-#pracc{
-    position: absolute;
-    padding: 3%;
-    width: 20%;
-    height: 10%;
-    background-color: rgb(255, 250, 230);
-    transform: translate(-50%, -50%);
-    border-radius: 4px;
-    box-shadow: 0px 0px 0px 25px rgb(214, 11, 21) 
-}
-
-#pracc2{
-    position: absolute;
-    padding: 5.6%;
-    width: 194px;
-    height: 10px;
-    
-    border-radius: 16px;
-    transform: translate(-50%, -50%);
-    border: 17px dotted black;
-    animation-name: colorSplash, fancyBoxMvmnt;
-    animation-duration: 5s, 4s;
-    animation-timing-function: linear, linear;
-    animation-iteration-count: infinite, 1;
-    animation-fill-mode: none, forwards;
-}
-@keyframes colorSplash {
-    0%{
-        border-color: yellow;
-    }
-    25%{
-        border-color: green;
-    }
-    50%{
-        border-color: blue;
-    }
-    75%{
-        border-color: purple;
-    }
-    100%{
-        border-color: orange;
-    }
-}
-
-.fancyBox{
-    top: -140px;
-    left: 600px;
-
-    animation: fancyBoxMvmnt;
-    animation-duration: 4s;
-    animation-delay: 15s;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
-}
-@keyframes fancyBoxMvmnt{
-    from {
-    
-        top: -200px;
-    }
-    to {
-
-        top: 140px;
-    }
-}
-@keyframes fancyBoxMvmntLight{
-    from {
-    
-        top: -90px;
-    }
-    to {
-
-        top: 230px;
-    }
-}
-
-#fancyBoxBgw{
-    position: absolute;
-
-    left: 350px;
-    width: 40%;
-    height: 40%;
-    border-radius: 20px;
-    background: rgb(195,34,34);
-background: radial-gradient(circle, rgba(195,34,34,1) 50%, rgba(255,255,255,0.26934523809523814) 95%);;
-    z-index: 0;
-    opacity: 0;
-}
-
-#light1{
-    position: absolute;
-    
-    top: -530px;
-    left: 420px;
-    width: 20px;
-    height: 40px;
-    transform: rotate(10deg);
-    transform-origin: top;
-    border-radius: 28% 25% 25% 25% / 85% 84% 25% 23%  ;
-    background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,1) 2%, rgba(0,0,0,1) 13%);
-    box-shadow: 0px 230px 150px 70px white;
-    animation: lightMvnt, fancyBoxMvmntLight;
-    animation-duration: 5s, 4s;
-    animation-delay: 0s, 15s;
-    animation-timing-function: ease-in-out, linear;
-    animation-iteration-count: infinite, 1;
-    animation-fill-mode: none, forwards;
-}
-#light2{
-    position: absolute;
-    
-    top: -530px;
-    left: 760px;
-    width: 20px;
-    height: 40px;
-    transform: rotate(10deg);
-    transform-origin: top;
-    border-radius: 28% 25% 25% 25% / 85% 84% 25% 23%  ;
-    background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,1) 2%, rgba(0,0,0,1) 13%);
-    box-shadow: 0px 230px 150px 70px white;
-    animation: lightMvnt, fancyBoxMvmntLight;
-    animation-duration: 5s, 4s;
-    animation-delay: 0s, 15s;
-    animation-timing-function: ease-in-out, linear;
-    animation-iteration-count: infinite, 1;
-    animation-fill-mode: none, forwards;
-}
-@keyframes lightMvnt{
-    0%{
-        transform: rotate(40deg);
-    }
-    50%{
-        transform: rotate(-40deg);
-    }
-    100%{
-        transform: rotate(40deg);
-    }
-}
 
 .curtain{
     position: absolute;
@@ -243,27 +96,37 @@ background: radial-gradient(circle, rgba(195,34,34,1) 50%, rgba(255,255,255,0.26
 
 #curtainRight{
     left: 50%;
-    top: -850px;
-    animation: curtain;
+    top: 0px;
+    animation: curtainR;
     animation-duration: 5s;
     animation-timing-function: linear;
     animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
 #curtainLeft{
-    top: -850px;
-    animation: curtain;
+    top: 0px;
+    animation: curtainL;
     animation-duration: 5s;
     animation-timing-function: linear;
     animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
-@keyframes curtain {
+@keyframes curtainR {
     0%{
-        top: 0px;
+        left: 50%;
     }
     100%{
-        top: -850px;
+        left: 100%;
+    }
+}
+@keyframes curtainL {
+    0%{
+        left: 0%;
+    }
+    100%{
+        left: -50%;
     }
 }
 
@@ -346,11 +209,7 @@ background: radial-gradient(circle, rgba(195,34,34,1) 50%, rgba(255,255,255,0.26
     }
 }
 
-#blackLayerTop{
-    position: relative;
-    border: 500px solid black;
-    top: -1000px;
-}
+
 
 *{
     margin: 0;
@@ -371,6 +230,7 @@ body{
     width: 1280px;
     height: 720px;
     background: rgb(0, 150, 255);
+    overflow: hidden;
 }
 
 .inventory{

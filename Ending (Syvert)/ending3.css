@@ -1,10 +1,11 @@
+/* 
+    Kohort 9 - Programmering
+    Syvert Andreas Eidjord
+    Kobling: ending3.html
+*/
+
 *{
     margin: 0;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -o-user-select: none;
-    user-select: none;
 }
 
 body{
@@ -101,7 +102,7 @@ body{
     background-color: white;
     top: 100px;
     left: 400px;
-    animation: speechBubble 2s linear 9s;
+    animation: appear 2s linear 9s;
     opacity: 0%;
     animation-fill-mode: forwards;
 }
@@ -114,7 +115,7 @@ body{
     border-radius: 20px;
     top: 500px;
     left: 550px;
-    animation: button 1s linear 6s;
+    animation: appear 1s linear 6s;
     animation-fill-mode: forwards;
     opacity: 0%;
     transition: transform 1s;
@@ -202,6 +203,22 @@ body{
     animation: ball 3s linear .5s;
 }
 
+.cloud {
+    position: absolute;
+    width: 200px;
+    top: 4%;
+    left: 0%;
+    animation: cloud 9400ms infinite linear;
+    animation-fill-mode: forwards;
+    z-index: 0;
+}
+
+@keyframes cloud {
+    0% {left: -50px; opacity: 0.3;}
+    10% {opacity: 1;}
+    100% {left: 1500px; opacity: 1;}
+}
+
 @keyframes alexFloating{
     0%{
         right: 300px;
@@ -286,16 +303,7 @@ body{
     }
 }
 
-@keyframes speechBubble{
-    0%{
-        opacity: 0%;
-    }
-    100%{
-        opacity: 100%;
-    }
-}
-
-@keyframes button {
+@keyframes appear{
     0%{
         opacity: 0%;
     }

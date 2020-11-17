@@ -6,11 +6,6 @@
 
 *{
     margin: 0;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -o-user-select: none;
-    user-select: none;
 }
 
 body{
@@ -113,7 +108,7 @@ body{
     background-color: white;
     top: 100px;
     left: 250px;
-    animation: speechBubble 2s linear;
+    animation: appear 2s linear;
     opacity: 0%;
     animation-delay: 3s;
     animation-fill-mode: forwards;
@@ -127,7 +122,7 @@ body{
     border-radius: 20px;
     top: 500px;
     left: 550px;
-    animation: button 1s linear 6s;
+    animation: appear 1s linear 6s;
     animation-fill-mode: forwards;
     opacity: 0%;
     transition: transform 1s;
@@ -159,9 +154,15 @@ body{
 }
 
 @keyframes cloud {
-    0% {left: -50px; opacity: 0.3;}
-    10% {opacity: 1;}
-    100% {left: 1500px; opacity: 1;}
+    0% {
+        left: -50px; opacity: 0.3;
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        left: 1500px; opacity: 1;
+    }
 }
 
 @keyframes startInventory{
@@ -187,16 +188,7 @@ body{
     }
 }
 
-@keyframes speechBubble{
-    0%{
-        opacity: 0%;
-    }
-    100%{
-        opacity: 100%;
-    }
-}
-
-@keyframes button {
+@keyframes appear{
     0%{
         opacity: 0%;
     }

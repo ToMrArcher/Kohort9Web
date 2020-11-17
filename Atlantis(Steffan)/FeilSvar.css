@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(../Montserrat/Montserrat-SemiBold.ttf);
+}
+
 #blackBox{
     position: absolute;
     opacity: 1;
@@ -68,6 +73,7 @@
     top: 200px;
     color: red;
     font-size: 100px;
+    font-family: montserrat;
 }
 
 #dialogTryAgain{
@@ -77,6 +83,7 @@
     top: 300px;
     font-size: 50px;
     text-decoration: none;
+    font-family: montserrat;
 }
 
 #dialogTryAgain:hover{
@@ -96,6 +103,7 @@
     padding: 50px;
     border-radius: 100px;
     background-color: white;
+    font-family: montserrat;
 }
 
 #blackLeftLayer{ 
