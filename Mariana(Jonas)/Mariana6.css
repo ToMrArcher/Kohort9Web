@@ -92,18 +92,18 @@
     }
 }
 
-#wheel{
+#ball{
     position: absolute;
     width: 50px;
     height: 50px;
     left: 1010px;
     top: 520px;
     
-    animation-name: wheel;
+    animation-name: ball;
     animation-duration: 4s;
     animation-timing-function: linear;
 }
-@keyframes wheel{
+@keyframes ball{
     0%{
         opacity: 0;
     }
