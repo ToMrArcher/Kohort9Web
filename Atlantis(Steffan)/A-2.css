@@ -331,6 +331,12 @@ background: radial-gradient(circle, rgba(195,34,34,1) 50%, rgba(255,255,255,0.26
     top: -1000px;
 }
 
+
+.inventoryItemPic{
+    width: 90%;
+    max-height: 90%;
+}
+
 *{
     margin: 0;
 }
@@ -357,19 +363,23 @@ body{
     width: 500px;
     height: 90px;
     top: 620px;
-    left: 365px;
+    left: 455px;
     opacity: 10%;
     transition: opacity linear .5s;
     animation: startInventory .1s;
 }
 
 .inventoryItem{
+    position: relative;
     float: left;
     width: 90px;
     height: 90px;
     background: white;
     border-radius: 10px;
     margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .inventory:hover{
