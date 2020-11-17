@@ -68,14 +68,14 @@
 }
 
 #answars{
-    top: 350px;
+    top: -350px;
     left: 480px;
     width: 150px;
     opacity: 0;
     text-decoration: none;
-    animation: answars;
-    animation-duration: 10s;
-    animation-delay: 22s;
+    animation: answars, moveAnswars;
+    animation-duration: 10s, 1s;
+    animation-delay: 22s, 18s;
     animation-fill-mode: forwards;
 }
 
@@ -88,6 +88,14 @@
     }
     100%{
         opacity: 1;
+    }
+}
+@keyframes moveAnswars{
+    from{
+        top: -350px;
+    }
+    to{
+        top: 350px;
     }
 }
 
@@ -105,6 +113,10 @@
 
 #pracc{
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
     padding: 3%;
     width: 20%;
     height: 10%;
