@@ -57,7 +57,16 @@ body{
     background: white;
     border-radius: 10px;
     margin-right: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+.inventoryItemImage{
+    width: 90%;
+
+}
+
 
 .inventory:hover{
     opacity: 100%;
@@ -77,7 +86,7 @@ body{
     animation-timing-function: linear;
     animation-fill-mode: forwards;
 }
-/*// her kan msdjfnsdjhfiskjhfskjfwseoijfseoifjsdoijfgsdoijgfsdogjsedoitgjfk /*/
+
 .rigg {
     position: absolute;
     width: 400px;
@@ -244,8 +253,8 @@ body{
     border-radius: 100px;
     background-color: white;
     top: 300px;
-    left: 550px;
-    animation: speechBubble 8s linear;
+    left: 520px;
+    animation: speechBubble 3s linear;
     opacity: 0;
     animation-delay: 14s;
     animation-fill-mode: forwards; 
@@ -293,15 +302,60 @@ body{
     animation-fill-mode: forwards, forwards;
     animation-timing-function: ease-in-out, linear;
 }
+.windturbine {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 120px;
+    left: 1000px;
+    animation: turbinfade;
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
+}
+.fish{
+    position: absolute;
+    width: 60px;
+    top: 400px;
+    left: 1400px;
+    animation: moveFish;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: 5;
+}
 
-
-
-
-
+.fish2{
+    position: absolute;
+    width: 70px;
+    height: 30px;
+    top: 600px;
+    left: 1500px;
+    animation: moveFish;
+    animation-delay: 4s;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: 5;
+}
+.fish3{
+    position: absolute;
+    width: 150px;
+    height: 70px;
+    top: 550px;
+    left: 1500px;
+    animation: moveFish;
+    animation-delay: 4s;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: 5;
+}
 
 
 
 /*// KEYFRAMES //*/
+@keyframes moveFish{
+    form { left: 1000px; }
+    to { left: -1000px}
+  
+}
 
 @keyframes speechBubble{
     0%{ opacity: 0;}
@@ -309,13 +363,27 @@ body{
     80% {opacity: 1;}
     100%{ opacity: 0;}
 }
+@keyframes turbinfade{
+    0%{ 
+        opacity: 0;
+    }
 
+    50% {
+         opacity: 0;
+        }
+
+    70% {
+        opacity: 0.3;
+    }
+    100%{ 
+        opacity: 1;
+    }
+}
 @keyframes rainbow {
     to {
         width: 0%;
     }
 }
-
 @keyframes moverigg{
     from{ left: 0px;}
     to{ left: -600px;}
@@ -331,7 +399,6 @@ body{
        transform: scale(0);
     }
 }
-
 @keyframes sunset{
     20%{ background-color: #0c1445;
     }
@@ -356,20 +423,16 @@ body{
         top: 20px;
     }
 }
-
 @keyframes cloudSection1 {
     0%{ left: -80px}
 
     100%{ left: 95%; }
   }
-
-
   @keyframes cloudSection2 {
     0%{ left: -80px}
 
     100%{ left: 95%;}
   }
-
   @keyframes cloudSection3 {
     0%{ left: -80px}
     100%{ left: 95%; }

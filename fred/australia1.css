@@ -57,7 +57,20 @@ body{
     background: white;
     border-radius: 10px;
     margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+.inventoryItemImage{
+    width: 90%;
+    opacity: 0;
+    animation-name: fadeinventory;
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+
+}
+
 
 .inventory:hover{
     opacity: 100%;
@@ -167,7 +180,7 @@ body{
     border-radius: 100px;
     background-color: white;
     top: 300px;
-    left: 750px;
+    left: 650px;
     animation: speechBubble 8s linear;
     opacity: 0;
     animation-delay: 14s;
@@ -182,7 +195,7 @@ body{
     border-radius: 100px;
     background-color: white;
     top: 300px;
-    left: 750px;
+    left: 650px;
     animation: speechBubble 10s linear;
     opacity: 0;
     animation-delay: 23s;
@@ -197,7 +210,7 @@ body{
     border-radius: 100px;
     background-color: white;
     top: 300px;
-    left: 750px;
+    left: 650px;
     animation: speechBubble 10s linear;
     opacity: 0;
     animation-delay: 15;
@@ -327,7 +340,15 @@ body{
 
 
 
+
 /*// KEYFRAMES //*/
+
+@keyframes fadeinventory
+{ 
+    to{
+        opacity: 1;
+    }
+}
 
 @keyframes boat {
     0%{ left: -50px;
@@ -403,7 +424,8 @@ body{
 }
 
 @keyframes collectparts{
-    to{right: 750px;
+    to{
+        right: 750px;
         bottom: 250px;
         opacity: 0;} 
 }
