@@ -80,6 +80,15 @@ body {
     margin: 0;
 }
 
+@keyframes startInventory {
+    0% {
+        opacity: 10%;
+    }
+    100% {
+        opacity: 10%;
+    }
+}
+
 /* END INVENTORY SECTION */
 
 .boat {
@@ -93,6 +102,20 @@ body {
     animation-iteration-count: 1, infinite;
     animation-fill-mode: forwards;
     opacity: 100%;
+}
+
+@keyframes boat {
+    0% {
+        left: -400px;
+    }
+    30% {
+        opacity: 100%;
+        left: -200px;
+    }
+    100% {
+        left: 50px;
+        opacity: 100%;
+    }
 }
 
 @keyframes upDown {
@@ -114,6 +137,18 @@ body {
     top: 10px;
     animation: upDown 2s ease-in-out infinite;
     z-index: 2;
+}
+
+@keyframes evilBoat {
+    0% {
+        top: 10px;
+    }
+    50% {
+        top: 20px;
+    }
+    100% {
+        top: 10px;
+    }
 }
 
 .waterRing {
@@ -165,9 +200,18 @@ body {
     z-index: 1;
 }
 
+@keyframes appear {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
 .button {
     position: absolute;
-    background: yellow;
+    background: #fd8c04;
     padding: 15px;
     border: 3px solid black;
     border-radius: 20px;
@@ -194,6 +238,18 @@ body {
     transform: rotateY(180deg);
 }
 
+@keyframes alex {
+    0% {
+        top: 70px;
+    }
+    50% {
+        top: 80px;
+    }
+    100% {
+        top: 70px;
+    }
+}
+
 .cloud {
     position: absolute;
     width: 200px;
@@ -215,62 +271,6 @@ body {
     100% {
         left: 1500px;
         opacity: 1;
-    }
-}
-
-@keyframes startInventory {
-    0% {
-        opacity: 10%;
-    }
-    100% {
-        opacity: 10%;
-    }
-}
-
-@keyframes boat {
-    0% {
-        left: -400px;
-    }
-    30% {
-        opacity: 100%;
-        left: -200px;
-    }
-    100% {
-        left: 50px;
-        opacity: 100%;
-    }
-}
-
-@keyframes appear {
-    0% {
-        opacity: 0%;
-    }
-    100% {
-        opacity: 100%;
-    }
-}
-
-@keyframes evilBoat {
-    0% {
-        top: 10px;
-    }
-    50% {
-        top: 20px;
-    }
-    100% {
-        top: 10px;
-    }
-}
-
-@keyframes alex {
-    0% {
-        top: 70px;
-    }
-    50% {
-        top: 80px;
-    }
-    100% {
-        top: 70px;
     }
 }
 
