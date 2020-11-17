@@ -15,7 +15,6 @@
     animation-name: dive;
     animation-duration: 5s;
 }
-
 @keyframes dive{
     0%{
         top: 450px;
@@ -25,6 +24,7 @@
         top: 720x;
     }
 }
+
 #bullet{
     position: relative;
     height: 30px;
@@ -39,7 +39,6 @@
     animation-duration: 2s;
     animation-timing-function: linear;
 }
-
 @keyframes bullet{
     0%{
         left: 1300px;
@@ -169,7 +168,6 @@
     width: 1000vw;
     bottom: -30px;
 }
-
 @keyframes seaMove {
     0% { left: -200px; }
     100% { left: 0px; }

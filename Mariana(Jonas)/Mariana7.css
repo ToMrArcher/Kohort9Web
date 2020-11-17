@@ -15,7 +15,6 @@
     animation-timing-function: linear;
     animation-duration: 5s;
 }
-
 @keyframes boat{
     0%{
         left: 750px;
@@ -70,7 +69,6 @@
     animation-duration: 4s;
     animation-timing-function: linear;
 }
-
 @keyframes wheel{
     0%{
     left: 1010px;
@@ -103,7 +101,6 @@
     animation-delay: 5s;
     animation-fill-mode: forwards;
 }
-
 @keyframes continue-background {
     to {
         z-index: -10;

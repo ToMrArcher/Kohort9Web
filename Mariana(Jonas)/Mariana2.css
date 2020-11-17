@@ -127,7 +127,6 @@
     animation-duration: 6s;
     animation-timing-function: ease-in-out;
 }
-
 @keyframes moon{
     0%{
         left: -150px;
@@ -168,7 +167,6 @@
     animation-iteration-count: infinite;
     animation-delay: 4s;
 }
-
 @keyframes shootingStar{
     0%{
         top: 10px;
@@ -182,6 +180,7 @@
         left: -10000px;
     }
 }
+
 #star1{
     top: 1px;
     left: 1000px;

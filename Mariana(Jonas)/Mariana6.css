@@ -15,7 +15,6 @@
     animation-duration: 4s;
     animation-timing-function: linear;
 }
-
 @keyframes boat{
     0%{
         top: 350px;
@@ -26,7 +25,6 @@
         left: 750px;
     }
 }
-
 
 #fish{
     position: absolute;
@@ -82,7 +80,6 @@
     animation-timing-function: linear;
     opacity: 1;
 }
-
 @keyframes openChest{
     0%{
         opacity: 0;
@@ -106,7 +103,6 @@
     animation-duration: 4s;
     animation-timing-function: linear;
 }
-
 @keyframes wheel{
     0%{
         opacity: 0;
@@ -125,6 +121,7 @@
     src:url(Fonts/Montserrat-SemiBold.ttf);
     font-style: normal;
 } /*Importerer fonten*/
+
 #text{
     position: absolute;
     left: 900px;
@@ -141,7 +138,6 @@
     animation-duration: 5s;
     animation-timing-function: linear;
 }
-
 @keyframes text{
     0%{
         opacity: 0;
