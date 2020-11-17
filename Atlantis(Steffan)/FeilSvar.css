@@ -70,7 +70,7 @@
 #dialogFeil{
     position: absolute;
     left: 600px;
-    top: 200px;
+    top: 300px;
     color: red;
     font-size: 100px;
     font-family: montserrat;
@@ -80,7 +80,7 @@
     position: absolute;
     color: black;
     left: 650px;
-    top: 300px;
+    top: 400px;
     font-size: 50px;
     text-decoration: none;
     font-family: montserrat;
@@ -113,6 +113,8 @@
 }
 
 
+
+
 *{
     margin: 0;
 }
@@ -139,18 +141,23 @@ body{
     width: 500px;
     height: 90px;
     top: 620px;
-    left: 365px;
+    left: 455px;
     opacity: 10%;
     transition: opacity linear .5s;
 }
 
+
 .inventoryItem{
+    position: relative;
     float: left;
     width: 90px;
     height: 90px;
     background: white;
     border-radius: 10px;
     margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .inventory:hover{
