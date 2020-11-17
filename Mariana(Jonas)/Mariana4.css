@@ -11,6 +11,7 @@
     height: 150px;
     left: 100px;
     opacity: 0.08;
+
     
     animation-name: dive;
     animation-duration: 4s;
@@ -34,7 +35,7 @@
 #text{
     position: absolute;
     left: 280px;
-    top: 350px;
+    top: 320px;
     font-family: semiBold;
     
     border: 5px solid black;
