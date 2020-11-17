@@ -116,6 +116,19 @@ body{
     width: 200px;
 }
 
+.boatleave{
+    position: absolute;
+    left: 370px;
+    top: 350px;
+    width: 200px;
+    animation: boatleave 5s linear forwards;
+    animation-delay: 17s;
+}
+
+@keyframes boatleave{
+    to{ left: 2200px;}
+}
+
 
 
 /*// bobler i vannet, endrer duration og delay slik at det gir en autentisk effekt på havet //*/
@@ -231,7 +244,7 @@ body{
     border-radius: 100px;
     background-color: white;
     top: 300px;
-    left: 750px;
+    left: 550px;
     animation: speechBubble 8s linear;
     opacity: 0;
     animation-delay: 14s;
@@ -247,7 +260,7 @@ body{
     margin: auto;
     left: -50px;
     top: 0px;
-    box-shadow: 0px 40px 100px 70px orange;
+    box-shadow: 0px 20px 100px 70px orange;
     animation-name: sunrise;
     animation-duration: 8s;
     animation-timing-function: linear;
@@ -290,6 +303,12 @@ body{
 
 /*// KEYFRAMES //*/
 
+@keyframes speechBubble{
+    0%{ opacity: 0;}
+    30%{ opacity: 1;}
+    80% {opacity: 1;}
+    100%{ opacity: 0;}
+}
 
 @keyframes rainbow {
     to {
