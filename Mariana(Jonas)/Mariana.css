@@ -135,7 +135,7 @@
 
 @font-face{
     font-family: 'semiBold';
-    src:url(Fonts/Montserrat-SemiBold.ttf);
+    src:url(/Montserrat/Montserrat-SemiBold.ttf);
     font-style: normal;
 } /*Importerer fonten*/
 

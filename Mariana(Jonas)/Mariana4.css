@@ -28,7 +28,7 @@
 
 @font-face{
     font-family: 'semiBold';
-    src:url(Fonts/Montserrat-SemiBold.ttf);
+    src:url(/Montserrat/Montserrat-SemiBold.ttf);
     font-style: normal;
 } /*Importerer fonten*/
 
@@ -204,7 +204,7 @@ body{
     width: 1280px;
     height: 720px;
     overflow: hidden;
-    background-image: url(Images/background.jpg);
+    background-image: url(/images/background.jpg);
     background-repeat: no-repeat;
     background-size: 1280px 720px;
 }
