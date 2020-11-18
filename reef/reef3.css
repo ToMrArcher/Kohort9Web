@@ -21,6 +21,7 @@ body{
     background: rgb(0, 150, 255);
     overflow: hidden;
 }
+
 /*// få de lysere effekt sun div /*/
 .light{
     position: absolute;

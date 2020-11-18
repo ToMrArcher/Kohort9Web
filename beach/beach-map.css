@@ -5,7 +5,15 @@ Kodet av Marco A. Gravbrøt
 
 @font-face {
     font-family: MontserratBold;
-    src: url(Montserrat/Montserrat-ExtraBold.ttf);
+    src: url(../Montserrat/Montserrat-ExtraBold.ttf);
+}
+
+/* Class for å gå videre til world-map som brukes for alle sidene og kan endre delay*/
+.screen.finish {
+    animation-name: continue-background;
+    animation-duration: 1s;
+    animation-delay: 19s;
+    animation-fill-mode: forwards;
 }
 
 .continue {
@@ -34,7 +42,7 @@ Kodet av Marco A. Gravbrøt
 
     top: 0px;
     
-    background-image: url(images/world.png);
+    background-image: url(../images/world.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
 
@@ -78,7 +86,7 @@ Kodet av Marco A. Gravbrøt
 
     height: 180px;
 
-    background-image: url(images/scroll.png);
+    background-image: url(../images/scroll.png);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -117,9 +125,9 @@ Kodet av Marco A. Gravbrøt
     top: 392px;
     left: 1100px; /*1234 = -134*/
 
-    animation-name: continue-arrow, boat-move-reef, boat-move-marianna, boat-move-atlantis, boat-move-northpole, boat-move-norway;
-    animation-duration: 1s, 3s, 4s, 6s, 4s, 4s;
-    animation-delay: 8s, 10s, 13s, 17s, 23s, 27s;
+    animation-name: continue-arrow, boat-move-reef;
+    animation-duration: 1s, 3s;
+    animation-delay: 8s, 10s;
     animation-fill-mode: forwards;
 }
 

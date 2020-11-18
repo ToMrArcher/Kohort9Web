@@ -33,13 +33,6 @@ body{
     overflow: hidden;
 }
 
-.screen.finish {
-    animation-name: continue-background;
-    animation-duration: 1s;
-    animation-delay: 7s;
-    animation-fill-mode: forwards;
-}
-
 .inventory{
     position: absolute;
     width: 500px;
