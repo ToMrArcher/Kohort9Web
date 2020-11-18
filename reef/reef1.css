@@ -1,5 +1,9 @@
 /*// Denne siden er codet av fredrik Holtet /*/
 
+@font-face {
+    font-family: Montserrat;
+    src: url(../Montserrat/Montserrat-SemiBold.ttf);
+}
 *{
     margin: 0;
 }
@@ -181,9 +185,10 @@ body{
     display: inline;
     padding: 50px;
     border-radius: 100px;
+    font-family: Montserrat;
     background-color: white;
     top: 300px;
-    left: 640px;
+    left: 550px;
     animation: speechBubble 8s linear;
     opacity: 0;
     animation-delay: 14s;
@@ -196,9 +201,10 @@ body{
     display: inline;
     padding: 50px;
     border-radius: 100px;
+    font-family: Montserrat;
     background-color: white;
     top: 300px;
-    left: 640px;
+    left: 550px;
     animation: speechBubble 10s linear;
     opacity: 0;
     animation-delay: 23s;
@@ -211,9 +217,10 @@ body{
     display: inline;
     padding: 50px;
     border-radius: 100px;
+    font-family: Montserrat;
     background-color: white;
     top: 300px;
-    left: 650px;
+    left: 550px;
     animation: speechBubble 10s linear;
     opacity: 0;
     animation-delay: 15;
