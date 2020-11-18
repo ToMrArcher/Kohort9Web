@@ -36,7 +36,7 @@
     left: 600px;
     opacity: 0;
     animation: dialog1;
-    animation-duration: 11s;
+    animation-duration: 8s;
     animation-delay: 4s;
     animation-timing-function: linear;
 }
@@ -59,8 +59,8 @@
     left: 600px;
     opacity: 0;
     animation: dialog1;
-    animation-duration: 11s;
-    animation-delay: 15s;
+    animation-duration: 8s;
+    animation-delay: 12s;
     animation-timing-function: linear;
 }
 @keyframes dialog1 {
@@ -86,7 +86,7 @@
     opacity: 0;
     animation-name: wheel;
     animation-duration: 5s;
-    animation-delay: 26s;
+    animation-delay: 20s;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
 }
