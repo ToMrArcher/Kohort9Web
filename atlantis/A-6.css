@@ -209,33 +209,6 @@
     }
 }
 
-#arrowContinue{
-    position: absolute;
-    width: 1%;
-    top: 300px;
-    left: 400px;
-    opacity: 0;
-    animation-name: arrow;
-    animation-duration: 2s;
-    animation-delay: 15s; 
-    animation-fill-mode: forwards;
-}
-@keyframes arrow{
-    from{
-        
-        width: 1%;
-        z-index: -1;
-        opacity: 0;
-    }
-    
-    to{
-        width: 30%;
-        z-index: 1;
-        opacity: 1;
-    }
-    
-}
-
 #blackBoxTransition{
     position: absolute;
     opacity: 1;
