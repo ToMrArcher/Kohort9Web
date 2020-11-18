@@ -191,7 +191,7 @@ body{
     left: 550px;
     animation: speechBubble 8s linear;
     opacity: 0;
-    animation-delay: 1s;
+    animation-delay: 14s;
     animation-fill-mode: forwards; 
     z-index: 1000;
 }
