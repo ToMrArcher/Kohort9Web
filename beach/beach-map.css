@@ -16,6 +16,7 @@ Kodet av Marco A. Gravbrøt
     animation-fill-mode: forwards;
 }
 
+/* Class for pilen som skal dukke opp og ha en liten effekt */
 .continue {
     opacity: 0%;
     position: absolute;
@@ -49,25 +50,6 @@ Kodet av Marco A. Gravbrøt
     animation-delay: 8s;
     animation-fill-mode: forwards;
 }
-
-/*
-.map-image {
-    position: absolute;
-
-    opacity: 0%;
-    z-index: -10;
-
-    width: 1280px;
-    height: 720px;
-
-    top: 0px;
-
-    animation-name: continue-arrow;
-    animation-duration: 1s;
-    animation-delay: 8s;
-    animation-fill-mode: forwards;
-}
-*/
 
 .map-texts {
     position: absolute;
@@ -108,6 +90,7 @@ Kodet av Marco A. Gravbrøt
     padding-bottom: 0px;
 }
 
+/* Posisjoner årstall riktig */
 .map-texts:nth-child(2) {
     margin-bottom: -15px;
 }
@@ -121,7 +104,7 @@ Kodet av Marco A. Gravbrøt
     width: 75px;
 
     top: 392px;
-    left: 1100px; /*1234 = -134*/
+    left: 1100px;
 
     animation-name: continue-arrow, boat-move-reef;
     animation-duration: 1s, 3s;
@@ -162,15 +145,9 @@ Kodet av Marco A. Gravbrøt
     }
 }
 
-@keyframes continue-effects {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
+/*
+    Hver båt-bevegelse har en egen keyframe, som vi bare endrer i båt classen for hver side.
+*/
 
 @keyframes boat-move-reef {
     to {
@@ -270,6 +247,10 @@ Kodet av Marco A. Gravbrøt
     }
 }
 
+/*
+    Effekter til bakgrunn, pil og diverse
+*/
+
 @keyframes continue-background {
     to {
         z-index: -10;
@@ -281,5 +262,15 @@ Kodet av Marco A. Gravbrøt
     to {
         opacity: 100%;
         z-index: 10;
+    }
+}
+
+@keyframes continue-effects {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
     }
 }

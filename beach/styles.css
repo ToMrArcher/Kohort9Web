@@ -231,6 +231,10 @@ body{
     animation-fill-mode: forwards;
 }
 
+/*
+    KEYFRAMES
+*/
+
 @keyframes showNext {
     to {
         opacity: 100%;
@@ -296,6 +300,9 @@ body{
     };
 }
 
+/*
+    Får båten til å gå oppover før den flyttes ut av "gone"
+*/
 @keyframes boat {
     to {
         transform: rotate(-20deg);
@@ -303,6 +310,9 @@ body{
     }
 }
 
+/*
+    Keyframe som får båten til å gå ut av skjermen
+*/
 @keyframes gone {
     to {
         left: 1300px;
