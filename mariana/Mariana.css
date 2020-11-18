@@ -1,0 +1,272 @@
+/*Jonas*/
+
+
+/*Hver keyframe hører sammen med ID/classen rett over*/
+
+#cannonBarrel{
+    width: 90%;
+    max-height: 90%;
+    
+}
+
+#boat{
+    position: absolute;
+    top: 100px;
+    width: 200px;
+    height: 150px;
+    left: 100px; 
+    
+    animation-name: moveBoat;
+    animation-duration: 5s;
+    animation-timing-function: ease-in;
+}
+@keyframes moveBoat{
+    0%{
+        left: -200px;
+    }
+    100%{
+        left: 100px;
+    }
+    
+}
+
+#bullet{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    background-color: black;
+    left: 1300px;
+    top: 200px;
+    
+    animation-name: bullet;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-delay: 6s;
+    animation-timing-function: linear;
+}
+@keyframes bullet{
+    0%{
+        top: 120px;
+        left: 1300px;
+    }
+    10%{
+        top: 100px;
+        left: 1170px;
+    }
+    20%{
+        top: 80px;
+        left: 1040px;
+    }
+    30%{
+        top: 70px;
+        left: 910px;
+    }
+    40%{
+        top: 60px;
+        left: 780px;
+    }
+    50%{
+        top: 50px;
+        left: 650px;
+    }
+    60%{
+        top: 40px;
+        left: 520px;
+    }
+    70%{
+        top: 40px;
+        left: 390px;
+    }
+    80%{
+        top: 50px;
+        left: 260px;
+    }
+    90%{
+        top: 60px;
+        left: 120px;
+    }
+    100%{
+        top: 80px;
+        left: -10px;
+    }
+
+}
+
+
+#sea{
+    position: relative;
+    left: 0;
+    top: 80px;
+    bottom: 50px;
+    height: 30px;
+    background-size: 40px 100px;
+    background-image: radial-gradient(
+        circle at 20px -5px,
+        transparent 22px,
+        rgba(30,50,191,1) 5%);
+        background-repeat: repeat;
+    width: 3000px;
+    
+    animation: seaMove 5s infinite linear;
+    animation-fill-mode: forwards;
+}
+
+#sea:before{
+    position: relative;
+    content: "";
+    background-color: #2d90af;
+    height: 30px;
+    width: 1000vw;
+    bottom: -30px;
+}
+@keyframes seaMove {
+    0% { left: -200px; }
+    100% { left: 0px; }
+}
+
+#sky{
+    position: absolute;
+    background-color: #bd4f6c;
+    background-image: linear-gradient(326deg, #bd4f6c 0%, #d7816a 74%);
+
+    width: 1280px;
+    height: 200px;
+    
+    animation-name: sky;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+}
+
+/*Importerer fonten*/
+@font-face{
+    font-family: 'semiBold';
+    src:url(/Montserrat/Montserrat-SemiBold.ttf);
+    font-style: normal;
+} 
+
+#sun{
+    position: relative;
+    background: rgb(246,255,0);
+    background: radial-gradient(circle, rgba(246,255,0,1) 4%, rgba(246,255,0,1) 9%, rgba(246,255,0,1) 30%, rgba(246,255,0,1) 33%, rgba(246,255,0,1) 56%, rgba(255,102,0,1) 100%);
+    box-shadow: 0 0 15px 15px yellow;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    left: 800px;
+    top:80px;
+    
+    animation-name: sun;
+    animation-duration: 4s;
+    animation-timing-function: ease-out;
+}
+@keyframes sun{
+    0%{
+        left: 400px;
+        top: -100px;
+    }
+    100%{
+        left: 800px;
+        top: 80px;
+    }
+}
+
+
+#text1{
+    position: absolute;
+    top: 100px;
+    left: 280px;
+    font-family: semiBold;
+    
+    border: 5px solid black;
+    display: inline;
+    padding: 9px;
+    border-radius: 100px;
+    background-color: white;
+    
+    animation-name: text;
+    animation-delay: 0s;
+    animation-duration: 8s;
+    opacity: 1;
+
+}
+
+@keyframes text{
+    0%{
+        opacity: 0;
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+* {
+    margin: 0;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+}
+
+.screen{
+    position: relative;
+    display: block;
+    width: 1280px;
+    height: 720px;
+    overflow: hidden;
+    background: rgb(6,4,47);
+    background: linear-gradient(0deg, rgba(6,4,47,1) 6%, rgba(30,50,191,1) 59%);
+}
+
+.inventory{
+    position: absolute;
+    width: 500px;
+    height: 90px;
+    top: 620px;
+    left: 365px;
+    opacity: 10%;
+    transition: opacity linear .5s;
+    
+    animation-name: inventory;
+    animation-duration: 1s;
+}
+
+@keyframes inventory{
+    0%{
+        opacity: 10%;
+    }
+    100%{
+        opacity: 10%;
+    }
+}
+
+.inventoryItem{
+    float: left;
+    width: 90px;
+    height: 90px;
+    background: white;
+    border-radius: 10px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inventory:hover{
+    opacity: 100%;
+}
+
+.inventoryItem:last-child{
+    margin:0;
+}
+
+
+

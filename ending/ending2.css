@@ -1,0 +1,343 @@
+/* 
+    Kohort 9 - Programmering
+    Syvert Andreas Eidjord
+    Kobling: ending2.html
+*/
+
+* {
+    margin: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+}
+
+.screen {
+    position: relative;
+    display: block;
+    width: 1280px;
+    height: 720px;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+        360deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(9, 9, 121, 1) 9%,
+        rgba(0, 150, 255, 1) 100%
+    );
+    overflow: hidden;
+}
+
+.sky {
+    position: absolute;
+    background: #9be8ff;
+    width: 100%;
+    height: 300px;
+    top: 0px;
+    z-index: 0;
+}
+
+/* INVENTORY */
+
+.inventory {
+    position: absolute;
+    width: 500px;
+    height: 90px;
+    top: 620px;
+    left: 455px;
+    opacity: 10%;
+    transition: opacity linear 0.5s;
+    animation: startInventory 0.1s;
+}
+
+.inventoryItem {
+    float: left;
+    position: relative;
+    width: 90px;
+    height: 90px;
+    background: white;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.inventoryItemPicture {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    animation: build 3s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes build {
+    99% {
+        top: 210px;
+        left: 270px;
+        opacity: 100%;
+    }
+    100% {
+        top: 210px;
+        left: 270px;
+        opacity: 0%;
+    }
+}
+
+
+.tube {
+    top: 625px;
+    left: 470px;
+    z-index: 5;
+}
+
+.ball {
+    top: 625px;
+    left: 570px;
+    z-index: 5;
+}
+
+.wheel {
+    top: 625px;
+    left: 670px;
+    z-index: 5;
+}
+
+.lighter {
+    top: 625px;
+    left: 770px;
+    z-index: 5;
+}
+
+.inventory:hover {
+    opacity: 100%;
+}
+
+.inventoryItem:last-child {
+    margin: 0;
+}
+
+@keyframes startInventory {
+    0% {
+        opacity: 10%;
+    }
+    100% {
+        opacity: 10%;
+    }
+}
+
+/* END INVENTORY SECTION */
+
+.boat {
+    width: 300px;
+    position: absolute;
+    left: 50px;
+    top: 180px;
+    opacity: 100%;
+}
+
+.evilBoat {
+    position: absolute;
+    width: 350px;
+    right: 10px;
+    top: 30px;
+    animation: evilBoat 2s ease-in-out infinite;
+}
+
+@keyframes evilBoat {
+    0% {
+        top: 10px;
+    }
+    50% {
+        top: 20px;
+    }
+    100% {
+        top: 10px;
+    }
+}
+
+.highZ {
+    z-index: 100;
+}
+
+.speechBubble {
+    position: absolute;
+    border: 5px solid black;
+    display: inline;
+    padding: 50px;
+    border-radius: 100px;
+    background-color: white;
+    top: 100px;
+    right: 300px;
+    animation: appear 2s linear;
+    opacity: 0%;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+.button {
+    position: absolute;
+    background: #fd8c04;
+    padding: 15px;
+    border: 3px solid black;
+    border-radius: 20px;
+    top: 500px;
+    left: 550px;
+    animation: appear 1s linear 6s;
+    animation-fill-mode: forwards;
+    opacity: 0%;
+    transition: transform 1s;
+    color: black;
+}
+
+.button:hover {
+    transform: scale(1.2, 1.2);
+}
+
+@keyframes button {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+.alex {
+    z-index: 1;
+    position: absolute;
+    width: 180px;
+    top: 70px;
+    right: 120px;
+    animation: alex 2s ease-in-out infinite;
+    transform: rotateY(180deg);
+}
+
+@keyframes alex {
+    0% {
+        top: 70px;
+    }
+    50% {
+        top: 80px;
+    }
+    100% {
+        top: 70px;
+    }
+}
+
+.cannon {
+    position: absolute;
+    width: 130px;
+    left: 260px;
+    top: 190px;
+    opacity: 0;
+    animation: appear 0.2s linear 3s;
+    animation-fill-mode: forwards;
+}
+
+.waterRing {
+    position: absolute;
+    top: 180px;
+    left: 550px;
+    width: 1100px;
+    height: 300px;
+    background: rgb(255, 255, 255);
+    background: radial-gradient(
+        circle,
+        rgba(255, 255, 255, 0) 20%,
+        rgb(31, 60, 153) 24%,
+        rgba(255, 255, 255, 0) 32%
+    );
+    transform: scaleY(0.5);
+    animation: fadeInOut 2s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+.buildingCloud {
+    position: absolute;
+    width: 300px;
+    left: 200px;
+    top: 100px;
+    z-index: 100;
+    opacity: 0;
+    animation: buildingCloud 2s linear 2.5s;
+}
+
+@keyframes buildingCloud {
+    0% {
+        transform: scale(0) rotate(0deg);
+    }
+    20% {
+        opacity: 1;
+        transform: scale(1) rotate(80deg);
+    }
+    80% {
+        opacity: 1;
+        transform: scale(1) rotate(280deg);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0) rotate(360deg);
+    }
+}
+
+.cloud {
+    position: absolute;
+    width: 200px;
+    top: 4%;
+    left: 0%;
+    animation: cloud 9400ms infinite linear;
+    animation-fill-mode: forwards;
+    z-index: 0;
+}
+
+@keyframes cloud {
+    0% {
+        left: -50px;
+        opacity: 0.3;
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        left: 1500px;
+        opacity: 1;
+    }
+}
+
+.sun {
+    position: absolute;
+    top: 100px;
+    left: 200px;
+    z-index: 0;
+    margin: auto;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: white;
+    opacity: 0.9;
+    box-shadow: 0px 0px 40px 15px white;
+}
