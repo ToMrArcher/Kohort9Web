@@ -168,13 +168,13 @@
 
 #text{
     position: absolute;
-    left: 280px;
+    left: 310px;
     top: 360px;
     font-family: semiBold;
     
     border: 5px solid black;
     display: inline;
-    padding: 7px;
+    padding: 30px;
     border-radius: 100px;
     background-color: white;
     
@@ -224,7 +224,7 @@ body{
     width: 500px;
     height: 90px;
     top: 620px;
-    left: 365px;
+    left: 455px;
     opacity: 10%;
     transition: opacity linear .5s;
 }

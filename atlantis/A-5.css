@@ -90,6 +90,7 @@
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
 }
+
 @keyframes wheel{
     0%{
         left: 600px;

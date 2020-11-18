@@ -4,8 +4,14 @@
     Kobling: ending1.html
 */
 
-* {
+@font-face {
+    font-family: Montserrat;
+    src: url(../Montserrat/Montserrat-SemiBold.ttf);
+}
+
+*{
     margin: 0;
+    font-family: Montserrat;
 }
 
 body {
