@@ -1,7 +1,13 @@
 /* Kodet av Elise Fonnes */
 
+@font-face {
+    font-family: Montserrat;
+    src: url(../Montserrat/Montserrat-SemiBold.ttf);
+}
+
 *{
     margin: 0;
+    font-family: Montserrat;
 }
 
 /* Snøen som snør i bakgrunnen */
@@ -296,7 +302,7 @@
     padding: 50px;
     border-radius: 100px;
     background-color: white;
-    font-size: 25px;
+
 }
 
 /* Snakkeboblene */

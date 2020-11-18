@@ -73,8 +73,9 @@
     z-index: 1;
     
     animation-name: ball;
-    animation-duration: 4s;
+    animation-duration: 3s;
     animation-timing-function: linear;
+    animation-fill-mode: forwards;
 }
 
 @keyframes ball{
@@ -88,6 +89,7 @@
     100%{
         left: 470px;
         top: 625px;
+        opacity: 10%;
     }
 }
 
@@ -121,7 +123,7 @@ body{
     width: 500px;
     height: 90px;
     top: 620px;
-    left: 365px;
+    left: 455px;
     opacity: 10%;
     transition: opacity linear .5s;
 }
