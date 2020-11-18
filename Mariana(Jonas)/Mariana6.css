@@ -92,6 +92,7 @@
     }
 }
 
+/*Kanonkula*/
 #ball{
     position: absolute;
     width: 50px;
@@ -115,12 +116,12 @@
     }
 }
 
-
+/*Importerer fonten*/
 @font-face{
     font-family: 'semiBold';
     src:url(/Montserrat/Montserrat-SemiBold.ttf);
     font-style: normal;
-} /*Importerer fonten*/
+} 
 
 #text{
     position: absolute;

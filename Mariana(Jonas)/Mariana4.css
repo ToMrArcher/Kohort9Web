@@ -26,11 +26,12 @@
     }
 }
 
+/*Importerer fonten*/
 @font-face{
     font-family: 'semiBold';
     src:url(/Montserrat/Montserrat-SemiBold.ttf);
     font-style: normal;
-} /*Importerer fonten*/
+} 
 
 #text{
     position: absolute;
@@ -60,6 +61,8 @@
     }
 }
 
+
+/*Kun lyskrona til fisken. Gjør det slik så opacity ikke trenger å være like*/
 #fish2{
     position: absolute;
     height: 600px;
@@ -114,6 +117,7 @@
     }
 }
 
+/*Hele fisken*/
 #fish{
     position: absolute;
     height: 600px;

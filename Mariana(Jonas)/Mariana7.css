@@ -57,6 +57,7 @@
     opacity: 1;
 }
 
+/*Kanonkula*/
 #ball{
     position: absolute;
     width: 80px;
@@ -69,6 +70,7 @@
     animation-duration: 4s;
     animation-timing-function: linear;
 }
+
 @keyframes ball{
     0%{
     left: 1010px;

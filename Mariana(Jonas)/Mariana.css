@@ -133,11 +133,12 @@
     animation-timing-function: linear;
 }
 
+/*Importerer fonten*/
 @font-face{
     font-family: 'semiBold';
     src:url(/Montserrat/Montserrat-SemiBold.ttf);
     font-style: normal;
-} /*Importerer fonten*/
+} 
 
 #sun{
     position: relative;
@@ -164,6 +165,7 @@
         top: 80px;
     }
 }
+
 
 #text1{
     position: absolute;
