@@ -1,3 +1,8 @@
+/*Jonas*/
+
+
+/*Hver keyframe hører sammen med ID/classen rett over*/
+
 #cannonBarrel{
     width: 90%;
     max-height: 90%;
@@ -133,11 +138,12 @@
     animation-timing-function: linear;
 }
 
+/*Importerer fonten*/
 @font-face{
     font-family: 'semiBold';
     src:url(/Montserrat/Montserrat-SemiBold.ttf);
     font-style: normal;
-} /*Importerer fonten*/
+} 
 
 #sun{
     position: relative;
@@ -164,6 +170,7 @@
         top: 80px;
     }
 }
+
 
 #text1{
     position: absolute;
