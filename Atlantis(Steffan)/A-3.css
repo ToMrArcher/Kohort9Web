@@ -1,3 +1,5 @@
+/* SKREVET AV STEFFAN */
+
 @font-face {
     font-family: Montserrat;
     src: url(../Montserrat/Montserrat-SemiBold.ttf);
@@ -99,18 +101,13 @@
     }
 }
 
-#rAnswar:hover{
-    color: red
-}
+/* Får svars alternativer til å lyse rødt */
 #wAnswar:hover{
     color: red
 }
 
 
-
-
-
-
+/* Spørsmåls panel */
 #pracc{
     position: absolute;
     padding: 3%;
@@ -338,7 +335,7 @@ background: radial-gradient(circle, rgba(195,34,34,1) 50%, rgba(255,255,255,0.26
         top: 100px;
     }
 }
-
+/* Starter mørkt og forsvinner når siden loader inn */
 #blackBoxTransition{
     position: absolute;
     opacity: 1;
@@ -367,6 +364,7 @@ background: radial-gradient(circle, rgba(195,34,34,1) 50%, rgba(255,255,255,0.26
     }
 }
 
+/* For å få ting til å kunne stå over screen */
 #blackLayerTop{
     position: relative;
     border: 500px solid black;

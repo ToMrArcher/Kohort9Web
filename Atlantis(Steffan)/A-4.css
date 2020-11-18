@@ -1,3 +1,5 @@
+/* SKREVET AV STEFFAN */
+
 @font-face {
     font-family: Montserrat;
     src: url(../Montserrat/Montserrat-SemiBold.ttf);
@@ -24,6 +26,7 @@
     top: 256px;
 }
 
+/* For å få bakgrunnen til å se mørkere ut iforhold til arenaen */
 #blackBox{
     position: absolute;
     opacity: 0.6;
@@ -99,17 +102,13 @@
     }
 }
 
-#rAnswar:hover{
-    color: red
-}
+
 #wAnswar:hover{
     color: red
 }
 
 
-
-
-
+/* Spørsmåls panelet */
 
 #pracc{
     position: absolute;
@@ -367,7 +366,7 @@ background: radial-gradient(circle, rgba(195,34,34,1) 50%, rgba(255,255,255,0.26
         
     }
 }
-
+/* For å få ting til å kunne stå over screen */
 #blackLayerTop{
     position: relative;
     border: 500px solid black;

@@ -1,3 +1,5 @@
+/* SKREVET AV STEFFAN */
+
 @font-face {
     font-family: Montserrat;
     src: url(../Montserrat/Montserrat-SemiBold.ttf);
@@ -24,6 +26,7 @@
     top: 256px;
 }
 
+/* Gir skygge i bakgrunnen bak arena */
 #blackBox{
     position: absolute;
     opacity: 0.6;
@@ -99,9 +102,7 @@
     }
 }
 
-#rAnswar:hover{
-    color: red
-}
+
 #wAnswar:hover{
     color: red
 }

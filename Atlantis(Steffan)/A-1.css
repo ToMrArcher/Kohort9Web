@@ -1,3 +1,5 @@
+/* SKREVET AV STEFFAN */ 
+
 @font-face {
     font-family: Montserrat;
     src: url(../Montserrat/Montserrat-SemiBold.ttf);
@@ -43,7 +45,6 @@
         top: 50%;
     }
 }
-
 
 #outerSqaure{
     color: red;
@@ -167,6 +168,7 @@
     }
     100%{left: 200px;}
 }
+/* For å få båten til å gå opp og ned sakte */
 @keyframes swaying{
     0%{
         top: 300px;
@@ -182,6 +184,7 @@
     }
 }
 
+ 
 .dialog{
     position: absolute;
     border: 5px solid black;
@@ -192,7 +195,8 @@
     font-family: montserrat;
 }
 
-#dialog2{
+
+#dialog1{
     top: 100px;
     left: 20%;
     opacity: 0;
@@ -209,12 +213,6 @@
     20%{
         opacity: 1;
     }
-    40%{
-        
-    }
-    60%{
-        
-    }
     90%{
         opacity: 1;
     }
@@ -223,7 +221,7 @@
     }
 }
 
-#dialog1{
+#dialog2{
     top: 5%;
     left: 50%;
     opacity: 0;
@@ -330,6 +328,7 @@
         left: 50%;
     }
 }
+/* Brukes for at ting kan komme ut til venstre side */
 #blackLeftLayer{ 
     position: relative;
     border: 360px solid black;
