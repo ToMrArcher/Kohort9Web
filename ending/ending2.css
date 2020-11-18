@@ -81,6 +81,8 @@ body {
         opacity: 100%;
     }
     100% {
+        top: 210px;
+        left: 270px;
         opacity: 0%;
     }
 }
