@@ -61,8 +61,8 @@ body {
 }
 
 .eivind {
-    width: 250px;
-    bottom: -200px;
+    width: 300px;
+    bottom: -100px;
     position: absolute;
     z-index: 3;
     opacity: 1;
@@ -122,25 +122,6 @@ body {
     top: 20px;
     right: 300px;
     animation: speechBubble 4s linear 13s;
-}
-
-.kiss {
-    position: absolute;
-    width: 30px;
-    left: 705px;
-    top: 372px;
-    animation: kiss 2s ease-in-out 18s;
-    opacity: 0;
-}
-
-@keyframes kiss {
-    10% {
-        opacity: 1;
-        transform: scale(4);
-    }
-    100% {
-        transform: scale(20);
-    }
 }
 
 @keyframes fadeIn {

@@ -1,3 +1,5 @@
+/* SKREVET AV STEFFAN */
+
 @font-face {
     font-family: Montserrat;
     src: url(../Montserrat/Montserrat-SemiBold.ttf);
@@ -18,15 +20,6 @@
     opacity: 0.6;
 }
 
-
-#blackBox{
-    position: absolute;
-    opacity: 0.0;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    
-}
 
 .dialog{
     position: absolute;
