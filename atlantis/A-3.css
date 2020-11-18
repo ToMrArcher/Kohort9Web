@@ -50,8 +50,8 @@
     left: 600px;
     opacity: 0;
     animation: dialog1;
-    animation-duration: 11s;
-    animation-delay: 4s;
+    animation-duration: 8s;
+    animation-delay: 3s;
     animation-timing-function: linear;
 }
 @keyframes dialog1 {
@@ -107,7 +107,7 @@
 }
 
 
-/* Spørsmåls panel */
+/* Spørsmåls panelet */
 #pracc{
     position: absolute;
     padding: 3%;
@@ -163,7 +163,7 @@
 
     animation: fancyBoxMvmnt;
     animation-duration: 4s;
-    animation-delay: 15s;
+    animation-delay: 13s;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
     
@@ -218,7 +218,7 @@ background: radial-gradient(circle, rgba(195,34,34,1) 50%, rgba(255,255,255,0.26
     box-shadow: 0px 230px 150px 70px white;
     animation: lightMvnt, fancyBoxMvmntLight;
     animation-duration: 5s, 4s;
-    animation-delay: 0s, 15s;
+    animation-delay: 0s, 13s;
     animation-timing-function: ease-in-out, linear;
     animation-iteration-count: infinite, 1;
     animation-fill-mode: none, forwards;
@@ -238,7 +238,7 @@ background: radial-gradient(circle, rgba(195,34,34,1) 50%, rgba(255,255,255,0.26
     box-shadow: 0px 230px 150px 70px white;
     animation: lightMvnt, fancyBoxMvmntLight;
     animation-duration: 5s, 4s;
-    animation-delay: 0s, 15s;
+    animation-delay: 0s, 13s;
     animation-timing-function: ease-in-out, linear;
     animation-iteration-count: infinite, 1;
     animation-fill-mode: none, forwards;

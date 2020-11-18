@@ -51,7 +51,7 @@
     left: 600px;
     opacity: 0;
     animation: dialog1;
-    animation-duration: 10s;
+    animation-duration: 8s;
     animation-delay: 5s;
     animation-timing-function: linear;
 }
@@ -69,7 +69,7 @@
         opacity: 0;
     }
 }
-
+/* Tekstboksen for svars alternativene */
 #answars{
     top: -350px;
     left: 480px;
@@ -78,7 +78,7 @@
     text-decoration: none;
     animation: answars, moveAnswars;
     animation-duration: 10s, 1s;
-    animation-delay: 22s, 18s;
+    animation-delay: 18s, 15s;
     animation-fill-mode: forwards;
 }
 
@@ -93,6 +93,7 @@
         opacity: 1;
     }
 }
+/* For å ikke noe trykktbart i skjermens */
 @keyframes moveAnswars{
     from{
         top: -350px;
@@ -111,7 +112,7 @@
 
 
 
-
+/* Styling for spørsmåls panelet */
 #pracc{
     position: absolute;
     display: flex;
@@ -166,7 +167,7 @@
 
     animation: fancyBoxMvmnt;
     animation-duration: 4s;
-    animation-delay: 15s;
+    animation-delay: 13s;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
     font-family: montserrat;
@@ -220,7 +221,7 @@ background: radial-gradient(circle, rgba(195,34,34,1) 50%, rgba(255,255,255,0.26
     box-shadow: 0px 230px 150px 70px white;
     animation: lightMvnt, fancyBoxMvmntLight;
     animation-duration: 5s, 4s;
-    animation-delay: 0s, 15s;
+    animation-delay: 0s, 13s;
     animation-timing-function: ease-in-out, linear;
     animation-iteration-count: infinite, 1;
     animation-fill-mode: none, forwards;
@@ -240,7 +241,7 @@ background: radial-gradient(circle, rgba(195,34,34,1) 50%, rgba(255,255,255,0.26
     box-shadow: 0px 230px 150px 70px white;
     animation: lightMvnt, fancyBoxMvmntLight;
     animation-duration: 5s, 4s;
-    animation-delay: 0s, 15s;
+    animation-delay: 0s, 13s;
     animation-timing-function: ease-in-out, linear;
     animation-iteration-count: infinite, 1;
     animation-fill-mode: none, forwards;
