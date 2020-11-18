@@ -1,8 +1,15 @@
-*{
+/* 
+Syvert Andreas Eidjord
+Kohort 9 - Programmering
+Linkes til template.html
+*/
+
+* {
     margin: 0;
 }
 
-body{
+/* Uses flex to center game screen. */
+body {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -11,7 +18,12 @@ body{
     background: black;
 }
 
-.screen{
+/* The playable area.
+   1280 x 720 pixels resolution. 
+   Positioned relative to make all items within it be responsive.
+   Overflow: hidden to not display all elements displayed outside of game area.
+*/
+.screen {
     position: relative;
     display: block;
     width: 1280px;
@@ -20,18 +32,19 @@ body{
     overflow: hidden;
 }
 
-.inventory{
+/* Inventory */
+.inventory {
     position: absolute;
     width: 500px;
     height: 90px;
     top: 620px;
     left: 365px;
     opacity: 10%;
-    transition: opacity linear .5s;
-    animation: startInventory .1s;
+    transition: opacity linear 0.5s;
+    animation: startInventory 0.1s;
 }
 
-.inventoryItem{
+.inventoryItem {
     float: left;
     width: 90px;
     height: 90px;
@@ -40,19 +53,20 @@ body{
     margin-right: 10px;
 }
 
-.inventory:hover{
+.inventory:hover {
     opacity: 100%;
 }
 
-.inventoryItem:last-child{
-    margin:0;
+.inventoryItem:last-child {
+    margin: 0;
 }
 
-@keyframes startInventory{
-    0%{
+/* Is used to overcome problem of having inventory transition in from 100% to 10% at reloading and opening page. */
+@keyframes startInventory {
+    0% {
         opacity: 10%;
     }
-    100%{
+    100% {
         opacity: 10%;
     }
 }
