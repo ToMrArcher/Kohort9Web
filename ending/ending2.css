@@ -17,6 +17,11 @@ body {
     background: black;
 }
 
+/* The playable area.
+   1280 x 720 pixels resolution. 
+   Positioned relative to make all items within it be responsive.
+   Overflow: hidden to not display all elements displayed outside of game area.
+*/
 .screen {
     position: relative;
     display: block;
@@ -32,6 +37,7 @@ body {
     overflow: hidden;
 }
 
+/* dekker toppen av screen for å illustrere himmelen */
 .sky {
     position: absolute;
     background: #9be8ff;
@@ -87,7 +93,6 @@ body {
     }
 }
 
-
 .tube {
     top: 625px;
     left: 470px;
@@ -131,6 +136,7 @@ body {
 
 /* END INVENTORY SECTION */
 
+/* Spillerens båt */
 .boat {
     width: 300px;
     position: absolute;
@@ -159,6 +165,7 @@ body {
     }
 }
 
+/* Brukes til å gi noen elementer høy z-index */
 .highZ {
     z-index: 100;
 }
@@ -215,6 +222,7 @@ body {
     }
 }
 
+/* Onde mannen */
 .alex {
     z-index: 1;
     position: absolute;
@@ -276,6 +284,7 @@ body {
     }
 }
 
+/* Skyen som dekker mens man bygger kanonen. */
 .buildingCloud {
     position: absolute;
     width: 300px;

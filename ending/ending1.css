@@ -17,6 +17,11 @@ body {
     background: black;
 }
 
+/* The playable area.
+   1280 x 720 pixels resolution. 
+   Positioned relative to make all items within it be responsive.
+   Overflow: hidden to not display all elements displayed outside of game area.
+*/
 .screen {
     position: relative;
     display: block;
@@ -32,6 +37,7 @@ body {
     overflow: hidden;
 }
 
+/* dekker toppen av screen for å illustrere himmelen */
 .sky {
     position: absolute;
     background: #9be8ff;
@@ -91,6 +97,7 @@ body {
 
 /* END INVENTORY SECTION */
 
+/* Spillerens båt */
 .boat {
     width: 300px;
     position: absolute;
@@ -180,6 +187,7 @@ body {
     }
 }
 
+/* Brukt på noen elementer for å gi de en høy z-index */
 .highZ {
     z-index: 100;
 }
@@ -228,6 +236,7 @@ body {
     transform: scale(1.2, 1.2);
 }
 
+/* Onde mannen */
 .alex {
     z-index: 3;
     position: absolute;

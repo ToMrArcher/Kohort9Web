@@ -17,6 +17,11 @@ body {
     background: black;
 }
 
+/* The playable area.
+   1280 x 720 pixels resolution. 
+   Positioned relative to make all items within it be responsive.
+   Overflow: hidden to not display all elements displayed outside of game area.
+*/
 .screen {
     position: relative;
     display: block;
@@ -26,6 +31,7 @@ body {
     overflow: hidden;
 }
 
+/* Fader inn fra forrige side. */
 .black {
     background-color: black;
     opacity: 1;
@@ -61,7 +67,7 @@ body {
 }
 
 .eivind {
-    width: 300px;
+    width: 400px;
     bottom: -100px;
     position: absolute;
     z-index: 3;
@@ -136,5 +142,33 @@ body {
     }
     100% {
         opacity: 0;
+    }
+}
+
+/* Brukes for å klikke videre til neste side */
+.arrow {
+    position: absolute;
+    width: 300px;
+    right: 50px;
+    bottom: 50px;
+    z-index: -10;
+    animation: arrow 1s linear 17s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes arrow {
+    0% {
+        z-index: -10;
+        opacity: 0;
+    }
+    1% {
+        z-index: 100;
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+    100% {
+        opacity: 1;
+        z-index: 1000;
+        transform: rotate(360deg);
     }
 }

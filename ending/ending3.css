@@ -17,6 +17,11 @@ body {
     background: black;
 }
 
+/* The playable area.
+   1280 x 720 pixels resolution. 
+   Positioned relative to make all items within it be responsive.
+   Overflow: hidden to not display all elements displayed outside of game area.
+*/
 .screen {
     position: relative;
     display: block;
@@ -69,6 +74,7 @@ body {
     }
 }
 
+/* dekker toppen av screen for å illustrere himmelen */
 .sky {
     position: absolute;
     background: #9be8ff;
@@ -78,6 +84,7 @@ body {
     z-index: 0;
 }
 
+/* Spillerens båt */
 .boat {
     width: 300px;
     position: absolute;
@@ -123,6 +130,7 @@ body {
     }
 }
 
+/* Brukes til å gi noen elementer høy z-index */
 .highZ {
     z-index: 100;
 }
@@ -169,6 +177,7 @@ body {
     }
 }
 
+/* Onde mannen */
 .alex {
     z-index: 1;
     position: absolute;
@@ -225,6 +234,9 @@ body {
     }
 }
 
+/* Samme karakter som alex, men med hele kroppen.
+Brukes mens karakteren flyr i luften for å vise hele kroppen,
+går tilbake til vanlig alex etter han har falt i vannet */
 .alex2 {
     z-index: 100;
     position: absolute;
@@ -271,6 +283,7 @@ body {
     animation-fill-mode: forwards;
 }
 
+/* Eksplosjons animasjonen */
 .boom {
     position: absolute;
     width: 250px;
@@ -309,6 +322,7 @@ body {
     }
 }
 
+/* Splash animasjonen når skurken faller i vannet */
 .splash {
     /* HEIGHT 300px WIDTH 500px */
     position: absolute;
