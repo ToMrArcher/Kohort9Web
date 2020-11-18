@@ -44,7 +44,7 @@
     opacity: 0;
     animation: dialog1;
     animation-duration: 11s;
-    animation-delay: 4s;
+    animation-delay: 2s;
     animation-timing-function: linear;
 }
 @keyframes dialog1 {
@@ -66,8 +66,8 @@
     left: 600px;
     opacity: 0;
     animation: dialog1;
-    animation-duration: 11s;
-    animation-delay: 15s;
+    animation-duration: 5s;
+    animation-delay: 14s;
     animation-timing-function: linear;
 }
 @keyframes dialog1 {
@@ -89,68 +89,47 @@
     position: absolute;
     top: 300px;
     left: 500px;
-    width: 1%;
-    opacity: 0;
+    width: 15%;
+    transform: rotate(980deg);
     animation-name: wheel;
-    animation-duration: 5s;
-    animation-delay: 26s;
-    animation-timing-function: ease-out;
+    animation-duration: 2s;
+    animation-timing-function: linear;
     animation-fill-mode: forwards;
 }
 @keyframes wheel{
     0%{
-        left: 600px;
+        top: 300px;
+    }
+    99%{
+        opacity: 1;
+    }
+    100%{
+        top: 620px;
+        left: 655px;
+        width: 7%;
+        opacity: 0.1;
+        z-index: 1;
+    }
+}
+
+#wheelInvt{
+    animation: invis;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+@keyframes invis{
+    0%{
         opacity: 0;
-        transform: rotate(0deg);
+    }
+    95%{
+        opacity: 0;
     }
     100%{
         opacity: 1;
-        transform: rotate(980deg);
-        width: 15%;
     }
 }
 
-
-
-.curtain{
-    position: absolute;
-}
-
-#curtainRight{
-    left: 50%;
-    top: 0px;
-    animation: curtainR;
-    animation-duration: 5s;
-    animation-timing-function: linear;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-}
-
-#curtainLeft{
-    top: 0px;
-    animation: curtainL;
-    animation-duration: 5s;
-    animation-timing-function: linear;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-}
-
-@keyframes curtainR {
-    0%{
-        left: 50%;
-    }
-    100%{
-        left: 100%;
-    }
-}
-@keyframes curtainL {
-    0%{
-        left: 0%;
-    }
-    100%{
-        left: -50%;
-    }
-}
 
 #uboat{
     position: absolute;
@@ -159,8 +138,10 @@
     left: 200px;
     animation: uboat, swaying;
     animation-duration: 10s, 10s;
+    animation-delay: 5s, 0s;
     animation-timing-function: linear, linear;
     animation-iteration-count: 1, infinite;
+    animation-fill-mode: forwards, none;
 }
 @keyframes swaying{
     0%{
@@ -176,6 +157,28 @@
         top: 300px;
     }
 }
+@keyframes uboat{
+    0%{
+        z-index: 1;
+        transform-origin: top;
+        transform: rotate(0deg);
+    }
+    30%{
+        transform: rotate(-380deg);
+    }
+    35%{
+        transform: rotate(-350deg);
+    }
+    40%{
+        transform: rotate(-360deg);
+    }
+    100%{
+        left: 1600px;
+        z-index: 1;
+        transform: rotate(-360deg);
+        
+    }
+}
 
 #Neptune{
     position: absolute;
@@ -184,9 +187,11 @@
     opacity: 1;
     transform: rotateY(180deg);
     animation: Neptune, nepSwaying;
-    animation-duration: 10s, 11s;
+    animation-duration: 1s, 11s;
+    animation-delay: 10s, 0s;
     animation-timing-function: linear, linear;
     animation-iteration-count: 1, infinite;
+    animation-fill-mode: forwards, none;
 }
 @keyframes nepSwaying{
     0%{
@@ -201,6 +206,41 @@
     100%{
         top: 100px;
     }
+}
+@keyframes Neptune{
+    to{
+        transform: rotateY(0deg);
+    }
+    from{
+        transform: rotateY(180deg);
+    }
+}
+
+#arrowContinue{
+    position: absolute;
+    width: 1%;
+    top: 300px;
+    left: 400px;
+    opacity: 0;
+    animation-name: arrow;
+    animation-duration: 2s;
+    animation-delay: 15s; 
+    animation-fill-mode: forwards;
+}
+@keyframes arrow{
+    from{
+        
+        width: 1%;
+        z-index: -1;
+        opacity: 0;
+    }
+    
+    to{
+        width: 30%;
+        z-index: 1;
+        opacity: 1;
+    }
+    
 }
 
 #blackBoxTransition{

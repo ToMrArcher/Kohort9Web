@@ -5,7 +5,15 @@ Kodet av Marco A. Gravbrøt
 
 @font-face {
     font-family: MontserratBold;
-    src: url(Montserrat/Montserrat-ExtraBold.ttf);
+    src: url(../Montserrat/Montserrat-ExtraBold.ttf);
+}
+
+/* Class for å gå videre til world-map som brukes for alle sidene og kan endre delay*/
+.screen.finish {
+    animation-name: continue-background;
+    animation-duration: 1s;
+    animation-delay: 19s;
+    animation-fill-mode: forwards;
 }
 
 .continue {
@@ -19,7 +27,7 @@ Kodet av Marco A. Gravbrøt
 
     animation-name: continue-arrow, continue-effects;
     animation-duration: 1s, 0.5s;
-    animation-delay: 13s, 13.5s;
+    animation-delay: 27s, 27.5s;
     animation-fill-mode: forwards;
 }
 
@@ -34,34 +42,15 @@ Kodet av Marco A. Gravbrøt
 
     top: 0px;
     
-    background-image: url(images/world.png);
+    background-image: url(../images/world.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
 
     animation-name: continue-arrow;
     animation-duration: 1s;
-    animation-delay: 8s;
+    animation-delay: 20s;
     animation-fill-mode: forwards;
 }
-
-/*
-.map-image {
-    position: absolute;
-
-    opacity: 0%;
-    z-index: -10;
-
-    width: 1280px;
-    height: 720px;
-
-    top: 0px;
-
-    animation-name: continue-arrow;
-    animation-duration: 1s;
-    animation-delay: 8s;
-    animation-fill-mode: forwards;
-}
-*/
 
 .map-texts {
     position: absolute;
@@ -78,14 +67,14 @@ Kodet av Marco A. Gravbrøt
 
     height: 180px;
 
-    background-image: url(images/scroll.png);
+    background-image: url(../images/scroll.png);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
 
     animation-name: map-text;
     animation-duration: 3s;
-    animation-delay: 10s;
+    animation-delay: 22s;
     animation-fill-mode: forwards;
 }
 
@@ -114,12 +103,12 @@ Kodet av Marco A. Gravbrøt
 
     width: 75px;
 
-    top: 392px;
-    left: 1100px; /*1234 = -134*/
+    top: 432px;
+    left: 1166px;
 
-    animation-name: continue-arrow, boat-move-reef, boat-move-marianna, boat-move-atlantis, boat-move-northpole, boat-move-norway;
-    animation-duration: 1s, 3s, 4s, 6s, 4s, 4s;
-    animation-delay: 8s, 10s, 13s, 17s, 23s, 27s;
+    animation-name: continue-arrow, boat-move-marianna;
+    animation-duration: 1s, 3s;
+    animation-delay: 20s, 22s;
     animation-fill-mode: forwards;
 }
 
@@ -142,6 +131,11 @@ Kodet av Marco A. Gravbrøt
     animation-duration: 1s;
     animation-delay: 8s;
     animation-fill-mode: forwards;
+}
+
+#point2 {
+    top: 450px;
+    left: 1200px;
 }
 
 @keyframes map-text {

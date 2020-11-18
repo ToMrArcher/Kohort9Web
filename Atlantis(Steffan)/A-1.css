@@ -19,23 +19,29 @@
 }
 
 
-@keyframes link {
-    0%{
-        opacity: 0;
-    }100%{
-        opacity: 1;
-        z-index: 2;
-    }
-}
 
-/* Sqaures er styling til start */
+
+/* Sqaures er styling til start quiz*/
 .square{
     position: absolute;
-    top: 50%;
+    top: -50%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 3%;
     font-family: montserrat;
+    animation: moveBtn;
+    animation-duration: 1s;
+    animation-delay: 44s;
+    animation-fill-mode: forwards;
+    
+}
+@keyframes moveBtn {
+    0%{
+        top:-50%;
+    }
+    100%{
+        top: 50%;
+    }
 }
 
 
@@ -44,10 +50,11 @@
     border: 17px dotted yellow;
     border-radius: 16px;
     padding: 3.1%;
-    animation-name: colorSplash;
-    animation-duration: 5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+    animation-name: colorSplash, moveBtn;
+    animation-duration: 5s, 1s;
+    animation-delay: 0s, 44s;
+    animation-timing-function: linear, ;
+    animation-iteration-count: infinite, 1;
 }
 @keyframes colorSplash {
     0%{
@@ -85,7 +92,8 @@
 @keyframes link {
     0%{
         opacity: 0;
-    }100%{
+    }
+    100%{
         opacity: 1;
     }
 }
@@ -329,6 +337,12 @@
 }
 
 
+
+.inventoryItemPic{
+    width: 90%;
+    max-height: 90%;
+}
+
 *{
     margin: 0;
 }
@@ -355,19 +369,23 @@ body{
     width: 500px;
     height: 90px;
     top: 620px;
-    left: 365px;
+    left: 455px;
     opacity: 10%;
     transition: opacity linear .5s;
     animation: startInventory .1s;
 }
 
 .inventoryItem{
+    position: relative;
     float: left;
     width: 90px;
     height: 90px;
     background: white;
     border-radius: 10px;
     margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .inventory:hover{

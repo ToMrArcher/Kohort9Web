@@ -1,3 +1,8 @@
+/*Jonas*/
+
+
+/*Hver keyframe hører sammen med ID/classen rett over*/
+
 #cannonBarrel{
     width: 90%;
     max-height: 90%;
@@ -75,11 +80,12 @@
     }
 }
 
+/*Importerer fonten*/
 @font-face{
     font-family: 'semiBold';
-    src:url(Fonts/Montserrat-SemiBold.ttf);
+    src:url(/Montserrat/Montserrat-SemiBold.ttf);
     font-style: normal;
-} /*Importerer fonten*/
+} 
 
 #sun{
     position: relative;
@@ -240,6 +246,12 @@
     animation-fill-mode: forwards;
 }
 
+/*Bevege bølgene*/
+@keyframes seaMove {
+    0% { left: -200px; }
+    100% { left: 0px; }
+} 
+
 #sea:before{
     position: relative;
     content: "";
@@ -249,10 +261,7 @@
     bottom: -30px;
 }
 
-@keyframes seaMove {
-    0% { left: -200px; }
-    100% { left: 0px; }
-}
+
 
 #text{
     position: absolute;

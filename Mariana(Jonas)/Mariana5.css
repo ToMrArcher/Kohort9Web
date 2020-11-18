@@ -1,3 +1,8 @@
+/*Jonas*/
+
+
+/*Hver keyframe hører sammen med ID/classen rett over*/
+
 #cannonBarrel{
     width: 90%;
     max-height: 90%;
@@ -29,6 +34,7 @@
     }
     }
 
+/*Hele fisken*/
 #fish{
     position: absolute;
     height: 400px;
@@ -61,6 +67,7 @@
     }
 }
 
+/*Kun lyskrona til fisken. Gjør det slik så opacity ikke trenger å være like*/
 #fish2{
     position: absolute;
     height: 400px;
@@ -152,11 +159,12 @@
     }
 }
 
+/*Importerer fonten*/
 @font-face{
     font-family: 'semiBold';
-    src:url(Fonts/Montserrat-SemiBold.ttf);
+    src:url(/Montserrat/Montserrat-SemiBold.ttf);
     font-style: normal;
-} /*Importerer fonten*/
+} 
 
 #text{
     position: absolute;
@@ -206,7 +214,7 @@ body{
     width: 1280px;
     height: 720px;
     overflow: hidden;
-    background-image: url(Images/background.jpg);
+    background-image: url(/images/background.jpg);
     background-repeat: no-repeat;
     background-size: 1280px 720px;
 }

@@ -74,6 +74,18 @@ body {
     animation-fill-mode: forwards;
 }
 
+@keyframes build {
+    99% {
+        top: 210px;
+        left: 270px;
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+
+
 .tube {
     top: 625px;
     left: 470px;
@@ -106,6 +118,15 @@ body {
     margin: 0;
 }
 
+@keyframes startInventory {
+    0% {
+        opacity: 10%;
+    }
+    100% {
+        opacity: 10%;
+    }
+}
+
 /* END INVENTORY SECTION */
 
 .boat {
@@ -122,6 +143,18 @@ body {
     right: 10px;
     top: 30px;
     animation: evilBoat 2s ease-in-out infinite;
+}
+
+@keyframes evilBoat {
+    0% {
+        top: 10px;
+    }
+    50% {
+        top: 20px;
+    }
+    100% {
+        top: 10px;
+    }
 }
 
 .highZ {
@@ -143,9 +176,18 @@ body {
     animation-fill-mode: forwards;
 }
 
+@keyframes appear {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
 .button {
     position: absolute;
-    background: yellow;
+    background: #fd8c04;
     padding: 15px;
     border: 3px solid black;
     border-radius: 20px;
@@ -162,6 +204,15 @@ body {
     transform: scale(1.2, 1.2);
 }
 
+@keyframes button {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
 .alex {
     z-index: 1;
     position: absolute;
@@ -170,6 +221,18 @@ body {
     right: 120px;
     animation: alex 2s ease-in-out infinite;
     transform: rotateY(180deg);
+}
+
+@keyframes alex {
+    0% {
+        top: 70px;
+    }
+    50% {
+        top: 80px;
+    }
+    100% {
+        top: 70px;
+    }
 }
 
 .cannon {
@@ -260,77 +323,6 @@ body {
     100% {
         left: 1500px;
         opacity: 1;
-    }
-}
-
-@keyframes speechBubble {
-    0% {
-        opacity: 0%;
-    }
-    100% {
-        opacity: 100%;
-    }
-}
-
-@keyframes button {
-    0% {
-        opacity: 0%;
-    }
-    100% {
-        opacity: 100%;
-    }
-}
-
-@keyframes evilBoat {
-    0% {
-        top: 10px;
-    }
-    50% {
-        top: 20px;
-    }
-    100% {
-        top: 10px;
-    }
-}
-
-@keyframes alex {
-    0% {
-        top: 70px;
-    }
-    50% {
-        top: 80px;
-    }
-    100% {
-        top: 70px;
-    }
-}
-
-@keyframes build {
-    99% {
-        top: 210px;
-        left: 270px;
-        opacity: 100%;
-    }
-    100% {
-        opacity: 0%;
-    }
-}
-
-@keyframes appear {
-    0% {
-        opacity: 0%;
-    }
-    100% {
-        opacity: 100%;
-    }
-}
-
-@keyframes startInventory {
-    0% {
-        opacity: 10%;
-    }
-    100% {
-        opacity: 10%;
     }
 }
 

@@ -58,6 +58,18 @@ body {
     z-index: 0;
 }
 
+@keyframes evilBoat {
+    0% {
+        top: 10px;
+    }
+    50% {
+        top: 20px;
+    }
+    100% {
+        top: 10px;
+    }
+}
+
 .highZ {
     z-index: 100;
 }
@@ -90,6 +102,21 @@ body {
     animation-fill-mode: forwards;
 }
 
+@keyframes speechBubble {
+    0% {
+        opacity: 0%;
+    }
+    20% {
+        opacity: 100%;
+    }
+    80% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 .alex {
     z-index: 5;
     position: absolute;
@@ -101,6 +128,18 @@ body {
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     transform: rotateY(180deg) rotate(-4deg);
+}
+
+@keyframes alexFloating {
+    0% {
+        right: 200px;
+    }
+    50% {
+        right: 180px;
+    }
+    100% {
+        right: 200px;
+    }
 }
 
 .cannon {
@@ -131,45 +170,6 @@ body {
     100% {
         left: 1500px;
         opacity: 1;
-    }
-}
-
-@keyframes alexFloating {
-    0% {
-        right: 200px;
-    }
-    50% {
-        right: 180px;
-    }
-    100% {
-        right: 200px;
-    }
-}
-
-@keyframes speechBubble {
-    0% {
-        opacity: 0%;
-    }
-    20% {
-        opacity: 100%;
-    }
-    80% {
-        opacity: 100%;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-@keyframes evilBoat {
-    0% {
-        top: 10px;
-    }
-    50% {
-        top: 20px;
-    }
-    100% {
-        top: 10px;
     }
 }
 
