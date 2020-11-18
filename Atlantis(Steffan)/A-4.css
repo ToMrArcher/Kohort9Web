@@ -40,7 +40,7 @@
     padding: 50px;
     border-radius: 100px;
     background-color: white;
-    font-family: Montserrat;
+    font-family: montserrat;
 }
 
 #dialog1{
@@ -68,14 +68,14 @@
 }
 
 #answars{
-    top: 350px;
+    top: -350px;
     left: 480px;
     width: 150px;
     opacity: 0;
     text-decoration: none;
-    animation: answars;
-    animation-duration: 10s;
-    animation-delay: 22s;
+    animation: answars, moveAnswars;
+    animation-duration: 10s, 1s;
+    animation-delay: 22s, 18s;
     animation-fill-mode: forwards;
 }
 
@@ -88,6 +88,14 @@
     }
     100%{
         opacity: 1;
+    }
+}
+@keyframes moveAnswars{
+    from{
+        top: -350px;
+    }
+    to{
+        top: 350px;
     }
 }
 
@@ -108,10 +116,16 @@
     padding: 3%;
     width: 20%;
     height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+
     background-color: rgb(255, 250, 230);
     transform: translate(-50%, -50%);
     border-radius: 4px;
-    box-shadow: 0px 0px 0px 25px rgb(214, 11, 21) 
+    box-shadow: 0px 0px 0px 25px rgb(214, 11, 21);
+    font-family: montserrat;
 }
 
 #pracc2{
@@ -156,6 +170,7 @@
     animation-delay: 15s;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
+    
 }
 @keyframes fancyBoxMvmnt{
     from {
@@ -189,6 +204,7 @@
 background: radial-gradient(circle, rgba(195,34,34,1) 50%, rgba(255,255,255,0.26934523809523814) 95%);;
     z-index: 0;
     opacity: 0;
+    
 }
 
 #light1{
@@ -395,6 +411,14 @@ body{
     transition: opacity linear .5s;
     animation: startInventory .1s;
 }
+@keyframes startInventory{
+    0%{
+        opacity: 10%;
+    }
+    100%{
+        opacity: 10%;
+    }
+}
 
 .inventoryItem{
     position: relative;
@@ -415,12 +439,4 @@ body{
 
 .inventoryItem:last-child{
     margin:0;
-}
-@keyframes startInventory{
-    0%{
-        opacity: 10%;
-    }
-    100%{
-        opacity: 10%;
-    }
 }
