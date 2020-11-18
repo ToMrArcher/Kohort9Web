@@ -1,92 +1,172 @@
+#cannonBarrel{
+    width: 90%;
+    max-height: 90%;
+    
+}
+
 #boat{
     position: absolute;
     top: 350px;
-    left: 100px;
     width: 200px;
     height: 150px;
-    opacity: 1;
-    
-    animation-name: boat;
-    animation-duration: 8s;
-    animation-timing-function: linear;
-    opacity: 1;
-}
+    left: 100px;
+    opacity: 0.08;
 
-@keyframes boat{
+    
+    animation-name: dive;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+}
+@keyframes dive{
     0%{
-        opacity: 0.08;
+        top: -200px;  
     }
     100%{
-        opacity: 1;
+        top: 350px;
     }
-    }
+}
 
+@font-face{
+    font-family: 'semiBold';
+    src:url(Fonts/Montserrat-SemiBold.ttf);
+    font-style: normal;
+} /*Importerer fonten*/
 
-#fish{
+#text{
     position: absolute;
-    height: 400px;
-    width: 400px;
-    left: 10px;
-    top: 5px;
-    transform: rotateY(180deg);
+    left: 280px;
+    top: 320px;
+    font-family: semiBold;
     
-    animation-name: fish;
-    animation-duration: 5s;
-    animation-timing-function: linear;
+    border: 5px solid black;
+    display: inline;
+    padding: 10px;
+    border-radius: 100px;
+    background-color: white;
+    
+    animation-name: text;
+    animation-duration: 15s;
     opacity: 1;
 }
-
-@keyframes fish{
+@keyframes text{
     0%{
-        left: 600px;
-        top: 100px;
-        height: 600px;
-        width: 600px;
-        opacity: 0.2;
-        transform: rotateY(0deg);
+        opacity: 0
+    }
+    80%{
+        opacity: 0;
     }
     100%{
-        left: 10px;
-        top: 5px;
-        height: 400px;
-        width: 400px;
         opacity: 1;
-        transform: rotateY(180deg);
     }
 }
 
 #fish2{
     position: absolute;
-    height: 400px;
-    width: 400px;
-    left: 10px;
-    top: 5px;
-    transform: rotateY(180deg);
+    height: 600px;
+    width: 600px;
+    left: 600px;
+    top: 100px;
     
     animation-name: fish2;
-    animation-duration: 5s;
+    animation-duration: 15s;
     animation-timing-function: linear;
-    opacity: 1;
+    opacity: 0.2;
 }
 @keyframes fish2{
     0%{
+        left: 650px;
+        top: 10px;
+        opacity: 0;
+    }
+    10%{
+        left: 650px;
+        top: 10px;
+        opacity: 0.08;
+        width: 200px;
+        height: 200px;
+    }
+    30%{
+        top: 40px;
+        width: 300px;
+        height: 300px;
+    }
+    50%{
+        transform: rotateY(0deg);
+        
+    }
+    60%{
+        left: 300px;
+        top: 300px;
+        width: 450px;
+        height: 450px;
+        transform: rotateY(180deg);
+    }
+    75%{
+        left: 450px;
+        top: 80px;
+    }
+    90%{
         left: 600px;
         top: 100px;
-        height: 600px;
-        width: 600px;
-        opacity: 0.2;
-        transform: rotateY(0deg);
-    }
-    100%{
-        left: 10px;
-        top: 5px;
-        height: 400px;
-        width: 400px;
-        opacity: 1;
         transform: rotateY(180deg);
+        width: 600px;
+        height: 600px;
     }
 }
 
+#fish{
+    position: absolute;
+    height: 600px;
+    width: 600px;
+    left: 600px;
+    top: 100px;
+    
+    animation-name: fish;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    opacity: 0.2;
+}
+@keyframes fish{
+    0%{
+        left: 650px;
+        top: 10px;
+        opacity: 0;
+    }
+    10%{
+        left: 650px;
+        top: 10px;
+        opacity: 0.08;
+        width: 200px;
+        height: 200px;
+    }
+    30%{
+        top: 40px;
+        width: 300px;
+        height: 300px;
+    }
+    50%{
+        transform: rotateY(0deg);
+        
+    }
+    60%{
+        left: 300px;
+        top: 300px;
+        width: 450px;
+        height: 450px;
+        transform: rotateY(180deg);
+    }
+    75%{
+        left: 450px;
+        top: 80px;
+    }
+    90%{
+        left: 600px;
+        top: 100px;
+        transform: rotateY(180deg);
+        width: 600px;
+        height: 600px;
+    }
+}
 
 #box{
     position: absolute;
@@ -94,78 +174,15 @@
     height: 40px;
     left: 613px;
     top: 380px;
+    
 }
 #box2{
     position: absolute;
     width: 1280px;
     height: 720px;
     background-color: black;
-    opacity: 0;
-    
-    animation-name: box2;
-    animation-duration: 7s;
-    animation-timing-function: linear;
-    
-}
-@keyframes box2{
-    0%{
-        opacity: 0.96666666666;
+    opacity: 0.9777
     }
-    50%{
-        opacity: 0.96666666666;
-    }
-    100%{
-        opacity: 0;
-    }
-}
-
-#closedChest{
-    position: absolute;
-    left: 1000px;
-    top: 500px;
-    width: 100px;
-    height: 100px;
-    opacity: 1;
-    
-    animation-name: closedChest;
-    animation-duration: 7s;
-    animation-timing-function: linear;
-}
-
-@keyframes closedChest{
-    0%{
-        opacity: 0;
-    }
-    50%{
-        opacity: 0;
-    }
-    51%{
-        opacity: 0.6;
-    }
-    100%{
-        opacity: 1;
-    }
-}
-#text{
-    position: absolute;
-    left: 300px;
-    top: 400px;
-    
-    animation-name: text;
-    animation-duration: 7s;
-}
-@keyframes text{
-    0%{
-        opacity: 0;
-    }
-    99%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-}
-
 
 {
     margin: 0;
@@ -186,6 +203,7 @@ body{
     display: block;
     width: 1280px;
     height: 720px;
+    overflow: hidden;
     background-image: url(Images/background.jpg);
     background-repeat: no-repeat;
     background-size: 1280px 720px;
@@ -199,6 +217,18 @@ body{
     left: 365px;
     opacity: 10%;
     transition: opacity linear .5s;
+    
+    animation-name: inventory;
+    animation-duration: 1s;
+}
+
+@keyframes inventory{
+    0%{
+        opacity: 10%;
+    }
+    100%{
+        opacity: 10%;
+    }
 }
 
 .inventoryItem{
@@ -208,7 +238,11 @@ body{
     background: white;
     border-radius: 10px;
     margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 
 .inventory:hover{
     opacity: 100%;

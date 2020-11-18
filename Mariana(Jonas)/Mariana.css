@@ -1,3 +1,9 @@
+#cannonBarrel{
+    width: 90%;
+    max-height: 90%;
+    
+}
+
 #boat{
     position: absolute;
     top: 100px;
@@ -9,24 +15,18 @@
     animation-duration: 5s;
     animation-timing-function: ease-in;
 }
-
 @keyframes moveBoat{
     0%{
-        opacity: 0;
-        left: 0px;
-        
-    }
-    50%{
-        opacity: 0.2;
+        left: -200px;
     }
     100%{
-        opacity: 1;
-        left: 100px;
+        100px;
     }
     
 }
+
 #bullet{
-    position: relative;
+    position: absolute;
     height: 30px;
     width: 30px;
     border-radius: 100%;
@@ -40,53 +40,86 @@
     animation-delay: 6s;
     animation-timing-function: linear;
 }
-
 @keyframes bullet{
     0%{
-        top: 190px;
+        top: 120px;
         left: 1300px;
     }
     10%{
-        top: 160px;
+        top: 100px;
         left: 1170px;
     }
     20%{
-        top: 130px;
+        top: 80px;
         left: 1040px;
     }
     30%{
-        top: 100px;
+        top: 70px;
         left: 910px;
     }
     40%{
-        top: 65px;
+        top: 60px;
         left: 780px;
     }
     50%{
-        top: 55px;
+        top: 50px;
         left: 650px;
     }
     60%{
-        top: 55px;
+        top: 40px;
         left: 520px;
     }
     70%{
-        top: 60px;
+        top: 40px;
         left: 390px;
     }
     80%{
-        top: 70px;
+        top: 50px;
         left: 260px;
     }
     90%{
-        top: 75px;
+        top: 60px;
         left: 120px;
     }
     100%{
-        top: 90px;
+        top: 80px;
         left: -10px;
     }
+
 }
+
+
+#sea{
+    position: relative;
+    left: 0;
+    top: 80px;
+    bottom: 50px;
+    height: 30px;
+    background-size: 40px 100px;
+    background-image: radial-gradient(
+        circle at 20px -5px,
+        transparent 22px,
+        rgba(30,50,191,1) 5%);
+        background-repeat: repeat;
+    width: 3000px;
+    
+    animation: seaMove 5s infinite linear;
+    animation-fill-mode: forwards;
+}
+
+#sea:before{
+    position: relative;
+    content: "";
+    background-color: #2d90af;
+    height: 30px;
+    width: 1000vw;
+    bottom: -30px;
+}
+@keyframes seaMove {
+    0% { left: -200px; }
+    100% { left: 0px; }
+}
+
 #sky{
     position: absolute;
     background-color: #bd4f6c;
@@ -94,22 +127,53 @@
 
     width: 1280px;
     height: 200px;
+    
+    animation-name: sky;
+    animation-duration: 5s;
+    animation-timing-function: linear;
 }
 
 @font-face{
-    font-family: 'SemiBold';
+    font-family: 'semiBold';
     src:url(Fonts/Montserrat-SemiBold.ttf);
     font-style: normal;
 } /*Importerer fonten*/
+
+#sun{
+    position: relative;
+    background: rgb(246,255,0);
+    background: radial-gradient(circle, rgba(246,255,0,1) 4%, rgba(246,255,0,1) 9%, rgba(246,255,0,1) 30%, rgba(246,255,0,1) 33%, rgba(246,255,0,1) 56%, rgba(255,102,0,1) 100%);
+    box-shadow: 0 0 15px 15px yellow;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    left: 800px;
+    top:80px;
+    
+    animation-name: sun;
+    animation-duration: 4s;
+    animation-timing-function: ease-out;
+}
+@keyframes sun{
+    0%{
+        left: 400px;
+        top: -100px;
+    }
+    100%{
+        left: 800px;
+        top: 80px;
+    }
+}
+
 #text1{
     position: absolute;
     top: 100px;
-    left: 270px;
-    font-family: SemiBold;
+    left: 280px;
+    font-family: semiBold;
     
     border: 5px solid black;
     display: inline;
-    padding 50px;
+    padding: 9px;
     border-radius: 100px;
     background-color: white;
     
@@ -150,6 +214,7 @@ body{
     display: block;
     width: 1280px;
     height: 720px;
+    overflow: hidden;
     background: rgb(6,4,47);
     background: linear-gradient(0deg, rgba(6,4,47,1) 6%, rgba(30,50,191,1) 59%);
 }
@@ -162,6 +227,18 @@ body{
     left: 365px;
     opacity: 10%;
     transition: opacity linear .5s;
+    
+    animation-name: inventory;
+    animation-duration: 1s;
+}
+
+@keyframes inventory{
+    0%{
+        opacity: 10%;
+    }
+    100%{
+        opacity: 10%;
+    }
 }
 
 .inventoryItem{
@@ -171,6 +248,9 @@ body{
     background: white;
     border-radius: 10px;
     margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .inventory:hover{

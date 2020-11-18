@@ -1,26 +1,33 @@
+#cannonBarrel{
+    width: 90%;
+    max-height: 90%;
+    
+}
+
 #boat{
     position: absolute;
-    top: 400px;
-    left: 750px;
+    top: 350px;
+    left: 100px;
     width: 200px;
     height: 150px;
+    opacity: 1;
     
     animation-name: boat;
-    animation-duration: 4s;
+    animation-duration: 8s;
     animation-timing-function: linear;
+    opacity: 1;
 }
-
 @keyframes boat{
     0%{
-        top: 350px;
-        left: 100px;
+        opacity: 0.08;
+    }
+    60%{
+        opacity: 0.7;
     }
     100%{
-        top: 400px;
-        left: 750px;
+        opacity: 1;
     }
-}
-
+    }
 
 #fish{
     position: absolute;
@@ -29,6 +36,29 @@
     left: 10px;
     top: 5px;
     transform: rotateY(180deg);
+    
+    animation-name: fish;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    opacity: 1;
+}
+@keyframes fish{
+    0%{
+        left: 600px;
+        top: 100px;
+        height: 600px;
+        width: 600px;
+        opacity: 0.2;
+        transform: rotateY(0deg);
+    }
+    100%{
+        left: 10px;
+        top: 5px;
+        height: 400px;
+        width: 400px;
+        opacity: 1;
+        transform: rotateY(180deg);
+    }
 }
 
 #fish2{
@@ -38,6 +68,61 @@
     left: 10px;
     top: 5px;
     transform: rotateY(180deg);
+    
+    animation-name: fish2;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    opacity: 1;
+}
+@keyframes fish2{
+    0%{
+        left: 600px;
+        top: 100px;
+        height: 600px;
+        width: 600px;
+        opacity: 0.2;
+        transform: rotateY(0deg);
+    }
+    100%{
+        left: 10px;
+        top: 5px;
+        height: 400px;
+        width: 400px;
+        opacity: 1;
+        transform: rotateY(180deg);
+    }
+}
+
+#box{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 613px;
+    top: 380px;
+}
+
+#box2{
+    position: absolute;
+    width: 1280px;
+    height: 720px;
+    background-color: black;
+    opacity: 0;
+    
+    animation-name: box2;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    
+}
+@keyframes box2{
+    0%{
+        opacity: 0.98888888;
+    }
+    50%{
+        opacity: 0.96666666666;
+    }
+    100%{
+        opacity: 0;
+    }
 }
 
 #closedChest{
@@ -46,83 +131,48 @@
     top: 500px;
     width: 100px;
     height: 100px;
+    opacity: 1;
     
     animation-name: closedChest;
-    animation-duration: 4s;
+    animation-duration: 7s;
     animation-timing-function: linear;
-    opacity: 0;
 }
 @keyframes closedChest{
     0%{
-        opacity: 1;
-    }
-    99%{
-        opacity: 1;
-    }
-    100%{
         opacity: 0;
     }
-}
-
-#openChest{
-    position: absolute;
-    left: 1000px;
-    top: 500px;
-    width: 100px;
-    height: 100px;
-    
-    animation-name: openChest;
-    animation-duration: 4s;
-    animation-timing-function: linear;
-    opacity: 1;
-}
-
-@keyframes openChest{
-    0%{
+    50%{
         opacity: 0;
     }
-    99%{
-        opacity: 0;
+    51%{
+        opacity: 0.6;
     }
     100%{
         opacity: 1;
     }
 }
 
-#wheel{
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    left: 1010px;
-    top: 520px;
-    
-    animation-name: wheel;
-    animation-duration: 4s;
-    animation-timing-function: linear;
-}
-
-@keyframes wheel{
-    0%{
-        opacity: 0;
-    }
-    99%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-}
+@font-face{
+    font-family: 'semiBold';
+    src:url(Fonts/Montserrat-SemiBold.ttf);
+    font-style: normal;
+} /*Importerer fonten*/
 
 #text{
     position: absolute;
-    left: 950px;
-    top: 400px;
+    left: 280px;
+    top: 360px;
+    font-family: semiBold;
+    
+    border: 5px solid black;
+    display: inline;
+    padding: 7px;
+    border-radius: 100px;
+    background-color: white;
     
     animation-name: text;
-    animation-duration: 5s;
-    animation-timing-function: linear;
+    animation-duration: 7s;
 }
-
 @keyframes text{
     0%{
         opacity: 0;
@@ -134,6 +184,7 @@
         opacity: 1;
     }
 }
+
 
 {
     margin: 0;
@@ -154,6 +205,7 @@ body{
     display: block;
     width: 1280px;
     height: 720px;
+    overflow: hidden;
     background-image: url(Images/background.jpg);
     background-repeat: no-repeat;
     background-size: 1280px 720px;
@@ -176,6 +228,21 @@ body{
     background: white;
     border-radius: 10px;
     margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    animation-name: inventory;
+    animation-duration: 1s;
+}
+
+@keyframes inventory{
+    0%{
+        opacity: 10%;
+    }
+    100%{
+        opacity: 10%;
+    }
 }
 
 .inventory:hover{
