@@ -222,7 +222,8 @@ body{
 
 
 
-/*// bobler i vannet, endrer duration og delay slik at det gir en autentisk effekt på havet //*/
+/*// bobler i vannet,
+endrer duration og delay slik at det gir en autentisk effekt på havet //*/
 
 .bubbles{
     position: absolute;
@@ -287,7 +288,8 @@ body{
     animation-delay: 5s;
 }
 
-/*// cloud er skyene som flyter rundt, setter lightning i samma class som cloud for at det skal få samma animasjon /*/
+/*// cloud er skyene som flyter rundt,
+ setter lightning i samma class som cloud for at det skal få samma animasjon /*/
 
 .cloudSection {
     position: absolute;
