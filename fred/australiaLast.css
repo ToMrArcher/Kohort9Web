@@ -1,3 +1,5 @@
+/*// Denne siden er codet av fredrik Holtet /*/
+
 *{
     margin: 0;
 }
@@ -39,6 +41,8 @@ body{
     animation: sunset 8s linear forwards;
 }
 
+/*// inventory er gjenstander som blir plukket opp,
+ som er kodet av en person for å få en felles kode /*/
 
 .inventory{
     position: absolute;
@@ -102,6 +106,7 @@ body{
     animation: boom 5s linear forwards;
     transform: scale(0);
 }
+
 
 .sea{
     position: relative;
@@ -200,7 +205,8 @@ body{
     animation-delay: 5s;
 }
 
-/*// cloud er skyene som flyter rundt, setter lightning i samma class som cloud for å slippe flere keyframes /*/
+/*// cloud er skyene som flyter rundt,
+ setter lightning i samma class som cloud for å slippe flere keyframes /*/
 
 .cloudSection {
     position: absolute;
@@ -240,6 +246,7 @@ body{
     animation: cloudSection3 30s linear infinite;
     top: 40px;
 }
+
 .speechBubble4 {
     position: absolute;
     border: 5px solid black;
@@ -303,7 +310,7 @@ body{
     height: 200px;
     top: 120px;
     left: 1000px;
-    animation: turbinfade;
+    animation: windmill;
     animation-duration: 10s;
     animation-fill-mode: forwards;
 }
@@ -360,7 +367,7 @@ body{
     80% {opacity: 1;}
     100%{ opacity: 0;}
 }
-@keyframes turbinfade{
+@keyframes windmill{
     0%{ 
         opacity: 0;
         height: 0px;
