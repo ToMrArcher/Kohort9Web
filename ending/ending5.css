@@ -79,15 +79,6 @@ body {
     }
 }
 
-.scarlett {
-    width: 141px;
-    left: 578px;
-    top: 200px;
-    position: absolute;
-    z-index: 0;
-    opacity: 1;
-}
-
 .speechBubble {
     z-index: 3;
     position: absolute;
