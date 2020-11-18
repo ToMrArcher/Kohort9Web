@@ -5,9 +5,18 @@ Kodet av Marco A. Gravbrøt
 
 @font-face {
     font-family: MontserratBold;
-    src: url(Montserrat/Montserrat-ExtraBold.ttf);
+    src: url(../Montserrat/Montserrat-ExtraBold.ttf);
 }
 
+/* Class for å gå videre til world-map som brukes for alle sidene og kan endre delay*/
+.screen.finish {
+    animation-name: continue-background;
+    animation-duration: 1s;
+    animation-delay: 19s;
+    animation-fill-mode: forwards;
+}
+
+/* Class for pilen som skal dukke opp og ha en liten effekt */
 .continue {
     opacity: 0%;
     position: absolute;
@@ -31,10 +40,8 @@ Kodet av Marco A. Gravbrøt
 
     opacity: 0%;
     z-index: -10%;
-
-    top: 0px;
     
-    background-image: url(images/world.png);
+    background-image: url(../images/world.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
 
@@ -43,25 +50,6 @@ Kodet av Marco A. Gravbrøt
     animation-delay: 8s;
     animation-fill-mode: forwards;
 }
-
-/*
-.map-image {
-    position: absolute;
-
-    opacity: 0%;
-    z-index: -10;
-
-    width: 1280px;
-    height: 720px;
-
-    top: 0px;
-
-    animation-name: continue-arrow;
-    animation-duration: 1s;
-    animation-delay: 8s;
-    animation-fill-mode: forwards;
-}
-*/
 
 .map-texts {
     position: absolute;
@@ -78,7 +66,7 @@ Kodet av Marco A. Gravbrøt
 
     height: 180px;
 
-    background-image: url(images/scroll.png);
+    background-image: url(../images/scroll.png);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -102,6 +90,7 @@ Kodet av Marco A. Gravbrøt
     padding-bottom: 0px;
 }
 
+/* Posisjoner årstall riktig */
 .map-texts:nth-child(2) {
     margin-bottom: -15px;
 }
@@ -117,9 +106,9 @@ Kodet av Marco A. Gravbrøt
     top: 392px;
     left: 1100px; /*1234 = -134*/
 
-    animation-name: continue-arrow, boat-move-reef, boat-move-marianna, boat-move-atlantis, boat-move-northpole, boat-move-norway;
-    animation-duration: 1s, 3s, 4s, 6s, 4s, 4s;
-    animation-delay: 8s, 10s, 13s, 17s, 23s, 27s;
+    animation-name: continue-arrow, boat-move-reef;
+    animation-duration: 1s, 3s;
+    animation-delay: 8s, 10s;
     animation-fill-mode: forwards;
 }
 
@@ -156,15 +145,9 @@ Kodet av Marco A. Gravbrøt
     }
 }
 
-@keyframes continue-effects {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
+/*
+    Hver båt-bevegelse har en egen keyframe, som vi bare endrer i båt classen for hver side.
+*/
 
 @keyframes boat-move-reef {
     to {
@@ -264,6 +247,10 @@ Kodet av Marco A. Gravbrøt
     }
 }
 
+/*
+    Effekter til bakgrunn, pil og diverse
+*/
+
 @keyframes continue-background {
     to {
         z-index: -10;
@@ -275,5 +262,15 @@ Kodet av Marco A. Gravbrøt
     to {
         opacity: 100%;
         z-index: 10;
+    }
+}
+
+@keyframes continue-effects {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
     }
 }

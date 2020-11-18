@@ -8,6 +8,15 @@ Kodet av Marco A. Gravbrøt
     src: url(Montserrat/Montserrat-ExtraBold.ttf);
 }
 
+/* Class for å gå videre til world-map som brukes for alle sidene og kan endre delay*/
+.screen.finish {
+    animation-name: continue-background;
+    animation-duration: 1s;
+    animation-delay: 19s;
+    animation-fill-mode: forwards;
+}
+
+/* Class for pilen som skal dukke opp og ha en liten effekt */
 .continue {
     opacity: 0%;
     position: absolute;
@@ -41,25 +50,6 @@ Kodet av Marco A. Gravbrøt
     animation-delay: 8s;
     animation-fill-mode: forwards;
 }
-
-/*
-.map-image {
-    position: absolute;
-
-    opacity: 0%;
-    z-index: -10;
-
-    width: 1280px;
-    height: 720px;
-
-    top: 0px;
-
-    animation-name: continue-arrow;
-    animation-duration: 1s;
-    animation-delay: 8s;
-    animation-fill-mode: forwards;
-}
-*/
 
 .map-texts {
     position: absolute;
@@ -100,6 +90,7 @@ Kodet av Marco A. Gravbrøt
     padding-bottom: 0px;
 }
 
+/* Posisjoner årstall riktig */
 .map-texts:nth-child(2) {
     margin-bottom: -15px;
 }
@@ -113,7 +104,7 @@ Kodet av Marco A. Gravbrøt
     width: 75px;
 
     top: 392px;
-    left: 1100px; /*1234 = -134*/
+    left: 1100px;
 
     animation-name: continue-arrow, boat-move-reef, boat-move-marianna, boat-move-atlantis, boat-move-northpole, boat-move-norway;
     animation-duration: 1s, 3s, 4s, 6s, 4s, 4s;
@@ -154,15 +145,10 @@ Kodet av Marco A. Gravbrøt
     }
 }
 
-@keyframes continue-effects {
-    from {
-        transform: rotate(0deg);
-    }
 
-    to {
-        transform: rotate(360deg);
-    }
-}
+/*
+    Hver båt-bevegelse har en egen keyframe, som vi bare endrer i båt classen for hver side.
+*/
 
 @keyframes boat-move-reef {
     to {
@@ -259,6 +245,20 @@ Kodet av Marco A. Gravbrøt
         top: 120px;
         left: 626px;
         transform: rotateY(0deg) rotateZ(0deg);
+    }
+}
+
+/*
+    Effekter til bakgrunn, pil og diverse
+*/
+
+@keyframes continue-effects {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
     }
 }
 

@@ -1,9 +1,15 @@
+<!--
+    Skrevet av Marco A. Gravbrøt
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template</title>
+    <title>Beach</title>
+
+    <link rel="icon" type="image/png" href="../favicon.png">
 
     <link rel="stylesheet" href="styles.css">
     <link href="../Montserrat-ExtraBold.ttf" rel="stylesheet">
@@ -14,14 +20,22 @@
             <h1>Vi må samle sammen delene til båten i riktig rekkefølge!</h1>
         </div>
 
-    
+        <!--
+            Alle delene til båten i en egen div, sånn at de kan skjules og vises ved behov.
+            Riktige delen har en egen class correctPart og en href for å gå til neste side
+            En del som nettopp har blitt trykket har classen movePart sånn at den beveges til lokasjon.
+            En del som allerede har blitt trykket har classen assembledPart slik at den holder
+            seg på riktig sted.
+        -->
         <img class="boatPart part1" src="../images/boat-1.png">
         <img class="boatPart part2" src="../images/boat-2.png">
         <a href="stage4.html"><img class="boatPart part3 correctPart" src="../images/boat-3.png"></a>
         <img class="boatPart part4 movePart" src="../images/boat-4.png">
         <img class="boatPart part5 assembledPart" src="../images/boat-5.png">
     
-        
+        <!--
+            Felles inventory system fra template.
+        -->
         <div class="inventory">
             <div class="inventoryItem"></div>
             <div class="inventoryItem"></div>
