@@ -45,12 +45,13 @@ body{
     width: 500px;
     height: 90px;
     top: 620px;
-    left: 365px;
+    left: 455px;
     opacity: 10%;
     transition: opacity linear .5s;
 }
 
 .inventoryItem{
+    position: relative;
     float: left;
     width: 90px;
     height: 90px;
@@ -180,7 +181,7 @@ body{
     border-radius: 100px;
     background-color: white;
     top: 300px;
-    left: 650px;
+    left: 640px;
     animation: speechBubble 8s linear;
     opacity: 0;
     animation-delay: 14s;
@@ -195,7 +196,7 @@ body{
     border-radius: 100px;
     background-color: white;
     top: 300px;
-    left: 650px;
+    left: 640px;
     animation: speechBubble 10s linear;
     opacity: 0;
     animation-delay: 23s;
