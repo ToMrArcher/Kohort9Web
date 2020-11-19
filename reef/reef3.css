@@ -43,7 +43,7 @@ body{
     top: 0;
     width: 100%;
     overflow: hidden;
-    animation: sunset 8s linear forwards;
+    animation: skyColorChange 8s linear forwards;
 }
 
 /*// inventory er gjenstander som blir plukket opp,
@@ -303,7 +303,7 @@ body{
     width: 100%;
     height: 100%;
 
-    animation-name: rainbow, sunset;
+    animation-name: rainbow, skyColorChange;
     animation-duration: 3s, 8s;
     animation-delay: 5s, 0s;
     animation-fill-mode: forwards, forwards;
@@ -403,6 +403,7 @@ body{
     from{ left: 0px;}
     to{ left: -600px;}
 }
+/*// boom er cartoon effect /*/ 
 @keyframes boom{
    10%{
         transform: scale(0.6);
@@ -414,7 +415,9 @@ body{
        transform: scale(0);
     }
 }
-@keyframes sunset{
+/*// Soloppgang men ikke solen,
+hvor fargen endrer seg under veis. for å få en endring i bakrunden med   /*/
+@keyframes skyColorChange{
     20%{ background-color: #0c1445;
     }
     50%{
@@ -428,6 +431,7 @@ body{
     }
 
 }
+/*// Dette er solen som stiger /*/
 @keyframes sunrise{
     0% {
         left: 1300px;

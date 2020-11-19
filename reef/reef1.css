@@ -116,13 +116,15 @@ body{
          rgb(0, 150, 255) 18px);
         background-repeat: repeat;
 }
- /*/ cleeen up hover er effekten når vi plukker opp søppel i havet /*/
+
+/*/ cleeen er effekten når vi plukker opp søppel i havet /*/
 .cleenGame {
     position: absolute;
     width: 100px;
     height: 50px;
     bottom: 0;
 }
+
 
 .boatFinish{
     position: absolute;
@@ -131,6 +133,7 @@ body{
     width: 200px;
 }
 
+/*// Trash gjenstander er alt man skal plukke opp /*/
 #cannontrash{
     position: absolute;
     bottom: 10px;
@@ -355,13 +358,11 @@ endrer duration og delay slik at det gir en autentisk effekt på havet //*/
 
 /*// KEYFRAMES //*/
 
-@keyframes fadeinventory
-{ 
+@keyframes fadeinventory{ 
     to{
         opacity: 1;
     }
 }
-
 @keyframes boat {
     0%{ left: -50px;
         top: 320px;
@@ -403,6 +404,7 @@ endrer duration og delay slik at det gir en autentisk effekt på havet //*/
       100% { opacity: 0;}
   }
 
+  /*// bobbler i havet /*/
 @keyframes bobble{
     0%{
         bottom: 0px;
@@ -442,6 +444,7 @@ endrer duration og delay slik at det gir en autentisk effekt på havet //*/
         opacity: 0;} 
 }
 
+/*// for å få ting til å være klikkbart etter en viss tid /*/
 @keyframes clickable{
     100%{
         z-index: -100;

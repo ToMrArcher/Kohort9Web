@@ -12,6 +12,8 @@
 <body>
     <div class="screen">
         <div class="sky">
+            <!-- cloud og lightning har samma classe og samme div 
+            fordi disse skal ha samma bevegelse i en keyframe-->
             <div class="cloudSection" id="cloudSection1">
                 <img class="cloud" src="images/svartSky.png">
                 <img class="lightning" src="images/lightning.png">
@@ -27,8 +29,10 @@
             <img class="rigg" src="images/oil-rig.png">
             
         </div>
+
         <div class="sea">
         </div>
+        <!-- Dette er bobblene som ligger i vannet (sea div)-->
         <div class="bubbels">
             <div class="bubble"></div>
             <div class="bubble"></div>
@@ -37,9 +41,11 @@
             <div class="bubble"></div>
             <div class="bubble"></div>
         </div>
-        
-        <div class="cover"></div>
 
+        <!-- skjuler inventory de første sekundene-->
+        <div class="cover"></div> 
+
+        <!-- gjenstander man plukker opp i havet-->
         <img class="sand" src="images/sandfloorFred3.png">
         <div class="cleenup">
             <a href="reef2.html"><img class="cleenGame" id="cannontrash" src="../images/cannonBarrel.png"></a>
@@ -53,6 +59,7 @@
         <p class="speechBubble">å NEEI!! skurken har forurenset havet og ødelagt klimaet. Dette må vi fikse!!</p>
         <p class="speechBubble2">Vi må nok plukke opp søppelet i havet, for å hjelpe klimaet</p>
         
+        <!-- inventory til gjenstander i "spillet"-->
         <div class="inventory">
             <div class="inventoryItem"></div>
             <div class="inventoryItem"></div>
