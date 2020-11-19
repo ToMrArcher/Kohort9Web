@@ -35,7 +35,6 @@ body{
     opacity: 0;
 
 }
-
 .sky{
     background-color: #0c1445;
     position: absolute;
@@ -75,8 +74,6 @@ body{
     width: 90%;
 
 }
-
-
 .inventory:hover{
     opacity: 100%;
 }
@@ -111,7 +108,6 @@ body{
     transform: scale(0);
 }
 
-
 .sea{
     position: relative;
     left: 0;
@@ -126,7 +122,6 @@ body{
         background-repeat: repeat;
 }
  /*/ cleeen up hover er effekten når vi plukker opp søppel i havet /*/
-
 
 .boatFinish{
     position: absolute;
@@ -281,7 +276,6 @@ body{
     animation-duration: 8s;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
-
 }
     
 .rainbow {
@@ -354,8 +348,6 @@ body{
     animation-timing-function: linear;
     animation-iteration-count: 5;
 }
-
-
 
 /*// KEYFRAMES //*/
 @keyframes moveFish{
