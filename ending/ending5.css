@@ -168,7 +168,7 @@ body {
     right: 50px;
     bottom: 50px;
     z-index: -10;
-    animation: arrow 1s linear 17s;
+    animation: arrow 1s linear 28s;
     animation-fill-mode: forwards;
 }
 
