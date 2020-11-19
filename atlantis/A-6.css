@@ -90,9 +90,7 @@
     animation-fill-mode: forwards;
 }
 
-#wheelPic:hover {
-    box-shadow: 0px 0px 110px 14px rgba(255,255,255,1)
-}
+
 
 @keyframes wheel{
     0%{
@@ -100,13 +98,14 @@
     }
     99%{
         opacity: 1;
+        z-index: 1;
     }
     100%{
         top: 620px;
         left: 655px;
         width: 7%;
         opacity: 0.1;
-        z-index: 1;
+        z-index: -1;
     }
 }
 
@@ -225,9 +224,8 @@
     animation-duration: 3s;
     animation-fill-mode: forwards;
     
-    
-    
 }
+
 @keyframes transition {
     0% {
         opacity: 1;
