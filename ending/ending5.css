@@ -9,7 +9,7 @@
     src: url(../Montserrat/Montserrat-SemiBold.ttf);
 }
 
-*{
+* {
     margin: 0;
     font-family: Montserrat;
 }
@@ -62,6 +62,16 @@ body {
     height: 100%;
     position: absolute;
     z-index: 1;
+    animation: cell 3s ease-in-out forwards;
+}
+
+@keyframes cell {
+    0% {
+        left: -1280px;
+    }
+    100% {
+        left: 0px;
+    }
 }
 
 .alex {
@@ -105,26 +115,26 @@ body {
 
 .speechBubble1 {
     top: 20px;
-    left: 300px;
-    animation: speechBubble 4s linear 1s;
+    left: 100px;
+    animation: speechBubble 6s linear 3s;
 }
 
 .speechBubble2 {
     top: 20px;
-    right: 300px;
-    animation: speechBubble 4s linear 5s;
+    right: 100px;
+    animation: speechBubble 6s linear 9s;
 }
 
 .speechBubble3 {
     top: 20px;
-    left: 300px;
-    animation: speechBubble 4s linear 9s;
+    left: 100px;
+    animation: speechBubble 6s linear 16s;
 }
 
 .speechBubble4 {
     top: 20px;
-    right: 300px;
-    animation: speechBubble 4s linear 13s;
+    right: 100px;
+    animation: speechBubble 6s linear 24s;
 }
 
 @keyframes fadeIn {
