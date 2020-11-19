@@ -266,6 +266,8 @@
     transition-duration: 700ms;  
 } 
 
+/* Bilde satt over et annet for å unngå at man kan klikke med en gang */
+
 #gift3-noClick {
     position: absolute;
     width: 100px;
