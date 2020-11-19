@@ -75,9 +75,7 @@ body{
     animation-delay: 1s;
     animation-duration: 1s;
     animation-fill-mode: forwards;
-
 }
-
 
 .inventory:hover{
     opacity: 100%;
@@ -124,7 +122,6 @@ body{
     height: 50px;
     bottom: 0;
 }
-
 
 .boatFinish{
     position: absolute;
@@ -180,8 +177,6 @@ body{
     bottom: 0;
 }
 
-
-
 .speechBubble {
     position: absolute;
     border: 5px solid black;
@@ -230,9 +225,6 @@ body{
     animation-fill-mode: forwards; 
     z-index: 1000;
 }
-
-
-
 
 /*// bobler i vannet,
 endrer duration og delay slik at det gir en autentisk effekt på havet //*/
@@ -341,7 +333,6 @@ endrer duration og delay slik at det gir en autentisk effekt på havet //*/
     animation: cloudSection3 30s linear infinite;
     top: 40px;
 }
-
 .lightning{
     opacity: 0;
     /*
@@ -352,9 +343,6 @@ endrer duration og delay slik at det gir en autentisk effekt på havet //*/
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
-
-
-
 
 /*// KEYFRAMES //*/
 
