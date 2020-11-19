@@ -5,6 +5,7 @@
     src: url(../Montserrat/Montserrat-SemiBold.ttf);
 }
 
+/* For å få skjermen til å fade in */
 #blackBox{
     position: absolute;
     opacity: 1;

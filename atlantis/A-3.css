@@ -68,7 +68,7 @@
         opacity: 0;
     }
 }
-
+/* Tekstboksen for svars alternativene, beholder underline for link for at spiller kan se hva de har trykket på hvis de har trykket feil førstegang */
 #answars{
     top: -350px;
     left: 480px;
@@ -124,6 +124,7 @@
     font-family: montserrat;
 }
 
+/* For å få lys effekter på dottene i panelet */
 #pracc2{
     position: absolute;
     padding: 5.6%;
@@ -157,6 +158,7 @@
     }
 }
 
+/* For å flytte på hele panelet */
 .fancyBox{
     top: -140px;
     left: 600px;
@@ -197,7 +199,7 @@
     height: 40%;
     border-radius: 20px;
     background: rgb(195,34,34);
-background: radial-gradient(circle, rgba(195,34,34,1) 50%, rgba(255,255,255,0.26934523809523814) 95%);;
+    background: radial-gradient(circle, rgba(195,34,34,1) 50%, rgba(255,255,255,0.26934523809523814) 95%);
     z-index: 0;
     opacity: 0;
     

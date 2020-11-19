@@ -105,11 +105,10 @@
         width: 15%;
     }
 }
-
+/* Får å gi en indikator at hjulet er trykk bart når det holdes over */
 #opaBox:hover{
     opacity: 0.6;
 }
-
 
 
 .curtain{

@@ -23,7 +23,7 @@
 
 
 
-/* Sqaures er styling til start quiz*/
+/* Sqaures er styling til start quiz */
 .square{
     position: absolute;
     top: -50%;
@@ -46,6 +46,7 @@
     }
 }
 
+/* For å få lys effekter på dottene i panelet */
 #outerSqaure{
     color: red;
     border: 17px dotted yellow;
@@ -75,6 +76,7 @@
     }
 }
 
+/* For å ha en bakgrunn bak dotlysende (for å få en effekt av et helt panel) */
 #mainSqaure{
     background-color: rgb(255, 250, 230);
     border-radius: 4px;
@@ -105,12 +107,12 @@
     left: 600px;
     opacity: 1;
     transform: rotateY(180deg);
-    animation: Neptune, nepSwaying;
+    animation: neptune, nepSwaying;
     animation-duration: 10s, 11s;
     animation-timing-function: linear, linear;
     animation-iteration-count: 1, infinite;
 }
-@keyframes Neptune{
+@keyframes neptune{
     0%{
         opacity: 0;
         left: 680px;
@@ -130,6 +132,7 @@
         left: 600px;
     }
 }
+/* For å få Havmannen til å gå sakte opp og ned litt ujevnt i forhold til ubåten*/
 @keyframes nepSwaying{
     0%{
         top: 100px;
