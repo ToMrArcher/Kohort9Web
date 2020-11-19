@@ -266,6 +266,24 @@
     transition-duration: 700ms;  
 } 
 
+#gift3-noClick {
+    position: absolute;
+    width: 100px;
+    top: 55%;
+    right: 60%;
+    z-index: 1;
+    transition-property: opacity;
+    transition-duration: 700ms;
+    animation-name: noClick;
+    animation-delay: 15s;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+} 
+
+@keyframes noClick {
+    to { z-index: -10}
+}
+
 #a {
     position: absolute;
     width: 100px;
@@ -309,7 +327,6 @@
     padding: 40px;
     border-radius: 100px;
     background-color: white;
-    font-size: 25px;
 }
 
 /* Snakkeboblen */
